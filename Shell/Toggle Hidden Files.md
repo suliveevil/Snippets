@@ -1,6 +1,4 @@
-# # Shift + Command + .
-
-
+# Shift + Command + .
 
 ## shell script 实现
 
