@@ -11,4 +11,3 @@ use scripting additions
 set date_string to date string of (current date)
 display dialog date_string
 ```
-
