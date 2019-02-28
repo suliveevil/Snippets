@@ -1,1 +1,0 @@
-display notification "message" sound name "Bottle.aiff"-- 声音文件都在 ~/Library/Sounds 和 /System/Library/Sounds 下面
