@@ -1,0 +1,7 @@
+git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons
+git clone https://github.com/easymotion/vim-easymotion ~/.vim/bundle/vim-easymotion
+git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+
+call pathogen#infect()
+syntax on
+filetype plugin indent on
