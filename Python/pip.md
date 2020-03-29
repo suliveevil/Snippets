@@ -27,3 +27,11 @@ pip3 freeze --local | grep -v '^-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
 # 2
 pip3 list -o --format legacy|awk '{print $1}'` ; do pip3 install --upgrade $i; done
 ```
+
+## 导出依赖
+
+```shell
+pip freeze > requirements.txt
+
+pip install -r requirements.txt
+```
