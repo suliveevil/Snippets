@@ -24,6 +24,8 @@ pip3 install --upgrade requests
 # 1
 pip3 freeze --local | grep -v '^-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
 
+pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U
+
 # 2
 pip3 list -o --format legacy|awk '{print $1}'` ; do pip3 install --upgrade $i; done
 ```
