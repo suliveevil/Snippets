@@ -1,0 +1,97 @@
+{
+	"description": "Textastic Code Completion for Python",
+	"uuid": "",
+	"completionSets": [
+		{
+			"name": "python.file",
+			"defaultAppend": "",
+			"strings": [
+				{
+					"string": "coding",
+					"append": "# -*- coding=utf-8 -*-\n"
+				},
+				{
+					"string": "",
+					"append": ""
+				}
+			]
+		},
+		{
+			"name": "python.keywords",
+			"defaultAppend": "",
+			"strings": [
+				{
+					"string": "",
+					"append": ""
+				},
+				{
+					"string": "",
+					"append": ""
+				}
+			]
+		},
+		{
+			"name": "python.function",
+			"defaultAppend": "",
+			"strings": [
+				{
+					"string": "",
+					"append": ""
+				},
+				{
+					"string": "",
+					"append": ""
+				}
+			]
+		},
+		{
+			"name": "python.import",
+			"defaultAppend": "",
+			"strings": [
+				{
+					"string": "",
+					"append": ""
+				},
+				{
+					"string": "",
+					"append": ""
+				}
+			]
+		},
+		{
+			"name": "python.misc",
+			"defaultAppend": "",
+			"strings": [
+				{
+					"string": "main",
+					"append": "if __name__ == \"__main__\""
+				},
+				{
+					"string": "",
+					"append": ""
+				}
+			]
+		}
+	],
+	"contexts": [
+		{
+			"description": "request",
+			"scope": "source.python",
+			"pattern": "",
+			"completionCaptureIndex": 1,
+			"completionSetNames": [
+				"python.request"
+			]
+		},
+		{
+			"description": "turtle",
+			"scope": "source.python",
+			"pattern": "",
+			"completionCaptureIndex": 2,
+			"completionSetNames": [
+				"python.turtle",
+				"python.window"
+			]
+		}
+	]
+}
