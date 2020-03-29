@@ -1,6 +1,6 @@
 {
 	"description": "Textastic Code Completion for Python",
-	"uuid": "00000000-0000-4000-8000-000000000000",
+	"uuid": "6C20A578-716B-11EA-91B2-A1E3873F6C0A",
 	"completionSets": [
 		{
 			"name": "keyword.control.flow.python",
