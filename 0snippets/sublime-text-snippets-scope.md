@@ -1,0 +1,4 @@
+# scope
+
+sublime text、textastic
+
