@@ -19,7 +19,7 @@
             "strings":[
                 {
                     "string": "tsnippet",
-                    "replace": "{\n\t\"name\": \"${1:enviroment}.${2:situation}\",\n\t\"defaultAppend\":\"${3}\",\n\t\"strings\":[\n\t\t{\n\t\t\t\"string\":\"${4:string2match}\",\n\t\t\t\"${5:replace}\":\"${6:snippet}\"\n\t\t}\n\t]\n}"
+                    "replace": "{\n\t\"name\": \"${1:enviroment}.${2:situation1}.${3:situation2}\",\n\t\"defaultAppend\":\"${4}\",\n\t\"strings\":[\n\t\t{\n\t\t\t\"string\":\"${5:string2match}\",\n\t\t\t\"${6:replace}\":\"${7:snippet}\"\n\t\t}\n\t]\n}"
                 }
             ]
         },
@@ -29,7 +29,7 @@
             "strings":[
                 {
                     "string": "tcont",
-                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"scope\":\"${2:source}.${3:python}\",\n\t\"pattern\":\"(${4:regex})\",\n\t\"completionCaptureIndex\":1,\n\t\"completionSetNames\":[\n\t\t\"${5:enviroment}.${6:situation}\"\n\t]\n}"
+                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"scope\":\"${2:source}.${3:python}\",\n\t\"pattern\":\"(${4:[a-zA-Z0-9]*})\",\n\t\"completionCaptureIndex\":1,\n\t\"completionSetNames\":[\n\t\t\"${5:enviroment}.${6:situation1}.${7:situation2}\"\n\t]\n}"
                 }
             ]
         }
