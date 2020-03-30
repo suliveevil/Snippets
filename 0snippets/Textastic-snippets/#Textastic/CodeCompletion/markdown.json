@@ -1,0 +1,61 @@
+{
+	"description": "Textastic Code Completion for markdown",
+	"uuid": "89FCE51A-7171-11EA-9BFC-0BEAD3AAAEF1",
+	
+    "completionSets":[
+        {
+            "name":"markdown.code",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string": "codeblock",
+                    "replace": "```${1:language}\n${2:your code}\n```\n$0"
+                }
+            ]
+        },
+        {
+            "name":"markdown.diagram",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string": "dot",
+                    "replace": "```${1:dot}\n${2:graphviz code}\n```\n$0"
+                },
+                {
+                    "string": "graphviz",
+                    "replace": "```${1:test}\n${2:graphviz code}\n```\n$0"
+                }
+            ]
+        }
+    ],
+    "contexts": [
+        {
+            "description":"markdown code",
+            "scope":"text.html.markdown",
+            "pattern":"(cod[a-zA-Z]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.code"
+            ]
+        },
+        {
+            "description":"markdown diagram",
+            "scope":"text.html.markdown",
+            "pattern":"(dot[a-zA-Z]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.diagram"
+            ]
+        },
+        {
+            "description":"markdown diagram",
+            "scope":"text.html.markdown",
+            "pattern":"(graph[a-zA-Z]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.diagram"
+            ]
+        }
+        
+    ]
+}
