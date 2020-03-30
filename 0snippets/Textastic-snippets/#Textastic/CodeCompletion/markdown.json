@@ -4,17 +4,27 @@
 	
     "completionSets":[
         {
+            "name": "markdown.url",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"url",
+                    "replace":"[${2:Title}](${1:URL})$0"
+                }
+            ]
+        },
+        {
             "name":"markdown.code",
             "defaultAppend":"",
             "strings":[
                 {
                     "string": "codeblock",
-                    "replace": "```${1:language}\n${2:your code}\n```\n$0"
+                    "replace": "\n```${1:language}\n${2:your code}\n```\n$0"
                 }
             ]
         },
         {
-            "name":"markdown.diagram",
+            "name":"markdown.diagram.graphviz",
             "defaultAppend":"",
             "strings":[
                 {
@@ -23,12 +33,22 @@
                 },
                 {
                     "string": "graphviz",
-                    "replace": "```${1:test}\n${2:graphviz code}\n```\n$0"
+                    "replace": "```${1:dot}\n${2:graphviz code}\n```\n$0"
                 }
             ]
+            
         }
     ],
     "contexts": [
+        {
+            "description": "markdown URL",
+            "scope":"text.html.markdown",
+            "pattern":"(ur[a-zA-Z0-9]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "markdown.url"
+            ]
+        },
         {
             "description":"markdown code",
             "scope":"text.html.markdown",
@@ -44,16 +64,16 @@
             "pattern":"(dot[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "markdown.diagram"
+                "markdown.diagram.graphviz"
             ]
         },
         {
             "description":"markdown diagram",
             "scope":"text.html.markdown",
-            "pattern":"(graph[a-zA-Z]*)",
+            "pattern":"(grap[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "markdown.diagram"
+                "markdown.diagram.graphviz"
             ]
         }
         
