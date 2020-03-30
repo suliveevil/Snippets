@@ -9,7 +9,7 @@
             "strings":[
                 {
                     "string": "tsf",
-                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"uuid\": \"${2:uuid}\",\n\t\"completionSets\":[\n\t\t${3:tsn-setSnippet}\n\t],\n\t\"contexts\": [\n\t\t${4:tco-setContexts}\n\t]\n}"
+                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"uuid\": \"${2:uuid}\",\n\t\"completionSets\":[\n\t\t${3:tsni$0}\n\t],\n\t\"contexts\": [\n\t\t${4:tcon}\n\t]\n}"
                 }
             ]
         },
@@ -28,7 +28,7 @@
             "defaultAppend":"",
             "strings":[
                 {
-                    "string": "tco",
+                    "string": "tcont",
                     "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"scope\":\"${2:source}.${3:python}\",\n\t\"pattern\":\"(${4:regex})\",\n\t\"completionCaptureIndex\":1,\n\t\"completionSetNames\":[\n\t\t\"${5:enviroment}.${6:situation}\"\n\t]\n}"
                 }
             ]
