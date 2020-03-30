@@ -4,7 +4,17 @@
 	
     "completionSets":[
         {
-            "name":"textastic.snippets",
+            "name":"textastic.snippet.file",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string": "tsf",
+                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"uuid\": \"${2:uuid}\",\n\t\"completionSets\":[\n\t\t${3:tsn-setSnippet}\n\t],\n\t\"contexts\": [\n\t\t${4:tco-setContexts}\n\t]\n}"
+                }
+            ]
+        },
+        {
+            "name":"textastic.snippet.snippets",
             "defaultAppend":"",
             "strings":[
                 {
@@ -14,7 +24,7 @@
             ]
         },
         {
-            "name":"textastic.contexts",
+            "name":"textastic.snippet.contexts",
             "defaultAppend":"",
             "strings":[
                 {
@@ -26,12 +36,21 @@
     ],
     "contexts": [
         {
+            "description":"textastic snippet file",
+            "scope":"source.json",
+            "pattern":"(tsf[a-zA-Z]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "textastic.snippet.file"
+            ]
+        },
+        {
             "description":"textastic snippet",
             "scope":"source.json",
             "pattern":"(tsn[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "textastic.snippets"
+                "textastic.snippet.snippets"
             ]
         },
         {
@@ -40,7 +59,7 @@
             "pattern":"(tco[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "textastic.contexts"
+                "textastic.snippet.contexts"
             ]
         }
     ]
