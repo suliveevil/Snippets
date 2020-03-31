@@ -4,6 +4,16 @@
 	
     "completionSets":[
         {
+            "name": "markdown.blog.head",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"blog",
+                    "replace":"---\nlayout: post\ntitle: \"${1:文章标题}\"\ndate:  20${2:年}-${3:月}-${4:日} ${5:时}:${6:分}:${7:秒} +0800\ncategories: ${8:所在目录}\ntags: ${9:标签，空格分开}\nauthor: ${10:suliveevil}\nmathjax: true\n---\n\n* content\n{:toc}\n\n${11:正文内容}"
+                }
+            ]
+        },
+        {
             "name": "markdown.url",
             "defaultAppend":"",
             "strings":[
@@ -40,6 +50,15 @@
         }
     ],
     "contexts": [
+        {
+            "description": "blog",
+            "scope":"text.html.markdown",
+            "pattern":"(blo[a-zA-Z0-9]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "markdown.blog.head"
+            ]
+        },
         {
             "description": "markdown URL",
             "scope":"text.html.markdown",
