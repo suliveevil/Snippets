@@ -3,6 +3,25 @@
     "uuid": "B62DFA6C-7292-11EA-A8CB-97DD6C7D84B1",
     "completionSets":[
         {
+            "name": "python.file.header",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"utf-8",
+                    "replace":"#!/usr/bin/python3\n# -*- coding: utf-8 -*-\n\n$1"
+                }
+            ]
+        },
+        {
+            "name": "python.functions",
+            "defaultAppend":"()",
+            "strings":[
+                {
+                    "string":"print","append":"($1)$0"
+                }
+            ]
+        },
+        {
             "name": "python.keyword",
             "defaultAppend":"",
             "strings":[
@@ -21,6 +40,15 @@
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "python.keyword"
+            ]
+        },
+        {
+            "description": "utf-8 file header",
+            "scope":"source.python",
+            "pattern":"(ut[a-zA-Z]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "python.file.header"
             ]
         }
     ]

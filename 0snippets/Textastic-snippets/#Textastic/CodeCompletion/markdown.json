@@ -47,6 +47,16 @@
                 }
             ]
             
+        },
+        {
+            "name": "markdown.regex.box",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"box",
+                    "replace":"\"「${1/./-/g}\",\n\"${1|\",\n\"${1/./-/g}」\"\n"
+                }
+            ]
         }
     ],
     "contexts": [
@@ -94,7 +104,15 @@
             "completionSetNames": [
                 "markdown.diagram.graphviz"
             ]
+        },
+        {
+            "description": "markdown regex box",
+            "scope":"text.html.markdown",
+            "pattern":"(box)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "markdown.regex.box"
+            ]
         }
-        
     ]
 }
