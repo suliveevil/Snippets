@@ -29,7 +29,7 @@
             "strings":[
                 {
                     "string": "tcont",
-                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"scope\":\"${2:source}.${3:python}\",\n\t\"pattern\":\"(${4:[a-zA-Z0-9]*})\",\n\t\"completionCaptureIndex\":1,\n\t\"completionSetNames\":[\n\t\t\"${5:enviroment}.${6:situation1}.${7:situation2}\"\n\t]\n}"
+                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"scope\":\"${2:source}.${3:python}\",\n\t\"pattern\":\"(${4:prefix}[${5:a-zA-Z0-9}]*)\",\n\t\"completionCaptureIndex\":1,\n\t\"completionSetNames\":[\n\t\t\"${6:enviroment}.${7:situation1}.${8:situation2}\"\n\t]\n}"
                 }
             ]
         }
