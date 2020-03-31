@@ -1,0 +1,47 @@
+{
+    "description": "description",
+    "uuid": "6B854C4C-72F9-11EA-BB9C-57DD78216B54",
+    "completionSets":[
+        {
+            "name": "test.test",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "\\": "test placeholder choice、variables、multi-caret",
+                    "string":"test",
+                    "replace":"${1|const,var|}\n$2\n$2"
+                }
+            ]
+        },
+        {
+            "name": "python.comment",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"comm",
+                    "replace":"'''\n$1\n'''\n\n$0"
+                }
+            ]
+        }
+    ],
+    "contexts": [
+        {
+            "description": "test",
+            "scope":"source.json | text.html.markdown | source.python",
+            "pattern":"(te[a-zA-Z0-9]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "test.test"
+            ]
+        },
+        {
+            "description": "python comment block",
+            "scope":"source.python",
+            "pattern":"(com[a-zA-Z0-9]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "python.comment"
+            ]
+        }
+    ]
+}
