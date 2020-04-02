@@ -7,9 +7,53 @@
             "defaultAppend":"",
             "strings":[
                 {
-                    "\\": "test placeholder choice、variables、multi-caret",
+                    "//": "test placeholder choice、variables、multi-caret",
                     "string":"test",
-                    "replace":"${1|const,var|}\n$2\n$2"
+                    "replace":"${1:const,var}\n$2\n$3"
+                }
+            ]
+        },
+        {
+            "name": "regex.assertion.pla",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "//": "输入字符后面必须是",
+                    "string":"pla",
+                    "replace":"正向先行断言: 输入字符后面必须是"
+                }
+            ]
+        },
+        {
+            "name": "regex.assertion.plb",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "//": "输入字符前面必须是",
+                    "string":"plb",
+                    "replace":"正向后行断言：输入字符前面必须是"
+                }
+            ]
+        },
+        {
+            "name": "regex.assertion.nla",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "//": "输入字符后面不能有",
+                    "string":"nla",
+                    "replace":"负向先行断言：输入字符后面不能有"
+                }
+            ]
+        },
+        {
+            "name": "regex.assertion.nlb",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "//": "输入字符前面不能有",
+                    "string":"nlb",
+                    "replace":"负向后行断言：输入字符前面不能有"
                 }
             ]
         },
@@ -19,7 +63,7 @@
             "strings":[
                 {
                     "string":"comm",
-                    "replace":"'''\n$1\n'''\n\n$0"
+                    "replace":"\n'''\n$1\n'''\n\n$0"
                 }
             ]
         }
@@ -32,6 +76,46 @@
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "test.test"
+            ]
+        },
+        {
+            "description": "regex 正向先行",
+            "scope":"source.json | text.html.markdown | source.python",
+            "//": "后面必须是",
+            "pattern":"(pl(?=\\s))",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "regex.assertion.pla"
+            ]
+        },
+        {
+            "description": "regex 正向后行",
+            "scope":"source.json | text.html.markdown | source.python",
+            "//": "前面必须是",
+            "pattern":"(pl(?<=\\S))",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "regex.assertion.plb"
+            ]
+        },
+        {
+            "description": "regex 负向先行",
+            "scope":"source.json | text.html.markdown | source.python",
+            "//": "后面必须不能是",
+            "pattern":"",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "regex.assertion.nla"
+            ]
+        },
+        {
+            "description": "regex 负向后行",
+            "scope":"source.json | text.html.markdown | source.python",
+            "//": "前面必须不能是",
+            "pattern":"(?<!:)(?:^|\\s|;)([a-zA-Z\\-+]+)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "regex.assertion.nlb"
             ]
         },
         {
