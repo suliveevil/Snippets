@@ -8,7 +8,7 @@
             "strings":[
                 {
                     "string":"utf-8",
-                    "replace":"#!/usr/bin/python3\n# -*- coding: utf-8 -*-\n\n$1"
+                    "replace":"#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n$1"
                 }
             ]
         },
