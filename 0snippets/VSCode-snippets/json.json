@@ -19,7 +19,7 @@
 		],
 		"description": "create textastic snippet file content"
 	},
-	"textastic snippet Set": {
+	"textastic snippet completionSet": {
 		"prefix": "tsn",
 		"body": [
 			"{\n\t\"name\": \"${1:enviroment}.${2:situation}\",\n\t\"defaultAppend\":\"${3}\",\n\t\"strings\":[\n\t\t{\n\t\t\t\"string\":\"${4:string2match}\",\n\t\t\t\"${5:replace}\":\"${6:snippet}\"\n\t\t}\n\t]\n}"

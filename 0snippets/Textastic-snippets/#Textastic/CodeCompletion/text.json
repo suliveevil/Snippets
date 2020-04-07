@@ -1,5 +1,5 @@
 {
-    "description": "Textastic CodeCompletion for AppleScript",
+    "description": "Textastic CodeCompletion for Plain Text",
     "uuid": "uuid",
     "completionSets":[
         {
@@ -16,7 +16,7 @@
     "contexts": [
         {
             "description": "description",
-            "scope":"source.applescript",
+            "scope":"text.plain",
             "pattern":"(prefix[a-zA-Z0-9]*)",
             "completionCaptureIndex":1,
             "completionSetNames":[

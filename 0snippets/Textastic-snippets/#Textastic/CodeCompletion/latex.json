@@ -16,7 +16,7 @@
     "contexts": [
         {
             "description": "description",
-            "scope":"source.python",
+            "scope":"text.tex | text.tex.latex",
             "pattern":"(prefix[a-zA-Z0-9]*)",
             "completionCaptureIndex":1,
             "completionSetNames":[
