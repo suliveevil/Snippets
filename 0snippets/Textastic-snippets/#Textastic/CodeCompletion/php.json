@@ -8,19 +8,55 @@
 			"defaultAppend": "()",
 
 			"strings": [
-				{ "string": "abs", "append": "(${1:number})" },
-				{ "string": "acos", "append": "(${1:arg})" },
-				{ "string": "acosh", "append": "(${1:arg})" },
-				{ "string": "addcslashes", "append": "(${1:str}, ${2:charlist})" },
+				{
+				    "string": "abs",
+				    "append": "(${1:number})"
+				},
+				{
+				    "string": "acos",
+				    "append": "(${1:arg})"
+				},
+				{
+				    "string": "acosh",
+				    "append": "(${1:arg})"
+				},
+				{
+				    "string": "addcslashes",
+				    "append": "(${1:str}, ${2:charlist})"
+				},
 				{ "string": "addslashes", "append": "(${1:str})" },
-				{ "string": "aggregate", "append": "(${1:object}, ${2:class_name})" },
-				{ "string": "aggregate_info", "append": "(${1:object})" },
-				{ "string": "aggregate_methods", "append": "(${1:object}, ${2:class_name})" },
-				{ "string": "aggregate_methods_by_list", "append": "(${1:object}, ${2:class_name}, ${3:methods_list})" },
-				{ "string": "aggregate_methods_by_regexp", "append": "(${1:object}, ${2:class_name}, ${3:regexp})" },
-				{ "string": "aggregate_properties", "append": "(${1:object}, ${2:class_name})" },
-				{ "string": "aggregate_properties_by_list", "append": "(${1:object}, ${2:class_name}, ${3:properties_list})" },
-				{ "string": "aggregate_properties_by_regexp", "append": "(${1:object}, ${2:class_name}, ${3:regexp})" },
+				{
+				    "string": "aggregate",
+				    "append": "(${1:object}, ${2:class_name})"
+				},
+				{
+				    "string": "aggregate_info",
+				    "append": "(${1:object})"
+				},
+				{
+				    "string": "aggregate_methods",
+				    "append": "(${1:object}, ${2:class_name})"
+				},
+				{
+				    "string": "aggregate_methods_by_list",
+				    "append": "(${1:object}, ${2:class_name}, ${3:methods_list})"
+				},
+				{
+				    "string": "aggregate_methods_by_regexp",
+				    "append": "(${1:object}, ${2:class_name}, ${3:regexp})"
+				},
+				{
+				    "string": "aggregate_properties",
+				    "append": "(${1:object}, ${2:class_name})"
+				},
+				{
+				    "string": "aggregate_properties_by_list",
+				    "append": "(${1:object}, ${2:class_name}, ${3:properties_list})"
+				},
+				{
+				    "string": "aggregate_properties_by_regexp",
+				    "append": "(${1:object}, ${2:class_name}, ${3:regexp})"
+				},
 				{ "string": "aggregation_info", "append": "()" },
 				{ "string": "apache_child_terminate", "append": "(${1:oid})" },
 				{ "string": "apache_get_modules", "append": "(${1:oid})" },

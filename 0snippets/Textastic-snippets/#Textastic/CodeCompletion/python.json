@@ -14,32 +14,48 @@
         },
         {
             "name": "python.functions",
-            "defaultAppend":"()",
-            "strings":[
-                {
-                    "string":"print","append":"($1)$0"
-                }
-            ]
-        },
-        {
-            "name": "python.keyword",
             "defaultAppend":"",
             "strings":[
+                {
+                    "string":"print",
+                    "replace":"print($1)$0"
+                },
                 {
                     "string":"ifmain",
                     "replace":"if __name__ = '__main__':\n\t$1"
                 }
             ]
-        }
+        },
+        {
+			"name": "python.keyword.control.flow",
+            "defaultAppend":"",
+			"strings": [
+				"break",
+				"continue",
+				"elif",
+				"else",
+				"except",
+				"finally",
+				"for",
+				"if",
+				"pass",
+				"raise",
+				"return",
+				"try",
+				"while",
+				"with",
+				"yield"
+			]
+		}
     ],
     "contexts": [
         {
             "description": "python keyword",
             "scope":"source.python",
-            "pattern":"(ifm[a-zA-Z0-9]*)",
+            "pattern":"(pr|ifm)([a-zA-Z0-9_]*)",
             "completionCaptureIndex":1,
             "completionSetNames":[
-                "python.keyword"
+                "python.functions"
             ]
         },
         {

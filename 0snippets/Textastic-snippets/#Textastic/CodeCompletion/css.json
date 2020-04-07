@@ -171,9 +171,12 @@
 			"name": "css.properties.css3",
 			"defaultAppend": ": $0;",
 			"strings": [
-				{"//": " CSS3 specs; final recommendations, but may not be implemented in browsers yet"},
-
-				{"//": " http://www.w3.org/TR/css3-animations/"},
+				{
+				    "//": " CSS3 specs; final recommendations, but may not be implemented in browsers yet"
+				},
+				{
+				    "//": " http://www.w3.org/TR/css3-animations/"
+				},
 				"animation",
 				"animation-delay",
 				"animation-direction",

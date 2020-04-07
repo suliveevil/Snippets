@@ -8,15 +8,31 @@
 			"defaultAppend": "",
 
 			"strings": [
-				{ "string": "continue", "append": ";" },
+				{
+				    "string": "continue",
+				    "append": ";"
+				},
+				{
+				    "string": "for",
+				    "append": " (${1:${2:var i = 0}; ${3:i < count}; ${4:i++}}) {\n\t$0\n}"
+				},
+				{
+				    "string": "forin",
+				    "replace": "for (${1:variable} in ${2:object}) {\n\t$0\n}"
+				},
+				{
+				    "string": "if",
+				    "append": " ($1) {\n\t$0\n}"
+				},
+				{
+				    "string": "else",
+				    "append": " {\n\t$0\n}"
+				},
 
-				{ "string": "for", "append": " (${1:${2:var i = 0}; ${3:i < count}; ${4:i++}}) {\n\t$0\n}" },
-				{ "string": "forin", "replace": "for (${1:variable} in ${2:object}) {\n\t$0\n}" },
-
-				{ "string": "if", "append": " ($1) {\n\t$0\n}" },
-				{ "string": "else", "append": " {\n\t$0\n}" },
-
-				{ "string": "switch", "append": " ($1) {\n\t$0\n}" },
+				{
+				    "string": "switch",
+				    "append": " ($1) {\n\t$0\n}"
+				},
 				{ "string": "case", "append": " ${1:condition}: " },
 				{ "string": "break", "append": ";" },
 				{ "string": "default", "append": ":" },
@@ -40,15 +56,20 @@
 			"name": "js.keywords.control.else-if",
 
 			"strings": [
-				{ "string": "else if", "append": " ($1) {\n\t$0\n}" }
+				{
+				    "string": "else if",
+				    "append": " ($1) {\n\t$0\n}"
+				}
 			]
 		},
 		{
 			"name": "js.keywords",
 			"defaultAppend": "",
 			"strings": [
-				{ "string": "function", "append": " ${1:name}($2) {\n\t$0\n}" },
-
+				{
+				    "string": "function",
+				    "append": " ${1:name}($2) {\n\t$0\n}"
+				},
 				"new",
 				"delete",
 
@@ -97,7 +118,10 @@
 		{
 			"name": "js.native-objects.Date",
 			"strings": [
-				{ "string": "UTC", "append": "(${1:yyyy}, ${2:mm}, ${3:dd}${4:, ${5:hh}, ${6:mm}, ${7:ss}, ${8:ms}})" }
+				{
+				    "string": "UTC",
+				    "append": "(${1:yyyy}, ${2:mm}, ${3:dd}${4:, ${5:hh}, ${6:mm}, ${7:ss}, ${8:ms}})"
+				}
 			]
 		},
 		{
@@ -169,15 +193,24 @@
 			"name": "js.functions",
 			"defaultAppend": "(${1:string})",
 			"strings": [
-				{ "string": "decodeURI", "append": "(${1:encodedURI})" },
-				{ "string": "decodeURIComponent", "append": "(${1:encodedURIComponent})" },
+				{
+				    "string": "decodeURI",
+				    "append": "(${1:encodedURI})"
+				},
+				{
+				    "string": "decodeURIComponent",
+				    "append": "(${1:encodedURIComponent})"
+				},
 				"encodeURI",
 				"encodeURIComponent",
 				"escape",
 				"eval",
 				{ "string": "isFinite", "append": "(${1:expression})" },
 				{ "string": "isNaN", "append": "(${1:expression})" },
-				{ "string": "parseInt", "append": "(${1:string}${2:, ${3:base}})" },
+				{
+				    "string": "parseInt",
+				    "append": "(${1:string}${2:, ${3:base}})"
+				},
 				"parseFloat",
 				"unescape"
 			]
@@ -211,16 +244,37 @@
 				"valueOf",
 
 				// Array
-				{ "string": "concat", "append": "(${1:array1}${2:, ${3:array2, ...}})" },
-				{ "string": "join", "append": "(${1:delimiter})" },
+				{
+				    "string": "concat",
+				    "append": "(${1:array1}${2:, ${3:array2, ...}})"
+				},
+				{
+				    "string": "join",
+				    "append": "(${1:delimiter})"
+				},
 				"pop",
-				{ "string": "push", "append": "(${1:item1}${2:, ${3:item2, ...}})" },
+				{
+				    "string": "push",
+				    "append": "(${1:item1}${2:, ${3:item2, ...}})"
+				},
 				"reverse",
 				"shift",
-				{ "string": "slice", "append": "(${1:startIndex}${2:, ${3:endIndex}})" },
-				{ "string": "sort", "append": "(${1:function(a, b) {$2\\}})" },
-				{ "string": "splice", "append": "(${1:startIndex}, ${2:deleteCount}${3:, ${4:replacingItem1, ...}})" },
-				{ "string": "unshift", "append": "(${1:item1}${2:, ${3:item2, ...}})" },
+				{
+				    "string": "slice",
+				    "append": "(${1:startIndex}${2:, ${3:endIndex}})"
+				},
+				{
+				    "string": "sort",
+				    "append": "(${1:function(a, b) {$2\\}})"
+				},
+				{
+				    "string": "splice",
+				    "append": "(${1:startIndex}, ${2:deleteCount}${3:, ${4:replacingItem1, ...}})"
+				},
+				{
+				    "string": "unshift",
+				    "append": "(${1:item1}${2:, ${3:item2, ...}})"
+				},
 
 				// Date
 				"getDate",
@@ -267,36 +321,96 @@
 				"toUTCString",
 
 				// Function
-				{ "string": "apply", "append": "(${1:${2:thisOjbect}, ${3:argumentsArray}})" },
-				{ "string": "call", "append": "(${1:${2:thisObject}${3:, ${4:arg1, ...}}})" },
+				{
+				    "string": "apply",
+				    "append": "(${1:${2:thisOjbect}, ${3:argumentsArray}})"
+				},
+				{
+				    "string": "call",
+				    "append": "(${1:${2:thisObject}${3:, ${4:arg1, ...}}})"
+				},
 
 				// Number
-				{ "string": "toExponential", "append": "(${1:fractionDigits})" },
-				{ "string": "toFixed", "append": "(${1:fractionDigits})" },
-				{ "string": "toPrecision", "append": "(${1:precisionDigits})" },
+				{
+				    "string": "toExponential",
+				    "append": "(${1:fractionDigits})"
+				},
+				{
+				    "string": "toFixed",
+				    "append": "(${1:fractionDigits})"
+				},
+				{
+				    "string": "toPrecision",
+				    "append": "(${1:precisionDigits})"
+				},
 
 				// Object
-				{ "string": "hasOwnProperty", "append": "(${1:propertyName})" },
-				{ "string": "isPrototypeOf", "append": "(${1:objectReference})" },
+				{
+				    "string": "hasOwnProperty",
+				    "append": "(${1:propertyName})"
+				},
+				{
+				    "string": "isPrototypeOf",
+				    "append": "(${1:objectReference})"
+				},
 
 				// RegExp
 				{ "string": "exec", "append": "(${1:string})" },
 				{ "string": "test", "append": "(${1:string})" },
 
 				// String
-				{ "string": "charAt", "append": "(${1:positionIndex})" },
-				{ "string": "charCodeAt", "append": "(${1:positionIndex})" },
-				{ "string": "concat", "append": "(${1:string2})" },
-				{ "string": "indexOf", "append": "(${1:search}${2:, ${3:fromIndex}})" },
-				{ "string": "lastIndexOf", "append": "(${1:search}${2:, ${3:fromIndex}})" },
-				{ "string": "localeCompare", "append": "(${1:string2})" },
-				{ "string": "match", "append": "(${1:regex})" },
-				{ "string": "replace", "append": "(${1:regex}, ${2:replacement})" },
-				{ "string": "search", "append": "(${1:regex})" },
-				{ "string": "slice", "append": "(${1:startPositionIndex}, ${2:endPositionIndex})" },
-				{ "string": "split", "append": "(${1:delimiter}${2:, ${3:limitInteger}})" },
-				{ "string": "substr", "append": "(${1:startPositionIndex}${2:, ${3:length}})" },
-				{ "string": "substring", "append": "(${1:startPositionIndex}, ${2:endPositionIndex})" },
+				{
+				    "string": "charAt",
+				    "append": "(${1:positionIndex})"
+				},
+				{
+				    "string": "charCodeAt",
+				    "append": "(${1:positionIndex})"
+				},
+				{
+				    "string": "concat",
+				    "append": "(${1:string2})"
+				    },
+				{
+				    "string": "indexOf",
+				    "append": "(${1:search}${2:, ${3:fromIndex}})"
+				},
+				{
+				    "string": "lastIndexOf",
+				    "append": "(${1:search}${2:, ${3:fromIndex}})"
+				},
+				{
+				    "string": "localeCompare",
+				    "append": "(${1:string2})"
+				},
+				{
+				    "string": "match",
+				    "append": "(${1:regex})"
+				},
+				{
+				    "string": "replace",
+				    "append": "(${1:regex}, ${2:replacement})"
+				},
+				{
+				    "string": "search",
+				    "append": "(${1:regex})"
+				},
+				{
+				    "string": "slice",
+				    "append": "(${1:startPositionIndex}, ${2:endPositionIndex})"
+				},
+				{
+				    "string": "split", 
+				    "append": "(${1:delimiter}${2:, ${3:limitInteger}})"
+				},
+				{
+				    "string": "substr",
+				    "append": "(${1:startPositionIndex}${2:, ${3:length}})"
+				},
+				{
+				    "string": "substring",
+				    "append": "(${1:startPositionIndex}, ${2:endPositionIndex})"
+				},
 				"toLocaleLowerCase",
 				"toLocaleUpperCase",
 				"toLowerCase",
@@ -373,37 +487,115 @@
 			"defaultAppend": "()",
 
 			"strings": [
-				{ "string": "addEventListener", "append": "(${1:eventType}, ${2:listener}, ${4:useCapture})" },
-				{ "string": "appendChild", "append": "(${1:nodeObject})" },
+				{
+				    "string": "addEventListener",
+				    "append": "(${1:eventType}, ${2:listener}, ${4:useCapture})"
+				},
+				{
+				    "string": "appendChild",
+				    "append": "(${1:nodeObject})"
+				},
 				"blur",
 				"click",
-				{ "string": "cloneNode", "append": "(${1:deepCopyBoolean})" },
-				{ "string": "dispatchEvent", "append": "(${1:eventObjectReference})" },
+				{
+				    "string": "cloneNode",
+				    "append": "(${1:deepCopyBoolean})"
+				},
+				{
+				    "string": "dispatchEvent",
+				    "append": "(${1:eventObjectReference})"
+				},
 				"focus",
-				{ "string": "getAttribute", "append": "(${1:attributeName})" },
-				{ "string": "getAttributeNode", "append": "(${1:attributeName})" },
-				{ "string": "getAttributeNodeNS", "append": "(${1:namespaceURI}, ${2:localName})" },
-				{ "string": "getAttributeNS", "append": "(${1:namespaceURI}, ${2:localName})" },
-				{ "string": "getElementsByTagName", "append": "(${1:tagName})" },
-				{ "string": "getElementsByTagNameNS", "append": "(${1:namespaceURI}, ${2:localName})" },
-				{ "string": "hasAttribute", "append": "(${1:attributeName})" },
-				{ "string": "hasAttributeNS", "append": "(${1:namespaceURI}, ${2:localName})" },
+				{
+				    "string": "getAttribute",
+				    "append": "(${1:attributeName})"
+				},
+				{
+				    "string": "getAttributeNode",
+				    "append": "(${1:attributeName})"
+				},
+				{
+				    "string": "getAttributeNodeNS",
+				    "append": "(${1:namespaceURI}, ${2:localName})"
+				},
+				{
+				    "string": "getAttributeNS",
+				    "append": "(${1:namespaceURI}, ${2:localName})"
+				},
+				{
+				    "string": "getElementsByTagName",
+				    "append": "(${1:tagName})"
+				},
+				{
+				    "string": "getElementsByTagNameNS",
+				    "append": "(${1:namespaceURI}, ${2:localName})"
+				},
+				{
+				    "string": "hasAttribute",
+				    "append": "(${1:attributeName})"
+				},
+				{
+				    "string": "hasAttributeNS",
+				    "append": "(${1:namespaceURI}, ${2:localName})"
+				},
 				"hasChildNodes",
-				{ "string": "insertBefore", "append": "(${1:newChildNode}, ${2:referenceChildNodeOrNull})" },
-				{ "string": "isSupported", "append": "(${1:feature}, ${2:version})" },
-				{ "string": "lookupNamespaceURI", "append": "(${1:prefix})" },
-				{ "string": "lookupPrefix", "append": "(${1:namespaceURI})" },
+				{
+				    "string": "insertBefore",
+				    "append": "(${1:newChildNode}, ${2:referenceChildNodeOrNull})"
+				},
+				{
+				    "string": "isSupported",
+				    "append": "(${1:feature}, ${2:version})"
+				},
+				{
+				    "string": "lookupNamespaceURI",
+				    "append": "(${1:prefix})"
+				},
+				{ 
+				    "string": "lookupPrefix",
+				    "append": "(${1:namespaceURI})"
+				},
 				"normalize",
-				{ "string": "removeAttribute", "append": "(${1:attributeName})" },
-				{ "string": "removeAttributeNode", "append": "(${1:attributeNodeReference})" },
-				{ "string": "removeAttributeNS", "append": "(${1:namespaceURI}, ${2:localName})" },
-				{ "string": "removeChild", "append": "(${1:childNodeReference})" },
-				{ "string": "removeEventListener", "append": "(${1:eventType}, ${2:listener}, ${4:useCapture})" },
-				{ "string": "replaceChild", "append": "(${1:newChildNodeReference}, ${2:oldChildNodeReference})" },
-				{ "string": "setAttribute", "append": "(${1:attributeName}, ${2:value})" },
-				{ "string": "setAttributeNode", "append": "(${1:attributeObjectReference})" },
-				{ "string": "setAttributeNodeNS", "append": "(${1:attributeObjectReference})" },
-				{ "string": "setAttributeNS", "append": "(${1:namespaceURI}, ${2:qualifiedName}, ${3:value})" },
+				{
+				    "string": "removeAttribute",
+				    "append": "(${1:attributeName})"
+				},
+				{
+				    "string": "removeAttributeNode",
+				    "append": "(${1:attributeNodeReference})"
+				},
+				{
+				    "string": "removeAttributeNS",
+				    "append": "(${1:namespaceURI}, ${2:localName})"
+				},
+				{
+				    "string": "removeChild",
+				    "append": "(${1:childNodeReference})"
+				},
+				{
+				    "string": "removeEventListener",
+				    "append": "(${1:eventType}, ${2:listener}, ${4:useCapture})"
+				},
+				{
+				    "string": "replaceChild",
+				    "append": "(${1:newChildNodeReference}, ${2:oldChildNodeReference})"
+				},
+				{
+				    "string": "setAttribute",
+				    "append": "(${1:attributeName}, ${2:value})"
+				},
+				{
+				    "string": "setAttributeNode",
+				    "append": "(${1:attributeObjectReference})"
+				},
+				{
+				    "string": "setAttributeNodeNS",
+				    "append": "(${1:attributeObjectReference})"
+				},
+				{
+				    "string": "setAttributeNS",
+				    "append": "(${1:namespaceURI}, ${2:qualifiedName}, ${3:value})"
+				},
 				"toString"
 			]
 		},
@@ -472,27 +664,84 @@
 			"strings": [
 				"clear",
 				"close",
-				{ "string": "createAttribute", "append": "(${1:attributeName})" },
-				{ "string": "createAttributeNS", "append": "(${1:namespaceURI}, ${2:qualifiedName})" },
-				{ "string": "createCDATASection", "append": "(${1:data})" },
-				{ "string": "createComment", "append": "(${1:commentText})" },
+				{
+				    "string": "createAttribute",
+				    "append": "(${1:attributeName})"
+				},
+				{
+				    "string": "createAttributeNS",
+				    "append": "(${1:namespaceURI}, ${2:qualifiedName})"
+				},
+				{
+				    "string": "createCDATASection",
+				    "append": "(${1:data})"
+				},
+				{
+				    "string": "createComment",
+				    "append": "(${1:commentText})"
+				},
 				"createDocumentFragment",
-				{ "string": "createElement", "append": "(${1:tagName})" },
-				{ "string": "createElementNS", "append": "(${1:namespaceURI}, ${2:qualifiedName})" },
-				{ "string": "createEntityReference", "append": "(${1:entityName})" },
-				{ "string": "createEvent", "append": "(${1:eventType})" },
-				{ "string": "createProcessingInstruction", "append": "(${1:target}, ${2:data})" },
+				{
+				    "string": "createElement",
+				    "append": "(${1:tagName})"
+				},
+				{
+				    "string": "createElementNS",
+				    "append": "(${1:namespaceURI}, ${2:qualifiedName})"
+				},
+				{
+				    "string": "createEntityReference",
+				    "append": "(${1:entityName})"
+				},
+				{
+				    "string": "createEvent",
+				    "append": "(${1:eventType})"
+				},
+				{
+				    "string": "createProcessingInstruction",
+				    "append": "(${1:target}, ${2:data})"
+				},
 				"createRange",
-				{ "string": "createTextNode", "append": "(${1:text})" },
-				{ "string": "createTreeWalker", "append": "(${1:rootNode}, ${2:whatToShow}, ${3:filterFunction}, ${4:entityRefExpansion})" },
-				{ "string": "elementFromPoint", "append": "(${1:x}, ${2:y})" },
-				{ "string": "execCommand", "append": "(${1:commandName}${2:, ${3:displayUI}, ${4:value}})" },
-				{ "string": "getElementById", "append": "(${1:id})" },
-				{ "string": "getElementsByName", "append": "(${1:elementName})" },
-				{ "string": "importNode", "append": "(${1:nodeReference}, ${2:deepBoolean})" },
-				{ "string": "open", "append": "(${1:${2:MIMEType}, ${3:replace}})" },
-				{ "string": "write", "append": "(${1:string1}${2:, ${3:string2, ...}})" },
-				{ "string": "writeln", "append": "(${1:string1}${2:, ${3:string2, ...}})" }
+				{
+				    "string": "createTextNode",
+				    "append": "(${1:text})"
+				},
+				{
+				    "string": "createTreeWalker",
+				    "append": "(${1:rootNode}, ${2:whatToShow}, ${3:filterFunction}, ${4:entityRefExpansion})"
+				},
+				{
+				    "string": "elementFromPoint",
+				    "append": "(${1:x}, ${2:y})"
+				},
+				{
+				    "string": "execCommand",
+				    "append": "(${1:commandName}${2:, ${3:displayUI}, ${4:value}})"
+				},
+				{
+				    "string": "getElementById",
+				    "append": "(${1:id})"
+				},
+				{
+				    "string": "getElementsByName",
+				    "append": "(${1:elementName})" 
+				},
+				{
+				    "string": "importNode",
+				    "append": "(${1:nodeReference}, ${2:deepBoolean})"
+				},
+				{
+				    "string": "open",
+				    "append": "(${1:${2:MIMEType}, ${3:replace}})"
+				},
+				{
+				    "string": "write",
+				    "append": "(${1:string1}${2:, ${3:string2, ...}})"
+				},
+				{
+				    "string": "writeln",
+				    "append": "(${1:string1}${2:, ${3:string2, ...}})"
+				}
 			]
 		},
 
@@ -512,7 +761,10 @@
 			"strings": [
 				"back",
 				"forward",
-				{ "string": "go", "append": "(${1:stepCountOrURL})" }
+				{
+				    "string": "go",
+				    "append": "(${1:stepCountOrURL})"
+				}
 			]
 		},
 
@@ -535,8 +787,14 @@
 			"name": "js.dom.location.methods",
 
 			"strings": [
-				{ "string": "reload", "append": "(${1:byPassCache})" },
-				{ "string": "replace", "append": "(${1:URL})" }
+				{
+				    "string": "reload",
+				    "append": "(${1:byPassCache})"
+				},
+				{
+				    "string": "replace",
+				    "append": "(${1:URL})"
+				}
 			]
 		},
 
@@ -559,7 +817,6 @@
 		// Window
 		{
 			"name": "js.dom.window.properties",
-
 			"strings": [
 				"closed",
 				"defaultStatus",
@@ -595,13 +852,34 @@
 			"name": "js.dom.window.methods.global",
 
 			"strings": [
-				{ "string": "alert", "append": "(${1:message})" },
-				{ "string": "clearInterval", "append": "(${1:intervalID})" },
-				{ "string": "clearTimeout", "append": "(${1:timeoutID})" },
-				{ "string": "confirm", "append": "(${1:message})" },
-				{ "string": "prompt", "append": "(${1:message}, ${2:defaultReply})" },
-				{ "string": "setInterval", "append": "(${1:functionReference}, ${2:milliseconds})" },
-				{ "string": "setTimeout", "append": "(${1:functionReference}, ${2:milliseconds})" }
+				{
+				    "string": "alert",
+				    "append": "(${1:message})"
+				},
+				{
+				    "string": "clearInterval",
+				    "append": "(${1:intervalID})"
+				},
+				{
+				    "string": "clearTimeout",
+				    "append": "(${1:timeoutID})"
+				},
+				{
+				    "string": "confirm",
+				    "append": "(${1:message})"
+				},
+				{
+				    "string": "prompt",
+				    "append": "(${1:message}, ${2:defaultReply})"
+				},
+				{
+				    "string": "setInterval",
+				    "append": "(${1:functionReference}, ${2:milliseconds})"
+				},
+				{
+				    "string": "setTimeout",
+				    "append": "(${1:functionReference}, ${2:milliseconds})"
+				}
 			]
 		},
 
@@ -612,15 +890,39 @@
 			"strings": [
 				"close",
 				"getSelection",
-				{ "string": "moveBy", "append": "(${1:deltaX}, ${2:deltaY})" },
-				{ "string": "moveTo", "append": "(${1:x}, ${2:y})" },
-				{ "string": "open", "append": "(${1:URL}, ${2:windowName}${3:, ${4:windowFeatures}})" },
+				{
+				    "string": "moveBy",
+				    "append": "(${1:deltaX}, ${2:deltaY})"
+				},
+				{
+				    "string": "moveTo",
+				    "append": "(${1:x}, ${2:y})"
+				},
+				{
+				    "string": "open",
+				    "append": "(${1:URL}, ${2:windowName}${3:, ${4:windowFeatures}})"
+				},
 				"print",
-				{ "string": "resizeBy", "append": "(${1:deltaX}, ${2:deltaY})" },
-				{ "string": "resizeTo", "append": "(${1:x}, ${2:y})" },
-				{ "string": "scroll", "append": "(${1:x}, ${2:y})" },
-				{ "string": "scrollBy", "append": "(${1:deltaX}, ${2:deltaY})" },
-				{ "string": "scrollTo", "append": "(${1:x}, ${2:y})" }
+				{
+				    "string": "resizeBy",
+				    "append": "(${1:deltaX}, ${2:deltaY})"
+				},
+				{
+				    "string": "resizeTo",
+				    "append": "(${1:x}, ${2:y})"
+				},
+				{
+				    "string": "scroll",
+				    "append": "(${1:x}, ${2:y})"
+				},
+				{
+				    "string": "scrollBy",
+				    "append": "(${1:deltaX}, ${2:deltaY})"
+				},
+				{
+				    "string": "scrollTo",
+				    "append": "(${1:x}, ${2:y})"
+				}
 			]
 		},
 
@@ -628,11 +930,26 @@
 			"name": "js.dom.localStorage.methods",
 
 			"strings": [
-				{ "string": "key", "append": "(${1:index})" },
-				{ "string": "getItem", "append": "(${1:key})" },
-				{ "string": "setItem", "append": "(${1:key}, ${2:value})" },
-				{ "string": "removeItem", "append": "(${1:key})" },
-				{ "string": "clear", "append": "()" }
+				{
+				    "string": "key",
+				    "append": "(${1:index})"
+				},
+				{
+				    "string": "getItem",
+				    "append": "(${1:key})"
+				},
+				{
+				    "string": "setItem",
+				    "append": "(${1:key}, ${2:value})"
+				},
+				{
+				    "string": "removeItem",
+				    "append": "(${1:key})"
+				},
+				{
+				    "string": "clear",
+				    "append": "()"
+				}
 			]
 		}
 	],

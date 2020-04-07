@@ -7,9 +7,18 @@
 			"defaultAppend": " type=\"${1:value}\" $0 />",
 			"strings": [
 				"statschart",
-				{"string": "ref", "append": " name=\"${1:name}\"/>$0"},
-				{"string": "references", "append": ">\n$0\n</references>\n"},
-				{"string": "summary", "append": " show=\"${1:true}\">${2}</summary> $0"}
+				{
+				    "string": "ref",
+				    "append": " name=\"${1:name}\"/>$0"
+				},
+				{
+				    "string": "references",
+				    "append": ">\n$0\n</references>\n"
+				},
+				{
+				    "string": "summary",
+				    "append": " show=\"${1:true}\">${2}</summary> $0"
+				}
 			]
 		},
 		{
@@ -66,26 +75,59 @@
 			"name": "sfs.wiki-sharks",
 			"defaultAppend":"]] $0",
 			"strings": [				
-				{"string": "Mark", "append": " Cuban|Mark]] $0"},
+				{
+				    "string": "Mark",
+				    "append": " Cuban|Mark]] $0"
+				},
 				"Mark Cuban",
-				{"string": "Lori", "append": " Greiner|Lori]] $0"},
+				{
+				    "string": "Lori",
+				    "append": " Greiner|Lori]] $0"
+				},
 				"Lori Greiner",
-				{"string": "Daymond", "append": " John|Daymond]] $0"},
+				{
+				    "string": "Daymond",
+				    "append": " John|Daymond]] $0"
+				},
 				"Daymond John",
-				{"string": "Kevin", "append": " O'Leary|Kevin]] $0"},
+				{
+				    "string": "Kevin",
+				    "append": " O'Leary|Kevin]] $0"
+				},
 				"Kevin O'Leary",
-				{"string": "MrWonderful", "replace": "Kevin O'Leary|Mr. Wonderful]] $0"},
-				{"string": "Barbara", "append": " Corcoran|Barbara]] $0"},
+				{
+				    "string": "MrWonderful",
+				    "replace": "Kevin O'Leary|Mr. Wonderful]] $0"
+				},
+				{
+				    "string": "Barbara",
+				    "append": " Corcoran|Barbara]] $0"
+				},
 				"Barbara Corcoran",
-				{"string": "Robert", "append": " Herjavec|Robert]] $0"},
+				{
+				    "string": "Robert",
+				    "append": " Herjavec|Robert]] $0"
+				},
 				"Robert Herjavec",
-				{"string": "Anne", "append": " Wojcicki|Anne]] $0"},
+				{
+				    "string": "Anne",
+				    "append": " Wojcicki|Anne]] $0"
+				},
 				"Anne Wojcicki",
-				{"string": "Rohan", "append": " Oza|Rohan]] $0"},
+				{
+				    "string": "Rohan",
+				    "append": " Oza|Rohan]] $0"
+				},
 				"Rohan Oza",
-				{"string": "Daniel", "append": " Lubetzky|Daniel]] $0"},
+				{
+				    "string": "Daniel",
+				    "append": " Lubetzky|Daniel]] $0"
+				},
 				"Daniel Lubetzky",
-				{"string": "Maria", "append": " Sharapova|Maria]] $0"},
+				{
+				    "string": "Maria",
+				    "append": " Sharapova|Maria]] $0"
+				},
 				"Maria Sharapova"
 			]
 		},
@@ -93,19 +135,58 @@
 			"name": "sfs.wiki-categories",
 			"defaultAppend":"]] $0",
 			"strings": [
-				{"string": ":Category:Season One", "append": "|Season One]] $0"},
-				{"string": ":Category:Season Two", "append": "|Season Two]] $0"},
-				{"string": ":Category:Season Three", "append": "|Season Three]] $0"},
-				{"string": ":Category:Season Four", "append": "|Season Four]] $0"},
-				{"string": ":Category:Season Five", "append": "|Season Five]] $0"},
-				{"string": ":Category:Season Six", "append": "|Season Six]] $0"},
-				{"string": ":Category:Season Seven", "append": "|Season Seven]] $0"},
-				{"string": ":Category:Season Eight", "append": "|Season Eight]] $0"},
-				{"string": ":Category:Season Nine", "append": "|Season Nine]] $0"},
-				{"string": ":Category:Season Ten", "append": "|Season Ten]] $0"},
-				{"string": ":Category:Season Eleven", "append": "|Season Eleven]] $0"},
-				{"string": ":Category:Apparel", "append": "|Apparel]] $0"},
-				{"string": ":Category:Accessories", "append": "|Accessories]] $0"},
+				{
+				    "string": ":Category:Season One",
+				    "append": "|Season One]] $0"
+				},
+				{
+				    "string": ":Category:Season Two",
+				    "append": "|Season Two]] $0"
+				},
+				{
+				    "string": ":Category:Season Three",
+				    "append": "|Season Three]] $0"
+				},
+				{
+				    "string": ":Category:Season Four",
+				    "append": "|Season Four]] $0"
+				},
+				{
+				    "string": ":Category:Season Five",
+				    "append": "|Season Five]] $0"
+				},
+				{
+				    "string": ":Category:Season Six",
+				    "append": "|Season Six]] $0"
+				},
+				{
+				    "string": ":Category:Season Seven",
+				    "append": "|Season Seven]] $0"
+				},
+				{
+				    "string": ":Category:Season Eight",
+				    "append": "|Season Eight]] $0"
+				},
+				{
+				    "string": ":Category:Season Nine",
+				    "append": "|Season Nine]] $0"
+				},
+				{
+				    "string": ":Category:Season Ten",
+				    "append": "|Season Ten]] $0"
+				},
+				{
+				    "string": ":Category:Season Eleven",
+				    "append": "|Season Eleven]] $0"
+				},
+				{
+				    "string": ":Category:Apparel",
+				    "append": "|Apparel]] $0"
+				},
+				{
+				    "string": ":Category:Accessories",
+				    "append": "|Accessories]] $0"
+				},
 				{"string": ":Category:Analysis", "append": "|analysis]] $0"},
 				{"string": ":Category:Beauty", "append": "|Beauty]] $0"},
 				{"string": ":Category:Beverage", "append": "|Beverage]] $0"},
@@ -176,14 +257,35 @@
 		{
 			"name": "sfs.wiki-links",
 			"defaultAppend":"]] $0",
-			"strings": [				
-				{"string": "Convertible Note", "append": "|convertible note]] $0"},
-				{"string": "Direct To Consumer", "append": "|direct to consumer]] $0"},
-				{"string": "Friends & Family Round", "append": "|friends and family round]] $0"},
-				{"string": "Guest Shark", "append": "|guest shark]] $0"},
-				{"string": "Shark Tank Bite", "append": "|bit]]$0"},
-				{"string": "Shark Tank Bump", "append": "|Shark Tank bump]] $0"},
-				{"string": "Shark Tank Frenzy", "append": "|frenzy]] $0"},
+			"strings": [
+				{
+				    "string": "Convertible Note",
+				    "append": "|convertible note]] $0"
+				},
+				{
+				    "string": "Direct To Consumer",
+				    "append": "|direct to consumer]] $0"
+				},
+				{
+				    "string": "Friends & Family Round",
+				    "append": "|friends and family round]] $0"
+				},
+				{
+				    "string": "Guest Shark",
+				    "append": "|guest shark]] $0"
+				},
+				{
+				    "string": "Shark Tank Bite",
+				    "append": "|bit]]$0"
+				},
+				{
+				    "string": "Shark Tank Bump",
+				    "append": "|Shark Tank bump]] $0"
+				},
+				{
+				    "string": "Shark Tank Frenzy",
+				    "append": "|frenzy]] $0"
+				},
 				"royalty",
 				"equity"
 			]
