@@ -13,51 +13,113 @@
             ]
         },
         {
+            "name": "python.keyword.control.flow",
+            "defaultAppend":"",
+            "strings": [
+                "break",
+                "continue",
+                "elif",
+                "else",
+                "except",
+                "finally",
+                "for",
+                "if",
+                "pass",
+                "raise",
+                "return",
+                "try",
+                "while",
+                "with",
+                "yield"
+            ]
+        },
+        {
+            "name": "python.function.builtin",
+            "defaultAppend":"($1)$0",
+            "strings": [
+                "__import__",
+                "abs",
+                "all",
+                "any",
+                "ascii",
+                "bin",
+                "bool",
+                "breakpoint",
+                "bytearray",
+                "bytes",
+                "callable",
+                "chr",
+                "classmethod",
+                "compile",
+                "complex",
+                "delattr",
+                "dict",
+                "dir",
+                "divmod",
+                "enumerate",
+                "eval",
+                "exec",
+                "filter",
+                "float",
+                "format",
+                "frozenset",
+                "getattr",
+                "globals",
+                "hasattr",
+                "hash",
+                "help",
+                "hex",
+                "id",
+                "input",
+                "int",
+                "isinstance",
+                "issubclass",
+                "iter",
+                "len",
+                "list",
+                "locals",
+                "map",
+                "max",
+                "memoryview",
+                "min",
+                "next",
+                "object",
+                "oct",
+                "open",
+                "ord",
+                "pow",
+                "print",
+                "property",
+                "range",
+                "repr",
+                "reversed",
+                "round",
+                "set",
+                "setattr",
+                "slice",
+                "sorted",
+                "staticmethod",
+                "str",
+                "sum",
+                "super",
+                "tuple",
+                "type",
+                "vars",
+                "zip",
+            ]
+        },
+        {
             "name": "python.functions",
             "defaultAppend":"",
             "strings":[
-                {
-                    "string":"print",
-                    "replace":"print($1)$0"
-                },
                 {
                     "string":"ifmain",
                     "replace":"if __name__ = '__main__':\n\t$1"
                 }
             ]
-        },
-        {
-			"name": "python.keyword.control.flow",
-            "defaultAppend":"",
-			"strings": [
-				"break",
-				"continue",
-				"elif",
-				"else",
-				"except",
-				"finally",
-				"for",
-				"if",
-				"pass",
-				"raise",
-				"return",
-				"try",
-				"while",
-				"with",
-				"yield"
-			]
-		}
+        }
     ],
     "contexts": [
-        {
-            "description": "python keyword",
-            "scope":"source.python",
-            "pattern":"(pr|ifm)([a-zA-Z0-9_]*)",
-            "completionCaptureIndex":1,
-            "completionSetNames":[
-                "python.functions"
-            ]
-        },
         {
             "description": "utf-8 file header",
             "scope":"source.python",
@@ -65,6 +127,33 @@
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "python.file.header"
+            ]
+        },
+        {
+            "description": "Python Keyword",
+            "scope":"source.python",
+            "pattern":"(prefix[a-zA-Z0-9]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "enviroment.situation1.situation2"
+            ]
+        },
+        {
+            "description": "Python Function Builtin",
+            "scope":"source.python",
+            "pattern":"(?<!\\.|@)\\b([a-zA-Z]+)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "python.function.builtin"
+            ]
+        },
+        {
+            "description": "Python Functions",
+            "scope":"source.python",
+            "pattern":"(pr|ifm)([a-zA-Z0-9_]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "python.functions"
             ]
         }
     ]

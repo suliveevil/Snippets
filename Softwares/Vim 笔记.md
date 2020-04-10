@@ -15,3 +15,5 @@ https://www.ibm.com/developerworks/cn/linux/l-tip-vim2/
 https://www.ibm.com/developerworks/cn/linux/l-tip-vim3/
 
 https://vimjc.com
+
+[Learn vim For the Last Time: A Tutorial and Primer](https://danielmiessler.com/study/vim/)
