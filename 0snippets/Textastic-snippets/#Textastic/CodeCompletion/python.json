@@ -9,7 +9,7 @@
                 {
                     "//":"Python 编码声明",
                     "string":"utf-8",
-                    "replace":"#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n$1"
+                    "replace":"#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n$0"
                 }
             ]
         },
@@ -26,7 +26,7 @@
         {
             "name": "python.keywords",
             "//":"Python 关键字（False、None、True 既是关键字也是常量",
-            "defaultAppend":"",
+            "defaultAppend":" $0",
             "strings": [
                 "and",
                 "as",
@@ -64,7 +64,7 @@
         },
         {
             "name": "python.library.standardlibrary",
-            "defaultAppend":"",
+            "defaultAppend":" $0",
             "strings":[
                 "__future__",
                 "__main__",
@@ -274,7 +274,7 @@
                 "zipimport",
                 "zlib"
             ]
-        }
+        },
         {
             "name": "python.object",
             "defaultAppend":"",
@@ -624,7 +624,7 @@
         {
             "description": "Python Standard Library 标准库",
             "scope":"source.python",
-            "pattern":"(?<=from|import)\\b([a-zA-Z0-9_]+)",
+            "pattern":"(?<=from\\s|import\\s)([a-zA-Z0-9_]+)",
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "python.library.standardlibrary"
