@@ -7,23 +7,52 @@
             "defaultAppend":"",
             "strings":[
                 {
+                    "//":"Python 编码声明",
                     "string":"utf-8",
                     "replace":"#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n$1"
                 }
             ]
         },
         {
-            "name": "python.keyword.control.flow",
+            "name": "python.comment",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"comment",
+                    "replace":"\"\"\"\n${1:Your Comment}\n\"\"\"\n$0"
+                }
+            ]
+        },
+        {
+            "name": "python.keywords",
+            "//":"Python 关键字（False、None、True 既是关键字也是常量",
             "defaultAppend":"",
             "strings": [
+                "and",
+                "as",
+                "assert",
+                "async",
+                "await",
                 "break",
+                "class",
                 "continue",
+                "def",
+                "del",
                 "elif",
                 "else",
                 "except",
                 "finally",
                 "for",
+                "from",
+                "global",
                 "if",
+                "import",
+                "in",
+                "is",
+                "lambda",
+                "nonlocal",
+                "not",
+                "or",
                 "pass",
                 "raise",
                 "return",
@@ -143,18 +172,18 @@
         },
         {
             "name": "python.functions",
-            "defaultAppend":"",
             "strings":[
                 {
+                    "//":"测试用",
                     "string":"ifmain",
-                    "replace":"if __name__ = '__main__':\n\t$1"
+                    "replace":"if __name__ = '__main__':\n\t$1\n$0"
                 }
             ]
         }
     ],
     "contexts": [
         {
-            "description": "utf-8 file header",
+            "description": "Python File Header: 运行环境、编码声明",
             "scope":"source.python",
             "pattern":"(ut[a-zA-Z]*)",
             "completionCaptureIndex":1,
@@ -163,12 +192,21 @@
             ]
         },
         {
-            "description": "Python Keyword",
+            "description": "Python Comment 注释",
             "scope":"source.python",
-            "pattern":"(prefix[a-zA-Z0-9]*)",
+            "pattern":"(com[a-zA-Z0-9]*)",
             "completionCaptureIndex":1,
             "completionSetNames":[
-                "enviroment.situation1.situation2"
+                "python.comment"
+            ]
+        },
+        {
+            "description": "Python Keywords",
+            "scope":"source.python",
+            "pattern":"(?<!\\.|\"|'|#)\\b([a-zA-Z]+)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "python.keywords"
             ]
         },
         {
@@ -193,7 +231,7 @@
         {
             "description": "Python Functions",
             "scope":"source.python",
-            "pattern":"(pr|ifm)([a-zA-Z0-9_]*)",
+            "pattern":"(ifm[a-zA-Z]*)",
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "python.functions"

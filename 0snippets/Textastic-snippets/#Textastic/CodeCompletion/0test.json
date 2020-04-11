@@ -56,16 +56,6 @@
                     "replace":"负向后行断言：输入字符前面不能有"
                 }
             ]
-        },
-        {
-            "name": "python.comment",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string":"comm",
-                    "replace":"\n'''\n$1\n'''\n\n$0"
-                }
-            ]
         }
     ],
     "contexts": [
@@ -116,15 +106,6 @@
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "regex.assertion.nlb"
-            ]
-        },
-        {
-            "description": "python comment block",
-            "scope":"source.python",
-            "pattern":"(com[a-zA-Z0-9]*)",
-            "completionCaptureIndex":1,
-            "completionSetNames":[
-                "python.comment"
             ]
         }
     ]
