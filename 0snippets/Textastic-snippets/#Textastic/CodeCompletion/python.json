@@ -188,7 +188,7 @@
                 "posix",
                 "pprint",
                 "profile",
-                "pstats"
+                "pstats",
                 "pty",
                 "pwd",
                 "py_compile",
@@ -272,7 +272,7 @@
                 "zipapp",
                 "zipfile",
                 "zipimport",
-                "zlib",
+                "zlib"
             ]
         }
         {
@@ -342,7 +342,7 @@
                 "__rrshift__",
                 "__rand__",
                 "__rxor__",
-                "__ror__",
+                "__ror__"
             ]
         },
         {
@@ -613,7 +613,7 @@
             ]
         },
         {
-            "description": "Python Keywords",
+            "description": "Python Keywords 关键字",
             "scope":"source.python",
             "pattern":"(?<!\\.|\"|'|#)\\b([a-zA-Z]+)",
             "completionCaptureIndex":1,
@@ -622,7 +622,7 @@
             ]
         },
         {
-            "description": "Python Standard Library",
+            "description": "Python Standard Library 标准库",
             "scope":"source.python",
             "pattern":"(?<=from|import)\\b([a-zA-Z0-9_]+)",
             "completionCaptureIndex":1,
@@ -640,7 +640,7 @@
             ]
         },
         {
-            "description": "Python Function Builtin",
+            "description": "Python Function Builtin 内建函数",
             "scope":"source.python",
             "pattern":"(?<!\\.|\"|'|#)\\b([a-zA-Z0-9_]+)",
             "completionCaptureIndex":1,
@@ -713,7 +713,7 @@
             ]
         },
         {
-            "description": "Python Functions",
+            "description": "Python Functions 方法（函数）",
             "scope":"source.python",
             "pattern":"(ifm[a-zA-Z]*)",
             "completionCaptureIndex":1,
