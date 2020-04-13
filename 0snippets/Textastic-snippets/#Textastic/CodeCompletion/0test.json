@@ -9,7 +9,7 @@
                 {
                     "//": "test placeholder choice、variables、multi-caret",
                     "string":"test",
-                    "replace":"${1:const,var}\n$2\n$3"
+                    "replace":"${1|const,var|}\n$2\n$3"
                 }
             ]
         },

@@ -19,7 +19,7 @@
             "strings":[
                 {
                     "string":"url",
-                    "replace":"[${2:Title}](${1:URL})$0"
+                    "replace":"[${2:Title}](${1:URL})\n$0"
                 }
             ]
         },
@@ -56,6 +56,100 @@
                     "string":"box",
                     "replace":"\"「${1/./-/g}\",\n\"${1|\",\n\"${1/./-/g}」\"\n"
                 }
+            ]
+        },
+        {
+            "name": "markdown.codeblock.language",
+            "defaultAppend":"$0",
+            "strings":[
+                "actionscript3",
+                "applescript",
+                "arduino",
+                "asciidoc",
+                "autohotkey",
+                "autoit",
+                "awk",
+                "bash",
+                "brainfuck",
+                "c",
+                "c#",
+                "clojure",
+                "cmake",
+                "cobol",
+                "cpp",
+                "csharp",
+                "css",
+                "csv",
+                "dart",
+                "delphi",
+                "diff",
+                "dot",
+                "echarts",
+                "edn",
+                "emacs",
+                "elisp",
+                "erl",
+                "flow",
+                "fsharp",
+                "go",
+                "golang",
+                "groovy",
+                "haskell",
+                "html",
+                "ini",
+                "java",
+                "javascript",
+                "json",
+                "julia",
+                "less",
+                "lisp",
+                "lua",
+                "markdown",
+                "mathematica",
+                "matlab",
+                "mermaid",
+                "objc",
+                "objectivec",
+                "org",
+                "osascript",
+                "pascal",
+                "perl",
+                "php",
+                "plantuml",
+                "plist",
+                "prolog",
+                "ps",
+                "pwsh",
+                "python",
+                "puml",
+                "r",
+                "regex",
+                "ruby",
+                "rss",
+                "rtf",
+                "sas",
+                "sass",
+                "scala",
+                "scheme",
+                "sed",
+                "sequence",
+                "shader",
+                "shell",
+                "snippet",
+                "sql",
+                "svg",
+                "swift",
+                "tcl",
+                "tex",
+                "text",
+                "toml",
+                "unity",
+                "vba",
+                "vim",
+                "vue",
+                "xml",
+                "yaml",
+                "zsh"
             ]
         }
     ],
@@ -112,6 +206,15 @@
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "markdown.regex.box"
+            ]
+        },
+        {
+            "description": "Programming Language",
+            "scope":"text.html.markdown",
+            "pattern":"(?<=`)([a-zA-Z0-9]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "markdown.codeblock.language"
             ]
         }
     ]
