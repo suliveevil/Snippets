@@ -3,17 +3,6 @@
     "uuid": "6B854C4C-72F9-11EA-BB9C-57DD78216B54",
     "completionSets":[
         {
-            "name": "test.test",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "//": "test placeholder choice、variables、multi-caret",
-                    "string":"test",
-                    "replace":"${1|const,var|}\n$2\n$3"
-                }
-            ]
-        },
-        {
             "name": "regex.assertion.pla",
             "defaultAppend":"",
             "strings":[
@@ -56,16 +45,52 @@
                     "replace":"负向后行断言：输入字符前面不能有"
                 }
             ]
+        },
+        {
+            "name": "test.choice",
+            "defaultAppend":"",
+            "string":"choice",
+            "replace":"${1|const,var|}\n$2\n$3"
+        },
+        {
+            "name": "test.variable",
+            "defaultAppend":"",
+            "string":"choice",
+            "replace":"${1}\n$2\n$3COMPLETION"
+        },
+        {
+            "name": "test.captureindex",
+            "defaultAppend":"",
+            "string":"choice",
+            "replace":"${1}\n$2\n$3"
         }
     ],
     "contexts": [
         {
             "description": "test",
             "scope":"source.json | text.html.markdown | source.python",
-            "pattern":"(te[a-zA-Z0-9]*)",
+            "pattern":"([a-zA-Z0-9]+)",
             "completionCaptureIndex":1,
             "completionSetNames":[
-                "test.test"
+                "test.choice"
+            ]
+        },
+        {
+            "description": "test",
+            "scope":"source.json | text.html.markdown | source.python",
+            "pattern":"([a-zA-Z0-9]+)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "test.variable"
+            ]
+        },
+        {
+            "description": "test",
+            "scope":"source.json | text.html.markdown | source.python",
+            "pattern":"([a-zA-Z0-9]+)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "test.captureindex"
             ]
         },
         {

@@ -211,9 +211,10 @@
         {
             "description": "Programming Language",
             "scope":"text.html.markdown",
-            "pattern":"(?<=`)([a-zA-Z0-9]*)",
-            "completionCaptureIndex":1,
+            "pattern":"(?<=`)[a-zA-Z0-9]*",
+            "completionCaptureIndex":2,
             "completionSetNames":[
+                "markdown.code.$1.language",
                 "markdown.codeblock.language"
             ]
         }
