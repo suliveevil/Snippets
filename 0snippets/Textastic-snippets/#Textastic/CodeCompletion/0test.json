@@ -50,15 +50,18 @@
             "//":"choice is not supported",
             "name": "test.choice",
             "defaultAppend":"",
-            "string":"choice-snippet",
-            "replace":"${1|const,var|}\n$2\n$3"
+            "strings":[
+                {
+                    "string":"choice",
+                    "replace":"${1|const,var|}\n$2\n$3"
+                }
+            ]
         },
         {
             "//":"variable is supported",
             "name": "test.variable",
-            "defaultAppend":"",
-            "string":"choice",
-            "replace":"${1}\n$2\n$3COMPLETION"
+            "defaultAppend":"-$COMPLETION$0",
+            "string":"variable"
         },
         {
             "//":"index is supported",
@@ -73,13 +76,33 @@
             "defaultAppend":"",
             "string":"attr",
             "replace":"attribute$0"
+        },
+        {
+            "name": "markdown.normal",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"normal",
+                    "replace":"normal\n$0"
+                }
+            ]
         }
     ],
     "contexts": [
         {
+            "//":"基准线",
+            "description": "normal(baseline)",
+            "scope":"text.html.markdown",
+            "pattern":"(no[a-zA-Z0-9]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "markdown.normal"
+            ]
+        },
+        {
             "description": "test",
             "scope":"source.json | text.html.markdown | source.python",
-            "pattern":"([a-zA-Z0-9]+)",
+            "pattern":"(ch[a-zA-Z0-9\\-]*)",
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "test.choice"
@@ -88,7 +111,7 @@
         {
             "description": "test",
             "scope":"source.json | text.html.markdown | source.python",
-            "pattern":"([a-zA-Z0-9]+)",
+            "pattern":"(va[a-zA-Z0-9]*)",
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "test.variable"
