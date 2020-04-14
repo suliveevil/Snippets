@@ -1,0 +1,27 @@
+{
+	"uuid": "E5AE1F52-7E49-11EA-A9DE-E7AC371A57AD",
+	"category": "Code",
+	"templates": [
+	    {
+			"name": "Bash File",
+			"fileExtension": "sh",
+			"snippet": ""
+		},
+	    {
+			"name": "JavaScript File",
+			"fileExtension": "js",
+			"snippet": ""
+		},
+		{
+			"name": "Python File",
+			"fileExtension": "py",
+			"snippet": "# -*- coding=utf-8 -*-\n\n$0\n"
+		},
+		
+		{
+			"name": "VimScript",
+			"fileExtension": "vim",
+			"snippet": ""
+		}
+	]
+}

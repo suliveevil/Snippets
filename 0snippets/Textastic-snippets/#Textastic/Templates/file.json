@@ -1,0 +1,21 @@
+{
+	"uuid": "C3A2862C-7E4A-11EA-828A-7BF1484B3860",
+	"category": "File",
+	"templates": [
+	    {
+			"name": "plain text",
+			"fileExtension": "txt",
+			"snippet": ""
+		},
+	    {
+			"name": "CSV",
+			"fileExtension": "csv",
+			"snippet": ""
+		},
+		{
+			"name": "JSON",
+			"fileExtension": "json",
+			"snippet": ""
+		}
+	]
+}
