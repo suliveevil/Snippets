@@ -1,0 +1,27 @@
+{
+    "description": "Textastic CodeCompletion for Swift",
+    "uuid": "uuid",
+    "completionSets":[
+        {
+            "name": "enviroment.situation1.situation2",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"string2match",
+                    "replace":"snippet"
+                }
+            ]
+        }
+    ],
+    "contexts": [
+        {
+            "description": "description",
+            "scope":"source.sql",
+            "pattern":"(prefix[a-zA-Z0-9]*)",
+            "completionCaptureIndex":1,
+            "completionSetNames":[
+                "enviroment.situation1.situation2"
+            ]
+        }
+    ]
+}

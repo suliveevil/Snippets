@@ -63,10 +63,27 @@
         {
             "//": "variable is supported",
             "name": "test.variable",
-            "defaultAppend": "-$COMPLETION$0",
+            "defaultAppend": "",
             "strings": [
                 {
-                    "string":"variable"
+                    "//":"✅",
+                    "string":"variable",
+                    "replace":"variable\n$COMPLETION\n"
+                },
+                {
+                    "//":"",
+                    "string":"clipboard",
+                    "replace":"-\n$CLIPBOARD\n-$0"
+                },
+                {
+                    "//":"❌",
+                    "string":"date",
+                    "replace":"$CURRENT_DATE\n$0"
+                },
+                {
+                    "//":"❌",
+                    "string":"year",
+                    "replace":"$CURRENT_YEAR\n$0"
                 }
             ]
         },
@@ -76,12 +93,11 @@
             "name": "test.test",
             "defaultAppend": "$1--$0",
             "strings": [
-                "captureindex",
-                "index1",
                 {
                     "string":"index",
                     "replace": "${1:attr1}\n${2:attr2}\n${3:attr3}"
-                }
+                },
+                "index1",
             ]
         },
         // index2
@@ -96,6 +112,16 @@
                 {
                     "string": "attr",
                     "replace": "attribute"
+                }
+            ]
+        },
+        {
+            "name": "test.test.snippet",
+            "defaultAppend":"",
+            "strings":[
+                {
+                    "string":"string2match",
+                    "replace":"${1:document.}getElement${2/(T)|(C)|(I)/(?1:s)(?2:s)/}By${2:T}${2/(T)|(I)|(C)|.*/(?1:agName)(?2:d)(?3:lassName)/}('$3')$0"
                 }
             ]
         },
@@ -126,7 +152,7 @@
         {
             "description": "test",
             "scope": "source.json | text.html.markdown | source.python",
-            "pattern": "(ch[a-zA-Z0-9]*)",
+            "pattern": "(cho)[a-zA-Z0-9]*",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "test.choice"
@@ -136,7 +162,7 @@
         {
             "description": "test",
             "scope": "source.json | text.html.markdown | source.python",
-            "pattern": "(va[a-zA-Z0-9]*)",
+            "pattern": "(.{2,})[a-zA-Z0-9]*",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "test.variable"
@@ -156,10 +182,9 @@
         {
             "description": "index 2",
             "scope": "text.html | text.html.markdown | meta.tag",
-            "pattern": "([a-zA-Z0-9]*)",
+            "pattern": "([a-zA-Z0-9]+)",
             "completionCaptureIndex": 2,
             "completionSetNames": [
-                "test.test.$1",
                 "test.captureindex"
             ]
         },

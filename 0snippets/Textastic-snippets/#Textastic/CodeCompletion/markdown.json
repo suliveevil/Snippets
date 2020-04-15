@@ -18,13 +18,21 @@
             "defaultAppend":"",
             "strings":[
                 {
-                    "string":"url",
+                    "string":"imgLink",
+                    "replace":"![${2:Title}](${1:URL})\n$0"
+                },
+                {
+                    "string":"pictureLink",
+                    "replace":"![${2:Title}](${1:URL})\n$0"
+                },
+                {
+                    "string":"urlLink",
                     "replace":"[${2:Title}](${1:URL})\n$0"
                 }
             ]
         },
         {
-            "name":"markdown.code",
+            "name":"markdown.block.code",
             "defaultAppend":"",
             "strings":[
                 {
@@ -34,7 +42,7 @@
             ]
         },
         {
-            "name":"markdown.diagram.graphviz",
+            "name":"markdown.block.code.diagram",
             "defaultAppend":"",
             "strings":[
                 {
@@ -42,8 +50,24 @@
                     "replace": "```${1:dot}\n${2:graphviz code}\n```\n$0"
                 },
                 {
+                    "string": "echarts",
+                    "replace": "```${1:echarts}\n${2:Badu Echarts}\n```\n$0"
+                },
+                {
+                    "string": "flow",
+                    "replace": "```${1:flow}\n${2:flowchart}\n```\n$0"
+                },
+                {
                     "string": "graphviz",
-                    "replace": "```${1:dot}\n${2:graphviz code}\n```\n$0"
+                    "replace": "```${1:dot}\n${2:graphviz}\n```\n$0"
+                },
+                {
+                    "string": "mermaid",
+                    "replace": "```${1:mermaid}\n${2:mermaid}\n```\n$0"
+                },
+                {
+                    "string": "sequence",
+                    "replace": "```${1:sequence}\n${2:sequence}\n```\n$0"
                 }
             ]
             
@@ -54,12 +78,12 @@
             "strings":[
                 {
                     "string":"box",
-                    "replace":"\"「${1/./-/g}\",\n\"${1|\",\n\"${1/./-/g}」\"\n"
+                    "replace":"\"「${1:/./-/g}\",\n\"|${1}|\",\n\"${1:/./-/g}」\"\n"
                 }
             ]
         },
         {
-            "name": "markdown.codeblock.language",
+            "name": "markdown.block.code.language",
             "defaultAppend":"$0",
             "strings":[
                 "actionscript3",
@@ -83,13 +107,10 @@
                 "dart",
                 "delphi",
                 "diff",
-                "dot",
-                "echarts",
                 "edn",
                 "emacs",
                 "elisp",
                 "erl",
-                "flow",
                 "fsharp",
                 "go",
                 "golang",
@@ -107,7 +128,6 @@
                 "markdown",
                 "mathematica",
                 "matlab",
-                "mermaid",
                 "objc",
                 "objectivec",
                 "org",
@@ -132,7 +152,6 @@
                 "scala",
                 "scheme",
                 "sed",
-                "sequence",
                 "shader",
                 "shell",
                 "snippet",
@@ -155,7 +174,7 @@
     ],
     "contexts": [
         {
-            "description": "blog",
+            "description": "blog header",
             "scope":"text.html.markdown",
             "pattern":"(blo[a-zA-Z0-9]*)",
             "completionCaptureIndex":1,
@@ -166,7 +185,7 @@
         {
             "description": "markdown URL",
             "scope":"text.html.markdown",
-            "pattern":"(ur[a-zA-Z0-9]*)",
+            "pattern":"(im|pi|ur)[a-zA-Z0-9]*",
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "markdown.url"
@@ -178,25 +197,7 @@
             "pattern":"(cod[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "markdown.code"
-            ]
-        },
-        {
-            "description":"markdown diagram",
-            "scope":"text.html.markdown",
-            "pattern":"(dot[a-zA-Z]*)",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "markdown.diagram.graphviz"
-            ]
-        },
-        {
-            "description":"markdown diagram",
-            "scope":"text.html.markdown",
-            "pattern":"(grap[a-zA-Z]*)",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "markdown.diagram.graphviz"
+                "markdown.block.code"
             ]
         },
         {
@@ -209,13 +210,22 @@
             ]
         },
         {
+            "description":"markdown diagram",
+            "scope":"text.html.markdown",
+            "pattern":"(dot|ech|flo|gra|seq)[a-zA-Z]*",
+            "completionCaptureIndex": 2,
+            "completionSetNames": [
+                "markdown.block.code.diagram"
+            ]
+        },
+        {
             "description": "Programming Language",
             "scope":"text.html.markdown",
-            "pattern":"(?<=`)[a-zA-Z0-9]*",
+            "//":"(?<=`)[a-zA-Z0-9]*",
+            "pattern":"([a-zA-Z0-9]+)",
             "completionCaptureIndex":2,
             "completionSetNames":[
-                "markdown.code.$1.language",
-                "markdown.codeblock.language"
+                "markdown.block.code.language"
             ]
         }
     ]

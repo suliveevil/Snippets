@@ -26,7 +26,7 @@
         {
             "name": "python.keywords",
             "//":"Python 关键字（False、None、True 既是关键字也是常量",
-            "defaultAppend":" $0",
+            "defaultAppend":"$0",
             "strings": [
                 "and",
                 "as",
@@ -586,6 +586,10 @@
             "name": "python.functions",
             "strings":[
                 {
+                    "string" : "a/f/,
+                    "replace" : "f(a)"
+                },
+                {
                     "//":"测试用",
                     "string":"ifmain",
                     "replace":"if __name__ = '__main__':\n\t$1\n$0"
@@ -715,7 +719,7 @@
         {
             "description": "Python Functions 方法（函数）",
             "scope":"source.python",
-            "pattern":"(ifm[a-zA-Z]*)",
+            "pattern":"(a\\/|ifm)[a-zA-Z0-9/]*",
             "completionCaptureIndex":1,
             "completionSetNames":[
                 "python.functions"
