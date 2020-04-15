@@ -46,7 +46,7 @@ JSB.newAddon = function(mainPath){
     queryAddonCommandStatus: function() {
       if(Application.sharedInstance().studyController(self.window).studyMode < 3)
         return {image:'deepl.png',object:self,selector:'toggleTranslate:',checked:(self.webController.view.window?true:false)};
-      return nil;
+      return null;
     },
     //Clicking note
     onPopupMenuOnNote: function(sender){
