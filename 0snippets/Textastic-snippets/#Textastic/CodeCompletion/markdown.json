@@ -199,7 +199,7 @@
         {
             "description": "markdown regex box",
             "scope": "text.html.markdown",
-            "pattern": "(fo|bo)([a-zA-Z0-9]*)",
+            "pattern": "\\b([a-zA-Z0-9]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "markdown.fold",
