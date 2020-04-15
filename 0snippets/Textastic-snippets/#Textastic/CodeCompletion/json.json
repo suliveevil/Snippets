@@ -3,11 +3,12 @@
     "uuid": "C9AC1DE2-7F28-11EA-824A-419027B8DBED",
     "completionSets": [
         {
-            "name": "enviroment.situation1.situation2",
+            "name": "json.snippet.scope",
             "defaultAppend": "",
-            "strings": [{
-            "string": "string2match",
-            "replace": "snippet"
+            "strings": [
+                {
+                    "string": "applescript",
+                    "replace": "source.applescript"
         },
         {
             "name": "enviroment.situation1.situation2",

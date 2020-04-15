@@ -64,14 +64,6 @@
             ]
         },
         {
-            "name": "markdown.regex.box",
-            "defaultAppend": "",
-            "strings": [{
-                "string": "box",
-                "replace": "\"「${1:/./-/g}\",\n\"|${1}|\",\n\"${1:/./-/g}」\"\n"
-            }]
-        },
-        {
             "name": "markdown.block.code.language",
             "defaultAppend": "$0",
             "strings": [
@@ -159,6 +151,22 @@
                 "yaml",
                 "zsh"
             ]
+        },
+        {
+            "name": "markdown.fold",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "fold",
+                "replace": "<details><summary>${1:description}</summary><br>\n${2:content}\n</details>\n$0"
+            }]
+        },
+        {
+            "name": "markdown.regex.box",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "box",
+                "replace": "\"「${1:/./-/g}\",\n\"|${1}|\",\n\"${1:/./-/g}」\"\n"
+            }]
         }
     ],
     "contexts": [{
@@ -191,9 +199,10 @@
         {
             "description": "markdown regex box",
             "scope": "text.html.markdown",
-            "pattern": "(box)",
+            "pattern": "(fo|bo)([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
+                "markdown.fold",
                 "markdown.regex.box"
             ]
         },
