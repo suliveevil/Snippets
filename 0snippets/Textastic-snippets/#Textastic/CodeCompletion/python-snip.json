@@ -1,16 +1,13 @@
 {
     "description": "Textastic Code Completion for Python",
     "uuid": "6C20A578-716B-11EA-91B2-A1E3873F6C0A",
-    "completionSets": [
-        {
+    "completionSets": [{
             "name": "test",
             "scope": "source.py",
-            "strings":[
-                {
-                    "string":"coding",
-                    "append":"# -*- coding: utf-8 -*-\n\"\"\"\n${1:description}\n\"\"\"\n$2"
-                }
-            ]
+            "strings": [{
+                "string": "coding",
+                "append": "# -*- coding: utf-8 -*-\n\"\"\"\n${1:description}\n\"\"\"\n$2"
+            }]
         },
         {
             "name": "support.type.exception.python",
@@ -232,16 +229,13 @@
             ]
         }
     ],
-
-    "contexts": [
-        {
-            "description": "test contexts",
-            "scope": "source.py",
-            "pattern": "([a-zA-Z]+)",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "test"
-            ]
-        }
-    ]
+    "contexts": [{
+        "description": "test contexts",
+        "scope": "source.py",
+        "pattern": "([a-zA-Z]+)",
+        "completionCaptureIndex": 1,
+        "completionSetNames": [
+            "test"
+        ]
+    }]
 }

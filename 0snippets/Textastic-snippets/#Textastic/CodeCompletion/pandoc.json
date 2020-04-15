@@ -1,12 +1,10 @@
 {
   "description": "Pandoc snippets",
   "uuid": "6a6b74bb-499d-43cf-89f7-8a2d0815d0e9",
-  "completionSets": [
-    {
+  "completionSets": [{
       "name": "pandoc.snippets.inline",
       "defaultAppend": "",
-      "strings": [
-        {
+      "strings": [{
           "string": "*emphasis*",
           "replace": "*${1:text}*"
         },
@@ -51,8 +49,7 @@
     {
       "name": "pandoc.snippets.footnotes",
       "defaultAppend": "",
-      "strings": [
-        {
+      "strings": [{
           "string": "[^footnote marker]",
           "replace": "[^${1:id}]"
         },
@@ -65,62 +62,50 @@
     {
       "name": "pandoc.snippets.lists.unordered.+.continue",
       "defaultAppend": "",
-      "strings": [
-        {
-          "string": "+",
-          "replace": "\n+ $0"
-        }
-      ]
+      "strings": [{
+        "string": "+",
+        "replace": "\n+ $0"
+      }]
     },
     {
       "name": "pandoc.snippets.lists.unordered.-.continue",
       "defaultAppend": "",
-      "strings": [
-        {
-          "string": "-",
-          "replace": "\n- $0"
-        }
-      ]
+      "strings": [{
+        "string": "-",
+        "replace": "\n- $0"
+      }]
     },
     {
       "name": "pandoc.snippets.lists.unordered.*.continue",
       "defaultAppend": "",
-      "strings": [
-        {
-          "string": "*",
-          "replace": "\n* $0"
-        }
-      ]
+      "strings": [{
+        "string": "*",
+        "replace": "\n* $0"
+      }]
     },
     {
       "name": "pandoc.snippets.lists.task.-.continue",
       "defaultAppend": "",
-      "strings": [
-        {
-          "string": "- [ ]",
-          "replace": "\n- [ ] $0"
-        }
-      ]
+      "strings": [{
+        "string": "- [ ]",
+        "replace": "\n- [ ] $0"
+      }]
     },
     {
       "name": "pandoc.snippets.lists.task.*.continue",
       "defaultAppend": "",
-      "strings": [
-        {
-          "string": "* [ ]",
-          "replace": "\n- [ ] $0"
-        }
-      ]
+      "strings": [{
+        "string": "* [ ]",
+        "replace": "\n- [ ] $0"
+      }]
     },
     {
       "name": "pandoc.snippets.lists.task.+.continue",
       "defaultAppend": "",
-      "strings": [
-        {
-          "string": "+ [ ]",
-          "replace": "\n- [ ] $0"
-        }
-      ]
+      "strings": [{
+        "string": "+ [ ]",
+        "replace": "\n- [ ] $0"
+      }]
     },
     {
       "name": "pandoc.snippets.lists.task",
@@ -141,8 +126,7 @@
     {
       "name": "pandoc.snippets.block",
       "defaultAppend": "",
-      "strings": [
-        {
+      "strings": [{
           "string": "[^footnote]",
           "replace": "[^${1:id}]: ${2:note}\n\n"
         },
@@ -157,8 +141,7 @@
       ]
     }
   ],
-  "contexts": [
-    {
+  "contexts": [{
       "description": "Pandoc/markdown snippets inline",
       "scope": "text.pandoc, text.html.markdown.pandoc, text.html.markdown",
       "pattern": "(?<![\\w\\d])([\\w\\*~\\[^!]+)",

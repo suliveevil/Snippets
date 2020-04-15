@@ -1,62 +1,54 @@
 {
-	"description": "Textastic Code Completion for Snippet Editing",
-	"uuid": "44065688-726E-11EA-A06C-1163C736638C",
-	
-    "completionSets":[
-        {
-            "name":"textastic.snippet.file",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string": "tsf",
-                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"uuid\": \"${2:uuid}\",\n\t\"completionSets\":[\n\t\t${3:tsni$0}\n\t],\n\t\"contexts\": [\n\t\t${4:tcon}\n\t]\n}"
-                }
-            ]
+    "description": "Textastic Code Completion for Snippet Editing",
+    "uuid": "44065688-726E-11EA-A06C-1163C736638C",
+
+    "completionSets": [{
+            "name": "textastic.snippet.file",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "tsf",
+                "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"uuid\": \"${2:uuid}\",\n\t\"completionSets\":[\n\t\t${3:tsni$0}\n\t],\n\t\"contexts\": [\n\t\t${4:tcon}\n\t]\n}"
+            }]
         },
         {
-            "name":"textastic.snippet.snippets",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string": "tsnippet",
-                    "replace": "{\n\t\"name\": \"${1:enviroment}.${2:situation1}.${3:situation2}\",\n\t\"defaultAppend\":\"${4}\",\n\t\"strings\":[\n\t\t{\n\t\t\t\"string\":\"${5:string2match}\",\n\t\t\t\"${6:replace}\":\"${7:snippet}\"\n\t\t}\n\t]\n}"
-                }
-            ]
+            "name": "textastic.snippet.snippets",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "tsnippet",
+                "replace": "{\n\t\"name\": \"${1:enviroment}.${2:situation1}.${3:situation2}\",\n\t\"defaultAppend\":\"${4}\",\n\t\"strings\":[\n\t\t{\n\t\t\t\"string\":\"${5:string2match}\",\n\t\t\t\"${6:replace}\":\"${7:snippet}\"\n\t\t}\n\t]\n}"
+            }]
         },
         {
-            "name":"textastic.snippet.contexts",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string": "tcont",
-                    "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"scope\":\"${2:source}.${3:python}\",\n\t\"pattern\":\"(${4:prefix}[${5:a-zA-Z0-9}]*)\",\n\t\"completionCaptureIndex\":1,\n\t\"completionSetNames\":[\n\t\t\"${6:enviroment}.${7:situation1}.${8:situation2}\"\n\t]\n}"
-                }
-            ]
+            "name": "textastic.snippet.contexts",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "tcont",
+                "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"scope\":\"${2:source}.${3:python}\",\n\t\"pattern\":\"(${4:prefix}[${5:a-zA-Z0-9}]*)\",\n\t\"completionCaptureIndex\":1,\n\t\"completionSetNames\":[\n\t\t\"${6:enviroment}.${7:situation1}.${8:situation2}\"\n\t]\n}"
+            }]
         }
     ],
-    "contexts": [
-        {
-            "description":"textastic snippet file",
-            "scope":"source.json",
-            "pattern":"(tsf[a-zA-Z]*)",
+    "contexts": [{
+            "description": "textastic snippet file",
+            "scope": "source.json",
+            "pattern": "(tsf[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "textastic.snippet.file"
             ]
         },
         {
-            "description":"textastic snippet",
-            "scope":"source.json",
-            "pattern":"(tsn[a-zA-Z]*)",
+            "description": "textastic snippet",
+            "scope": "source.json",
+            "pattern": "(tsn[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "textastic.snippet.snippets"
             ]
         },
         {
-            "description":"textastic context",
-            "scope":"source.json",
-            "pattern":"(tco[a-zA-Z]*)",
+            "description": "textastic context",
+            "scope": "source.json",
+            "pattern": "(tco[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "textastic.snippet.contexts"

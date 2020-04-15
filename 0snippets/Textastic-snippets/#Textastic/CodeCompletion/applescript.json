@@ -1,27 +1,21 @@
 {
     "description": "Textastic CodeCompletion for AppleScript",
     "uuid": "uuid",
-    "completionSets":[
-        {
-            "name": "enviroment.situation1.situation2",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string":"string2match",
-                    "replace":"snippet"
-                }
-            ]
-        }
-    ],
-    "contexts": [
-        {
-            "description": "description",
-            "scope":"source.applescript",
-            "pattern":"(prefix[a-zA-Z0-9]*)",
-            "completionCaptureIndex":1,
-            "completionSetNames":[
-                "enviroment.situation1.situation2"
-            ]
-        }
-    ]
+    "completionSets": [{
+        "name": "enviroment.situation1.situation2",
+        "defaultAppend": "",
+        "strings": [{
+            "string": "string2match",
+            "replace": "snippet"
+        }]
+    }],
+    "contexts": [{
+        "description": "description",
+        "scope": "source.applescript",
+        "pattern": "(prefix[a-zA-Z0-9]*)",
+        "completionCaptureIndex": 1,
+        "completionSetNames": [
+            "enviroment.situation1.situation2"
+        ]
+    }]
 }

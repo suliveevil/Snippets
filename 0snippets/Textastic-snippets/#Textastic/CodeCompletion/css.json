@@ -1,9 +1,7 @@
 {
 	"description": "Textastic Code Completion for CSS",
 	"uuid": "7918FCDA-429B-474B-919D-D352311D4274",
-
-	"completionSets": [
-		{
+	"completionSets": [{
 			"name": "css.properties",
 			"defaultAppend": ": $0;",
 			"strings": [
@@ -170,12 +168,11 @@
 		{
 			"name": "css.properties.css3",
 			"defaultAppend": ": $0;",
-			"strings": [
-				{
-				    "//": " CSS3 specs; final recommendations, but may not be implemented in browsers yet"
+			"strings": [{
+					"//": " CSS3 specs; final recommendations, but may not be implemented in browsers yet"
 				},
 				{
-				    "//": " http://www.w3.org/TR/css3-animations/"
+					"//": " http://www.w3.org/TR/css3-animations/"
 				},
 				"animation",
 				"animation-delay",
@@ -186,33 +183,38 @@
 				"animation-name",
 				"animation-play-state",
 				"animation-timing-function",
-
-				{"//":" http://dev.w3.org/csswg/css3-3d-transforms/"},
+				{
+					"//": " http://dev.w3.org/csswg/css3-3d-transforms/"
+				},
 				"transform",
 				"transform-origin",
 				"transform-style",
 				"perspective-",
 				"perspective-origin",
 				"backface-visibility",
-
-				{"//":" http://www.w3.org/TR/css3-page/"},
+				{
+					"//": " http://www.w3.org/TR/css3-page/"
+				},
 				"fit",
 				"fit-position",
-
-				{"//":" http://www.w3.org/TR/css3-ruby/"},
+				{
+					"//": " http://www.w3.org/TR/css3-ruby/"
+				},
 				"ruby-position",
 				"ruby-align",
 				"ruby-overhang",
 				"ruby-span",
-
-				{"//":" http://www.w3.org/TR/css3-marquee/"},
+				{
+					"//": " http://www.w3.org/TR/css3-marquee/"
+				},
 				"overflow-style",
 				"marquee-style",
 				"marquee-play-count",
 				"marquee-direction",
 				"marquee-speed",
-
-				{"//":" http://www.w3.org/TR/css3-ui/"},
+				{
+					"//": " http://www.w3.org/TR/css3-ui/"
+				},
 				"appearance",
 				"icon",
 				"box-sizing",
@@ -221,8 +223,9 @@
 				"nav-right",
 				"nav-down",
 				"nav-left",
-
-				{"//":" http://www.w3.org/TR/css3-multicol/"},
+				{
+					"//": " http://www.w3.org/TR/css3-multicol/"
+				},
 				"column-width",
 				"column-count",
 				"columns",
@@ -236,8 +239,9 @@
 				"break-inside",
 				"column-span",
 				"column-fill",
-
-				{"//":" http://www.w3.org/TR/css3-background/"},
+				{
+					"//": " http://www.w3.org/TR/css3-background/"
+				},
 				"border-image-slice",
 				"border-image-source",
 				"border-image-width",
@@ -256,8 +260,9 @@
 					"string": "box-shadow",
 					"append": ": ${1:${2:0px} ${3:3px} ${4:5px} ${5:#333}};"
 				},
-
-				{"//":" http://www.w3.org/TR/css3-flexbox/"},
+				{
+					"//": " http://www.w3.org/TR/css3-flexbox/"
+				},
 				"box-orient",
 				"box-direction",
 				"box-ordinal-group",
@@ -266,15 +271,14 @@
 				"box-flex-group",
 				"box-pack",
 				"box-lines",
-
-				{"//":" http://www.w3.org/TR/WD-font/"},
+				{
+					"//": " http://www.w3.org/TR/WD-font/"
+				},
 				"font-smooth"
 			]
 		}
 	],
-
-	"contexts": [
-		{
+	"contexts": [{
 			"description": "CSS Property Completion",
 			"scope": "source.css meta.property-list.css, source.css.less",
 			"pattern": "(?<!:)(?:^|\\s|;)([a-zA-Z\\-+]+)",
@@ -289,9 +293,9 @@
 			"scope": "source.css - meta.property-list.css, source.css.less",
 			"pattern": "(?:^|\\s|\\})(@[a-zA-Z-+]*)",
 			"completionCaptureIndex": 1,
-			"completionSetNames": [
-				{"//":" this is done through Emmet"}
-			]
+			"completionSetNames": [{
+				"//": " this is done through Emmet"
+			}]
 		}
 	]
 }

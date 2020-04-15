@@ -1,32 +1,30 @@
 {
 	"description": "Textastic Code Completion for SFS Wikis",
 	"uuid": "CACA68A6-B67C-428C-BB0C-79E84D19C17B",
-	"completionSets": [
-		{
+	"completionSets": [{
 			"name": "sfs.parser-tags",
 			"defaultAppend": " type=\"${1:value}\" $0 />",
 			"strings": [
 				"statschart",
 				{
-				    "string": "ref",
-				    "append": " name=\"${1:name}\"/>$0"
+					"string": "ref",
+					"append": " name=\"${1:name}\"/>$0"
 				},
 				{
-				    "string": "references",
-				    "append": ">\n$0\n</references>\n"
+					"string": "references",
+					"append": ">\n$0\n</references>\n"
 				},
 				{
-				    "string": "summary",
-				    "append": " show=\"${1:true}\">${2}</summary> $0"
+					"string": "summary",
+					"append": " show=\"${1:true}\">${2}</summary> $0"
 				}
 			]
 		},
 		{
 			"name": "sfs.template-tags",
 			"defaultAppend": " \n}}",
-			"strings": [
-				{
-					"string": "CompanySidebar", 
+			"strings": [{
+					"string": "CompanySidebar",
 					"append": "\n|Float=right\n|Category=[[:Category:${4:categoryname}|${4}]]\n|Company=\n|AskingAmt=\n|AskingEQ=\n|AskingVal=\n|DealType=${6:No Deal}\n|Sharks=\n|DealAmt=\n|DealEQ=\n|DealVal=\n|SharkBite=\n}}"
 				},
 				{
@@ -73,156 +71,243 @@
 		},
 		{
 			"name": "sfs.wiki-sharks",
-			"defaultAppend":"]] $0",
-			"strings": [				
-				{
-				    "string": "Mark",
-				    "append": " Cuban|Mark]] $0"
+			"defaultAppend": "]] $0",
+			"strings": [{
+					"string": "Mark",
+					"append": " Cuban|Mark]] $0"
 				},
 				"Mark Cuban",
 				{
-				    "string": "Lori",
-				    "append": " Greiner|Lori]] $0"
+					"string": "Lori",
+					"append": " Greiner|Lori]] $0"
 				},
 				"Lori Greiner",
 				{
-				    "string": "Daymond",
-				    "append": " John|Daymond]] $0"
+					"string": "Daymond",
+					"append": " John|Daymond]] $0"
 				},
 				"Daymond John",
 				{
-				    "string": "Kevin",
-				    "append": " O'Leary|Kevin]] $0"
+					"string": "Kevin",
+					"append": " O'Leary|Kevin]] $0"
 				},
 				"Kevin O'Leary",
 				{
-				    "string": "MrWonderful",
-				    "replace": "Kevin O'Leary|Mr. Wonderful]] $0"
+					"string": "MrWonderful",
+					"replace": "Kevin O'Leary|Mr. Wonderful]] $0"
 				},
 				{
-				    "string": "Barbara",
-				    "append": " Corcoran|Barbara]] $0"
+					"string": "Barbara",
+					"append": " Corcoran|Barbara]] $0"
 				},
 				"Barbara Corcoran",
 				{
-				    "string": "Robert",
-				    "append": " Herjavec|Robert]] $0"
+					"string": "Robert",
+					"append": " Herjavec|Robert]] $0"
 				},
 				"Robert Herjavec",
 				{
-				    "string": "Anne",
-				    "append": " Wojcicki|Anne]] $0"
+					"string": "Anne",
+					"append": " Wojcicki|Anne]] $0"
 				},
 				"Anne Wojcicki",
 				{
-				    "string": "Rohan",
-				    "append": " Oza|Rohan]] $0"
+					"string": "Rohan",
+					"append": " Oza|Rohan]] $0"
 				},
 				"Rohan Oza",
 				{
-				    "string": "Daniel",
-				    "append": " Lubetzky|Daniel]] $0"
+					"string": "Daniel",
+					"append": " Lubetzky|Daniel]] $0"
 				},
 				"Daniel Lubetzky",
 				{
-				    "string": "Maria",
-				    "append": " Sharapova|Maria]] $0"
+					"string": "Maria",
+					"append": " Sharapova|Maria]] $0"
 				},
 				"Maria Sharapova"
 			]
 		},
 		{
 			"name": "sfs.wiki-categories",
-			"defaultAppend":"]] $0",
-			"strings": [
-				{
-				    "string": ":Category:Season One",
-				    "append": "|Season One]] $0"
+			"defaultAppend": "]] $0",
+			"strings": [{
+					"string": ":Category:Season One",
+					"append": "|Season One]] $0"
 				},
 				{
-				    "string": ":Category:Season Two",
-				    "append": "|Season Two]] $0"
+					"string": ":Category:Season Two",
+					"append": "|Season Two]] $0"
 				},
 				{
-				    "string": ":Category:Season Three",
-				    "append": "|Season Three]] $0"
+					"string": ":Category:Season Three",
+					"append": "|Season Three]] $0"
 				},
 				{
-				    "string": ":Category:Season Four",
-				    "append": "|Season Four]] $0"
+					"string": ":Category:Season Four",
+					"append": "|Season Four]] $0"
 				},
 				{
-				    "string": ":Category:Season Five",
-				    "append": "|Season Five]] $0"
+					"string": ":Category:Season Five",
+					"append": "|Season Five]] $0"
 				},
 				{
-				    "string": ":Category:Season Six",
-				    "append": "|Season Six]] $0"
+					"string": ":Category:Season Six",
+					"append": "|Season Six]] $0"
 				},
 				{
-				    "string": ":Category:Season Seven",
-				    "append": "|Season Seven]] $0"
+					"string": ":Category:Season Seven",
+					"append": "|Season Seven]] $0"
 				},
 				{
-				    "string": ":Category:Season Eight",
-				    "append": "|Season Eight]] $0"
+					"string": ":Category:Season Eight",
+					"append": "|Season Eight]] $0"
 				},
 				{
-				    "string": ":Category:Season Nine",
-				    "append": "|Season Nine]] $0"
+					"string": ":Category:Season Nine",
+					"append": "|Season Nine]] $0"
 				},
 				{
-				    "string": ":Category:Season Ten",
-				    "append": "|Season Ten]] $0"
+					"string": ":Category:Season Ten",
+					"append": "|Season Ten]] $0"
 				},
 				{
-				    "string": ":Category:Season Eleven",
-				    "append": "|Season Eleven]] $0"
+					"string": ":Category:Season Eleven",
+					"append": "|Season Eleven]] $0"
 				},
 				{
-				    "string": ":Category:Apparel",
-				    "append": "|Apparel]] $0"
+					"string": ":Category:Apparel",
+					"append": "|Apparel]] $0"
 				},
 				{
-				    "string": ":Category:Accessories",
-				    "append": "|Accessories]] $0"
+					"string": ":Category:Accessories",
+					"append": "|Accessories]] $0"
 				},
-				{"string": ":Category:Analysis", "append": "|analysis]] $0"},
-				{"string": ":Category:Beauty", "append": "|Beauty]] $0"},
-				{"string": ":Category:Beverage", "append": "|Beverage]] $0"},
-				{"string": ":Category:Box", "append": "|Box]] $0"},
-				{"string": ":Category:Fitness", "append": "|Fitness]] $0"},
-				{"string": ":Category:Food", "append": "|Food]] $0"},
-				{"string": ":Category:Gag", "append": "|Gag]] $0"},
-				{"string": ":Category:Health", "append": "|Health]] $0"},
-				{"string": ":Category:Home", "append": "|Home]] $0"},
-				{"string": ":Category:Kids", "append": "|Kids]] $0"},
-				{"string": ":Category:Online", "append": "|Online]] $0"},
-				{"string": ":Category:Outdoors", "append": "|Outdoors]] $0"},
-				{"string": ":Category:Pets", "append": "|Pets]] $0"},
-				{"string": ":Category:Recreation", "append": "|Recreation]] $0"},
-				{"string": ":Category:Retail", "append": "|Retail]] $0"},
-				{"string": ":Category:Service", "append": "|Service]] $0"},
-				{"string": ":Category:Tech", "append": "|Tech]] $0"},
-				{"string": ":Category:Toys", "append": "|Toys]] $0"},
-				{"string": ":Category:Utility", "append": "|Utility]] $0"}
+				{
+					"string": ":Category:Analysis",
+					"append": "|analysis]] $0"
+				},
+				{
+					"string": ":Category:Beauty",
+					"append": "|Beauty]] $0"
+				},
+				{
+					"string": ":Category:Beverage",
+					"append": "|Beverage]] $0"
+				},
+				{
+					"string": ":Category:Box",
+					"append": "|Box]] $0"
+				},
+				{
+					"string": ":Category:Fitness",
+					"append": "|Fitness]] $0"
+				},
+				{
+					"string": ":Category:Food",
+					"append": "|Food]] $0"
+				},
+				{
+					"string": ":Category:Gag",
+					"append": "|Gag]] $0"
+				},
+				{
+					"string": ":Category:Health",
+					"append": "|Health]] $0"
+				},
+				{
+					"string": ":Category:Home",
+					"append": "|Home]] $0"
+				},
+				{
+					"string": ":Category:Kids",
+					"append": "|Kids]] $0"
+				},
+				{
+					"string": ":Category:Online",
+					"append": "|Online]] $0"
+				},
+				{
+					"string": ":Category:Outdoors",
+					"append": "|Outdoors]] $0"
+				},
+				{
+					"string": ":Category:Pets",
+					"append": "|Pets]] $0"
+				},
+				{
+					"string": ":Category:Recreation",
+					"append": "|Recreation]] $0"
+				},
+				{
+					"string": ":Category:Retail",
+					"append": "|Retail]] $0"
+				},
+				{
+					"string": ":Category:Service",
+					"append": "|Service]] $0"
+				},
+				{
+					"string": ":Category:Tech",
+					"append": "|Tech]] $0"
+				},
+				{
+					"string": ":Category:Toys",
+					"append": "|Toys]] $0"
+				},
+				{
+					"string": ":Category:Utility",
+					"append": "|Utility]] $0"
+				}
 			]
 		},
 		{
 			"name": "sfs.wiki-categories-assignment",
-			"defaultAppend":"]]\n$0",
-			"strings": [
-				{"string": "Category", "append": ":${1:category}]]\n$0"},
-				{"string": "Category:Barbara", "append": " Corcoran]]\n$0"},
-				{"string": "Category:Mark", "append": " Cuban]]\n$0"},
-				{"string": "Category:Lori", "append": " Greiner]]\n$0"},
-				{"string": "Category:Kevin", "append": " O'Leary]]\n$0"},
-				{"string": "Category:Daymond", "append": " John]]\n$0"},
-				{"string": "Category:Robert", "append": " Herjavec]]\n$0"},
-				{"string": "Category:Anne", "append": " Wojcicki]]\n$0"},
-				{"string": "Category:Rohan", "append": " Oza]]\n$0"},
-				{"string": "Category:Daniel", "append": " Lubetzky]]\n$0"},
-				{"string": "Category:Maria", "append": " Sharapova]]\n$0"},
+			"defaultAppend": "]]\n$0",
+			"strings": [{
+					"string": "Category",
+					"append": ":${1:category}]]\n$0"
+				},
+				{
+					"string": "Category:Barbara",
+					"append": " Corcoran]]\n$0"
+				},
+				{
+					"string": "Category:Mark",
+					"append": " Cuban]]\n$0"
+				},
+				{
+					"string": "Category:Lori",
+					"append": " Greiner]]\n$0"
+				},
+				{
+					"string": "Category:Kevin",
+					"append": " O'Leary]]\n$0"
+				},
+				{
+					"string": "Category:Daymond",
+					"append": " John]]\n$0"
+				},
+				{
+					"string": "Category:Robert",
+					"append": " Herjavec]]\n$0"
+				},
+				{
+					"string": "Category:Anne",
+					"append": " Wojcicki]]\n$0"
+				},
+				{
+					"string": "Category:Rohan",
+					"append": " Oza]]\n$0"
+				},
+				{
+					"string": "Category:Daniel",
+					"append": " Lubetzky]]\n$0"
+				},
+				{
+					"string": "Category:Maria",
+					"append": " Sharapova]]\n$0"
+				},
 				"Category:Analysis",
 				"Category:Equity",
 				"Category:Equity/Debt",
@@ -256,35 +341,34 @@
 		},
 		{
 			"name": "sfs.wiki-links",
-			"defaultAppend":"]] $0",
-			"strings": [
-				{
-				    "string": "Convertible Note",
-				    "append": "|convertible note]] $0"
+			"defaultAppend": "]] $0",
+			"strings": [{
+					"string": "Convertible Note",
+					"append": "|convertible note]] $0"
 				},
 				{
-				    "string": "Direct To Consumer",
-				    "append": "|direct to consumer]] $0"
+					"string": "Direct To Consumer",
+					"append": "|direct to consumer]] $0"
 				},
 				{
-				    "string": "Friends & Family Round",
-				    "append": "|friends and family round]] $0"
+					"string": "Friends & Family Round",
+					"append": "|friends and family round]] $0"
 				},
 				{
-				    "string": "Guest Shark",
-				    "append": "|guest shark]] $0"
+					"string": "Guest Shark",
+					"append": "|guest shark]] $0"
 				},
 				{
-				    "string": "Shark Tank Bite",
-				    "append": "|bit]]$0"
+					"string": "Shark Tank Bite",
+					"append": "|bit]]$0"
 				},
 				{
-				    "string": "Shark Tank Bump",
-				    "append": "|Shark Tank bump]] $0"
+					"string": "Shark Tank Bump",
+					"append": "|Shark Tank bump]] $0"
 				},
 				{
-				    "string": "Shark Tank Frenzy",
-				    "append": "|frenzy]] $0"
+					"string": "Shark Tank Frenzy",
+					"append": "|frenzy]] $0"
 				},
 				"royalty",
 				"equity"
@@ -327,11 +411,7 @@
 		{
 			"name": "sfs.statschart.style.attr.values",
 			"defaultAppend": "$0",
-			"strings": [
-				"size-half left",
-				"size-half right",
-				"size-full"
-			]
+			"strings": ["size-half left", "size-half right", "size-full"]
 		},
 		{
 			"name": "sfs.statschart.category.attr.values",
@@ -368,33 +448,26 @@
 			]
 		}
 	],
-	"contexts": [
-		{
+	"contexts": [{
 			"description": "Chart completions",
 			"scope": "(text.html | source.wiki) - source - comment - string",
 			"pattern": "<([a-zA-Z0-9]*)",
 			"completionCaptureIndex": 1,
-			"completionSetNames": [
-				"sfs.parser-tags"
-			]
+			"completionSetNames": ["sfs.parser-tags"]
 		},
 		{
 			"description": "Template completions",
 			"scope": "(text.html | source.wiki) - source - comment - string",
 			"pattern": "{{([a-zA-Z0-9]*)",
 			"completionCaptureIndex": 1,
-			"completionSetNames": [
-				"sfs.template-tags"
-			]
+			"completionSetNames": ["sfs.template-tags"]
 		},
 		{
 			"description": "Template parameters completions",
 			"scope": "(text.html | source.wiki) - source - comment - string",
 			"pattern": "^\\|([a-zA-Z0-9]*)",
 			"completionCaptureIndex": 1,
-			"completionSetNames": [
-				"sfs.template-params"
-			]
+			"completionSetNames": ["sfs.template-params"]
 		},
 		{
 			"description": "Wiki Link completions",
@@ -413,18 +486,14 @@
 			"scope": "(text.html | source.wiki) - source - comment - string",
 			"pattern": "<([a-zA-Z0-9]*)(?:\\s+[a-zA-Z0-9-:_]+\\s*=\\s*(?:'.*'|\".*\"))*(?:(?:\\s([a-zA-Z0-9-]+))|\\s)",
 			"completionCaptureIndex": 2,
-			"completionSetNames": [
-				"sfs.$1.attr"
-			]
+			"completionSetNames": ["sfs.$1.attr"]
 		},
 		{
 			"description": "Chart Attribute Values Completion",
 			"scope": "(text.html | source.wiki) meta.tag string.quoted",
 			"pattern": "<([a-zA-Z0-9]*)(?:\\s+[a-zA-Z0-9-:_]+\\s*=\\s*(?:'.*'|\".*\"))*(?:\\s([a-zA-Z0-9-]+)\\s*=\\s*(?:[\"'])([a-zA-Z0-9-]*))",
 			"completionCaptureIndex": 3,
-			"completionSetNames": [
-				"sfs.$1.$2.attr.values"
-			]
+			"completionSetNames": ["sfs.$1.$2.attr.values"]
 		}
 	]
 }

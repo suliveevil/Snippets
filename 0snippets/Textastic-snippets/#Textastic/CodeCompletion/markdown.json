@@ -1,51 +1,43 @@
 {
-	"description": "Textastic Code Completion for markdown",
-	"uuid": "89FCE51A-7171-11EA-9BFC-0BEAD3AAAEF1",
-	
-    "completionSets":[
-        {
+    "description": "Textastic Code Completion for markdown",
+    "uuid": "89FCE51A-7171-11EA-9BFC-0BEAD3AAAEF1",
+    "completionSets": [{
             "name": "markdown.blog.head",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string":"blog",
-                    "replace":"---\nlayout: post\ntitle: \"${1:文章标题}\"\ndate:  20${2:年}-${3:月}-${4:日} ${5:时}:${6:分}:${7:秒} +0800\ncategories: ${8:所在目录}\ntags: ${9:标签，空格分开}\nauthor: ${10:suliveevil}\nmathjax: true\n---\n\n* content\n{:toc}\n\n${11:正文内容}"
-                }
-            ]
+            "defaultAppend": "",
+            "strings": [{
+                "string": "blog",
+                "replace": "---\nlayout: post\ntitle: \"${1:文章标题}\"\ndate:  20${2:年}-${3:月}-${4:日} ${5:时}:${6:分}:${7:秒} +0800\ncategories: ${8:所在目录}\ntags: ${9:标签，空格分开}\nauthor: ${10:suliveevil}\nmathjax: true\n---\n\n* content\n{:toc}\n\n${11:正文内容}"
+            }]
         },
         {
             "name": "markdown.url",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string":"imgLink",
-                    "replace":"![${2:Title}](${1:URL})\n$0"
+            "defaultAppend": "",
+            "strings": [{
+                    "string": "imgLink",
+                    "replace": "![${2:Title}](${1:URL})\n$0"
                 },
                 {
-                    "string":"pictureLink",
-                    "replace":"![${2:Title}](${1:URL})\n$0"
+                    "string": "pictureLink",
+                    "replace": "![${2:Title}](${1:URL})\n$0"
                 },
                 {
-                    "string":"urlLink",
-                    "replace":"[${2:Title}](${1:URL})\n$0"
+                    "string": "urlLink",
+                    "replace": "[${2:Title}](${1:URL})\n$0"
                 }
             ]
         },
         {
-            "name":"markdown.block.code",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string": "codeblock",
-                    "replace": "\n```${1:language}\n${2:your code}\n```\n$0"
-                }
-            ]
+            "name": "markdown.block.code",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "codeblock",
+                "replace": "\n```${1:language}\n${2:your code}\n```\n$0"
+            }]
         },
         {
-            "name":"markdown.block.code.diagram",
-            "defaultAppend":"",
-            "strings":[
-                {
+            "name": "markdown.block.code.diagram",
+            "defaultAppend": "",
+            "strings": [{
                     "string": "dot",
                     "replace": "```${1:dot}\n${2:graphviz code}\n```\n$0"
                 },
@@ -70,22 +62,19 @@
                     "replace": "```${1:sequence}\n${2:sequence}\n```\n$0"
                 }
             ]
-            
         },
         {
             "name": "markdown.regex.box",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string":"box",
-                    "replace":"\"「${1:/./-/g}\",\n\"|${1}|\",\n\"${1:/./-/g}」\"\n"
-                }
-            ]
+            "defaultAppend": "",
+            "strings": [{
+                "string": "box",
+                "replace": "\"「${1:/./-/g}\",\n\"|${1}|\",\n\"${1:/./-/g}」\"\n"
+            }]
         },
         {
             "name": "markdown.block.code.language",
-            "defaultAppend":"$0",
-            "strings":[
+            "defaultAppend": "$0",
+            "strings": [
                 "actionscript3",
                 "applescript",
                 "arduino",
@@ -172,29 +161,28 @@
             ]
         }
     ],
-    "contexts": [
-        {
+    "contexts": [{
             "description": "blog header",
-            "scope":"text.html.markdown",
-            "pattern":"(blo[a-zA-Z0-9]*)",
-            "completionCaptureIndex":1,
-            "completionSetNames":[
+            "scope": "text.html.markdown",
+            "pattern": "(blo[a-zA-Z0-9]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
                 "markdown.blog.head"
             ]
         },
         {
             "description": "markdown URL",
-            "scope":"text.html.markdown",
-            "pattern":"(im|pi|ur)[a-zA-Z0-9]*",
-            "completionCaptureIndex":1,
-            "completionSetNames":[
+            "scope": "text.html.markdown",
+            "pattern": "(im|pi|ur)[a-zA-Z0-9]*",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
                 "markdown.url"
             ]
         },
         {
-            "description":"markdown code",
-            "scope":"text.html.markdown",
-            "pattern":"(cod[a-zA-Z]*)",
+            "description": "markdown code",
+            "scope": "text.html.markdown",
+            "pattern": "(cod[a-zA-Z]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "markdown.block.code"
@@ -202,17 +190,17 @@
         },
         {
             "description": "markdown regex box",
-            "scope":"text.html.markdown",
-            "pattern":"(box)",
-            "completionCaptureIndex":1,
-            "completionSetNames":[
+            "scope": "text.html.markdown",
+            "pattern": "(box)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
                 "markdown.regex.box"
             ]
         },
         {
-            "description":"markdown diagram",
-            "scope":"text.html.markdown",
-            "pattern":"(dot|ech|flo|gra|seq)[a-zA-Z]*",
+            "description": "markdown diagram",
+            "scope": "text.html.markdown",
+            "pattern": "(dot|ech|flo|gra|seq)[a-zA-Z]*",
             "completionCaptureIndex": 2,
             "completionSetNames": [
                 "markdown.block.code.diagram"
@@ -220,11 +208,11 @@
         },
         {
             "description": "Programming Language",
-            "scope":"text.html.markdown",
-            "//":"(?<=`)[a-zA-Z0-9]*",
-            "pattern":"([a-zA-Z0-9]+)",
-            "completionCaptureIndex":2,
-            "completionSetNames":[
+            "scope": "text.html.markdown",
+            "//": "(?<=`)[a-zA-Z0-9]*",
+            "pattern": "([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 2,
+            "completionSetNames": [
                 "markdown.block.code.language"
             ]
         }

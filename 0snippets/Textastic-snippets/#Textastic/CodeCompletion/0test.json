@@ -6,84 +6,73 @@
         {
             "name": "regex.assertion.pla",
             "defaultAppend": "",
-            "strings": [
-                {
-                    "//": "输入字符后面必须是",
-                    "string": "pla",
-                    "replace": "正向先行断言: 输入字符后面必须是"
-                }
-            ]
+            "strings": [{
+                "//": "输入字符后面必须是",
+                "string": "pla",
+                "replace": "正向先行断言: 输入字符后面必须是"
+            }]
         },
         {
             "name": "regex.assertion.plb",
             "defaultAppend": "",
-            "strings": [
-                {
-                    "//": "输入字符前面必须是",
-                    "string": "plb",
-                    "replace": "正向后行断言：输入字符前面必须是"
-                }
-            ]
+            "strings": [{
+                "//": "输入字符前面必须是",
+                "string": "plb",
+                "replace": "正向后行断言：输入字符前面必须是"
+            }]
         },
         {
             "name": "regex.assertion.nla",
             "defaultAppend": "",
-            "strings": [
-                {
-                    "//": "输入字符后面不能有",
-                    "string": "nla",
-                    "replace": "负向先行断言：输入字符后面不能有"
-                }
-            ]
+            "strings": [{
+                "//": "输入字符后面不能有",
+                "string": "nla",
+                "replace": "负向先行断言：输入字符后面不能有"
+            }]
         },
         {
             "name": "regex.assertion.nlb",
             "defaultAppend": "",
-            "strings": [
-                {
-                    "//": "输入字符前面不能有",
-                    "string": "nlb",
-                    "replace": "负向后行断言：输入字符前面不能有"
-                }
-            ]
+            "strings": [{
+                "//": "输入字符前面不能有",
+                "string": "nlb",
+                "replace": "负向后行断言：输入字符前面不能有"
+            }]
         },
         // choice
         {
             "//": "choice is not supported",
             "name": "test.choice",
             "defaultAppend": "",
-            "strings": [
-                {
-                    "string": "choice",
-                    "replace": "choose${1:|const,var|}\n$2"
-                }
-            ]
+            "strings": [{
+                "string": "choice",
+                "replace": "choose${1:|const,var|}\n$2"
+            }]
         },
         // variable ✅
         {
             "//": "variable is supported",
             "name": "test.variable",
             "defaultAppend": "",
-            "strings": [
-                {
-                    "//":"✅",
-                    "string":"variable",
-                    "replace":"variable\n$COMPLETION\n"
+            "strings": [{
+                    "//": "✅",
+                    "string": "variable",
+                    "replace": "variable\n$COMPLETION\n"
                 },
                 {
-                    "//":"",
-                    "string":"clipboard",
-                    "replace":"-\n$CLIPBOARD\n-$0"
+                    "//": "",
+                    "string": "clipboard",
+                    "replace": "-\n$CLIPBOARD\n-$0"
                 },
                 {
-                    "//":"❌",
-                    "string":"date",
-                    "replace":"$CURRENT_DATE\n$0"
+                    "//": "❌",
+                    "string": "date",
+                    "replace": "$CURRENT_DATE\n$0"
                 },
                 {
-                    "//":"❌",
-                    "string":"year",
-                    "replace":"$CURRENT_YEAR\n$0"
+                    "//": "❌",
+                    "string": "year",
+                    "replace": "$CURRENT_YEAR\n$0"
                 }
             ]
         },
@@ -92,12 +81,11 @@
             "//": "index is supported",
             "name": "test.test",
             "defaultAppend": "$1--$0",
-            "strings": [
-                {
-                    "string":"index",
+            "strings": [{
+                    "string": "index",
                     "replace": "${1:attr1}\n${2:attr2}\n${3:attr3}"
                 },
-                "index1",
+                "index1"
             ]
         },
         // index2
@@ -117,24 +105,20 @@
         },
         {
             "name": "test.test.snippet",
-            "defaultAppend":"",
-            "strings":[
-                {
-                    "string":"string2match",
-                    "replace":"${1:document.}getElement${2/(T)|(C)|(I)/(?1:s)(?2:s)/}By${2:T}${2/(T)|(I)|(C)|.*/(?1:agName)(?2:d)(?3:lassName)/}('$3')$0"
-                }
-            ]
+            "defaultAppend": "",
+            "strings": [{
+                "string": "string2match",
+                "replace": "${1:document.}getElement${2/(T)|(C)|(I)/(?1:s)(?2:s)/}By${2:T}${2/(T)|(I)|(C)|.*/(?1:agName)(?2:d)(?3:lassName)/}('$3')$0"
+            }]
         },
         // 基准线
         {
             "name": "markdown.normal",
             "defaultAppend": "",
-            "strings": [
-                {
-                    "string": "normal",
-                    "replace": "normal\n$0"
-                }
-            ]
+            "strings": [{
+                "string": "normal",
+                "replace": "normal\n$0"
+            }]
         }
     ],
     "contexts": [

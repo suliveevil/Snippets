@@ -1,9 +1,7 @@
 {
 	"description": "Textastic Code Completion for HTML Tags and Attributes",
 	"uuid": "928A838C-F861-4902-92B8-58C29FCFC077",
-
-	"completionSets": [
-		{
+	"completionSets": [{
 			"name": "html.tags.with-newline",
 			"defaultAppend": ">\n$0\n</$COMPLETION>",
 			"strings": [
@@ -15,8 +13,7 @@
 		{
 			"name": "html.tags",
 			"defaultAppend": ">$0</$COMPLETION>",
-			"strings": [
-				{
+			"strings": [{
 					"string": "a",
 					"append": " href=\"$1\">$2</a>$0"
 				},
@@ -163,8 +160,7 @@
 		{
 			"name": "html.tags.self-closing",
 			"defaultAppend": " />",
-			"strings": [
-				{
+			"strings": [{
 					"string": "img",
 					"append": " src=\"$1\" $2/>$0"
 				},
@@ -183,10 +179,9 @@
 				"br",
 				"col",
 				"hr",
-				"wbr"				
+				"wbr"
 			]
 		},
-		
 		// Global attributes
 		{
 			"name": "html.tags.standard-attributes",
@@ -218,7 +213,6 @@
 				"onkeyup"
 			]
 		},
-		
 		// Attributes of specific tags	
 		{
 			"name": "html.tags.a.attributes",
@@ -251,7 +245,7 @@
 				"object",
 				"vspace"
 			]
-		},	
+		},
 		{
 			"name": "html.tags.area.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -270,7 +264,6 @@
 				"type"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.audio.attributes",
@@ -283,7 +276,6 @@
 				"loop"
 			]
 		},
-	
 		{
 			"name": "html.tags.base.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -292,7 +284,6 @@
 				"target"
 			]
 		},
-	
 		{
 			"name": "html.tags.bdo.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -300,7 +291,6 @@
 				"dir"
 			]
 		},
-	
 		{
 			"name": "html.tags.blockquote.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -308,7 +298,6 @@
 				"cite"
 			]
 		},
-	
 		{
 			"name": "html.tags.button.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -327,7 +316,6 @@
 				"formtarget"
 			]
 		},
-	
 		{
 			"name": "html.tags.canvas.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -336,7 +324,6 @@
 				"height"
 			]
 		},
-	
 		{
 			"name": "html.tags.col.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -349,7 +336,6 @@
 				"width"
 			]
 		},
-	
 		{
 			"name": "html.tags.colgroup.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -362,7 +348,6 @@
 				"width"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.command.attributes",
@@ -376,7 +361,6 @@
 				"radiogroup"
 			]
 		},
-	
 		{
 			"name": "html.tags.del.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -385,7 +369,6 @@
 				"datetime"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.details.attributes",
@@ -394,7 +377,6 @@
 				"open"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.device.attributes",
@@ -403,7 +385,6 @@
 				"type"
 			]
 		},
-	
 		{
 			"name": "html.tags.dir.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -411,7 +392,6 @@
 				"compact"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.embed.attributes",
@@ -423,7 +403,6 @@
 				"height"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.fieldset.attributes",
@@ -434,7 +413,6 @@
 				"name"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.form.attributes",
@@ -450,7 +428,6 @@
 				"target"
 			]
 		},
-	
 		{
 			"name": "html.tags.frame.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -465,7 +442,6 @@
 				"src"
 			]
 		},
-	
 		{
 			"name": "html.tags.frameset.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -474,7 +450,6 @@
 				"rows"
 			]
 		},
-	
 		{
 			"name": "html.tags.head.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -482,7 +457,6 @@
 				"profile"
 			]
 		},
-	
 		{
 			"name": "html.tags.html.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -492,7 +466,6 @@
 				"manifest"
 			]
 		},
-	
 		{
 			"name": "html.tags.iframe.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -514,7 +487,6 @@
 				"seamless"
 			]
 		},
-	
 		{
 			"name": "html.tags.img.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -529,7 +501,6 @@
 				"ismap"
 			]
 		},
-	
 		{
 			"name": "html.tags.input.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -566,7 +537,6 @@
 				"width"
 			]
 		},
-	
 		{
 			"name": "html.tags.ins.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -575,8 +545,7 @@
 				"datetime"
 			]
 		},
-	
-			// HTML5
+		// HTML5
 		{
 			"name": "html.tags.keygen.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -589,7 +558,6 @@
 				"name"
 			]
 		},
-	
 		{
 			"name": "html.tags.label.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -599,8 +567,7 @@
 				"form"
 			]
 		},
-	
-			// HTML5
+		// HTML5
 		{
 			"name": "html.tags.li.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -608,7 +575,6 @@
 				"value"
 			]
 		},
-	
 		{
 			"name": "html.tags.link.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -625,7 +591,6 @@
 				"sizes"
 			]
 		},
-	
 		{
 			"name": "html.tags.map.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -633,7 +598,6 @@
 				"name"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.menu.attributes",
@@ -643,7 +607,6 @@
 				"type"
 			]
 		},
-	
 		{
 			"name": "html.tags.meta.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -656,7 +619,6 @@
 				"charset"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.meter.attributes",
@@ -671,7 +633,6 @@
 				"value"
 			]
 		},
-	
 		{
 			"name": "html.tags.object.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -692,7 +653,6 @@
 				"width"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.ol.attributes",
@@ -702,7 +662,6 @@
 				"start"
 			]
 		},
-	
 		{
 			"name": "html.tags.optgroup.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -711,7 +670,6 @@
 				"disabled"
 			]
 		},
-	
 		{
 			"name": "html.tags.option.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -722,7 +680,6 @@
 				"value"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.output.attributes",
@@ -733,7 +690,6 @@
 				"name"
 			]
 		},
-	
 		{
 			"name": "html.tags.param.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -744,7 +700,6 @@
 				"valuetype"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.progress.attributes",
@@ -754,7 +709,6 @@
 				"value"
 			]
 		},
-	
 		{
 			"name": "html.tags.q.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -762,7 +716,6 @@
 				"cite"
 			]
 		},
-	
 		{
 			"name": "html.tags.script.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -776,7 +729,6 @@
 				"async"
 			]
 		},
-	
 		{
 			"name": "html.tags.select.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -790,7 +742,6 @@
 				"form"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.source.attributes",
@@ -801,7 +752,6 @@
 				"type"
 			]
 		},
-	
 		{
 			"name": "html.tags.style.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -813,7 +763,6 @@
 				"title"
 			]
 		},
-	
 		{
 			"name": "html.tags.table.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -828,7 +777,6 @@
 				"width"
 			]
 		},
-	
 		{
 			"name": "html.tags.tbody.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -838,7 +786,6 @@
 				"valign"
 			]
 		},
-	
 		{
 			"name": "html.tags.td.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -857,7 +804,6 @@
 				"width"
 			]
 		},
-	
 		{
 			"name": "html.tags.textarea.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -876,7 +822,6 @@
 				"wrap"
 			]
 		},
-	
 		{
 			"name": "html.tags.tfoot.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -886,7 +831,6 @@
 				"valign"
 			]
 		},
-	
 		{
 			"name": "html.tags.th.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -904,7 +848,6 @@
 				"width"
 			]
 		},
-	
 		{
 			"name": "html.tags.thead.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -914,7 +857,6 @@
 				"valign"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.time.attributes",
@@ -927,7 +869,6 @@
 				}
 			]
 		},
-	
 		{
 			"name": "html.tags.tr.attributes",
 			"defaultAppend": "=\"$1\"$0",
@@ -937,7 +878,6 @@
 				"valign"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.track.attributes",
@@ -949,7 +889,6 @@
 				"srclang"
 			]
 		},
-	
 		// HTML5
 		{
 			"name": "html.tags.video.attributes",
@@ -965,7 +904,6 @@
 				"width"
 			]
 		},
-		
 		// Attribute values
 		// Generic attribute completions
 		{
@@ -977,7 +915,6 @@
 				"https://"
 			]
 		},
-	
 		{
 			"name": "html.tags.alltags.attributes.src.attribute-values",
 			"strings": [
@@ -987,7 +924,6 @@
 				"https://"
 			]
 		},
-			
 		//  Tag-specific attribute completions 
 		{
 			"name": "html.tags.input.attributes.type.attribute-values",
@@ -1153,9 +1089,7 @@
 			]
 		}
 	],
-
-	"contexts": [
-		{
+	"contexts": [{
 			"description": "HTML Tag Completion",
 			"scope": "text.html - source - comment - string",
 			"pattern": "<([a-zA-Z0-9]*)",
