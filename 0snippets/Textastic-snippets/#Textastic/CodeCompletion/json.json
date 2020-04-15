@@ -195,7 +195,7 @@
     "contexts": [{
             "description": "Snippet-Scope 作用域",
             "scope": "source.json",
-            "pattern": "(\\b[a-zA-Z0-9]+)",
+            "pattern": "(\\b[a-zA-Z0-9]+\\b)",
             "completionCaptureIndex": 1,
             "completionSetNames": ["json.snippet.scope"]
         },

@@ -167,6 +167,14 @@
                 "string": "box",
                 "replace": "\"「${1:/./-/g}\",\n\"|${1}|\",\n\"${1:/./-/g}」\"\n"
             }]
+        },
+        {
+            "name": "markdown.position",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "func",
+                "replace": "${1:func}($COMPLETION):\n\t$0"
+            }]
         }
     ],
     "contexts": [{
@@ -209,20 +217,20 @@
         {
             "description": "markdown diagram",
             "scope": "text.html.markdown",
-            "pattern": "(dot|ech|flo|gra|seq)[a-zA-Z]*",
+            "pattern": "(?<=```)([a-zA-Z]*)",
             "completionCaptureIndex": 2,
             "completionSetNames": [
-                "markdown.block.code.diagram"
+                "markdown.block.code.diagram",
+                "markdown.block.code.language"
             ]
         },
         {
-            "description": "Programming Language",
+            "description": "markdown test COMPLETION",
             "scope": "text.html.markdown",
-            "//": "(?<=`)[a-zA-Z0-9]*",
-            "pattern": "([a-zA-Z0-9]+)",
-            "completionCaptureIndex": 2,
+            "pattern": "\\b([a-zA-Z]+)",
+            "completionCaptureIndex": 1,
             "completionSetNames": [
-                "markdown.block.code.language"
+                "markdown.position"
             ]
         }
     ]
