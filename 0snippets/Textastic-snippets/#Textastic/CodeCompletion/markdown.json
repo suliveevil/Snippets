@@ -169,7 +169,7 @@
             }]
         },
         {
-            "name": "markdown.position",
+            "name": "markdown.test",
             "defaultAppend": "",
             "strings": [{
                 "string": "func",
@@ -177,22 +177,24 @@
             }]
         }
     ],
-    "contexts": [{
+    "contexts": [
+        {
+            "description": "markdown test COMPLETION",
+            "scope": "text.html.markdown",
+            "pattern": "\\b([a-zA-Z]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.test",
+                "markdown.url"
+            ]
+        },
+        {
             "description": "blog header",
             "scope": "text.html.markdown",
             "pattern": "(blo[a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "markdown.blog.head"
-            ]
-        },
-        {
-            "description": "markdown URL",
-            "scope": "text.html.markdown",
-            "pattern": "(im|pi|ur)[a-zA-Z0-9]*",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "markdown.url"
             ]
         },
         {
@@ -222,15 +224,6 @@
             "completionSetNames": [
                 "markdown.block.code.diagram",
                 "markdown.block.code.language"
-            ]
-        },
-        {
-            "description": "markdown test COMPLETION",
-            "scope": "text.html.markdown",
-            "pattern": "\\b([a-zA-Z]+)",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "markdown.position"
             ]
         }
     ]
