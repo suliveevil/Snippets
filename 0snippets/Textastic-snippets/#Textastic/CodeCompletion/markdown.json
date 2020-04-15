@@ -184,46 +184,31 @@
             "pattern": "\\b([a-zA-Z]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "markdown.test",
-                "markdown.url"
+                "markdown.test"
             ]
         },
         {
-            "description": "blog header",
-            "scope": "text.html.markdown",
-            "pattern": "(blo[a-zA-Z0-9]*)",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "markdown.blog.head"
-            ]
-        },
-        {
-            "description": "markdown code",
-            "scope": "text.html.markdown",
-            "pattern": "(cod[a-zA-Z]*)",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "markdown.block.code"
-            ]
-        },
-        {
-            "description": "markdown regex box",
+            "description": "markdown url",
             "scope": "text.html.markdown",
             "pattern": "\\b([a-zA-Z0-9]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
+                "markdown.blog.head",
+                "markdown.block.code",
                 "markdown.fold",
-                "markdown.regex.box"
+                "markdown.regex.box",
+                "markdown.url"
             ]
         },
         {
             "description": "markdown diagram",
             "scope": "text.html.markdown",
-            "pattern": "(?<=```)([a-zA-Z]*)",
+            "//": "(?<=```)([a-zA-Z]*)",
+            "pattern": "([a-zA-Z]*)",
             "completionCaptureIndex": 2,
             "completionSetNames": [
-                "markdown.block.code.diagram",
-                "markdown.block.code.language"
+                "markdown.block.$1.diagram",
+                "markdown.block.$1.language"
             ]
         }
     ]

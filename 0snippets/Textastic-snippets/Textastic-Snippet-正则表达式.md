@@ -41,7 +41,6 @@
 (tco[a-zA-Z]*)
 (tsf[a-zA-Z]*)
 (tsn[a-zA-Z]*)
-// this is done through Emmet
 <([a-zA-Z0-9]*)
 <([a-zA-Z0-9]*)
 <([a-zA-Z0-9]*)(?:\\s+[a-zA-Z0-9-:_]+\\s*=\\s*(?:'.*'|\".*\"))*(?:(?:\\s([a-zA-Z0-9-]+))|\\s)

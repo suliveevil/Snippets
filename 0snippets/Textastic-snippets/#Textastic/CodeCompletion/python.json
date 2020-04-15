@@ -589,7 +589,7 @@
     "contexts": [{
             "description": "Python File Header: 运行环境、编码声明",
             "scope": "source.python",
-            "pattern": "(ut[a-zA-Z]*)",
+            "pattern": "\\b([a-zA-Z]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.file.header"
