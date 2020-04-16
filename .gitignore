@@ -1,6 +1,13 @@
 # general
+
+# macOS
 .DS_Store
 *.DS_Store
 */.DS_Store
+
+# macOS Thumbnails
 */__MACOSX/
+._*
+
+# folders
 .history/
