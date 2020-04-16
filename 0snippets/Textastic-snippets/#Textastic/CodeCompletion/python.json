@@ -385,7 +385,10 @@
                 "chr",
                 "classmethod",
                 "compile",
-                "complex",
+                {
+                    "string":"complex",
+                    "replace":"complex(${1:x}${2:,}${3:y})$0"
+                },
                 "delattr",
                 "dict",
                 "dir",
@@ -637,7 +640,8 @@
         {
             "description": "Python Function Builtin 内建函数",
             "scope": "source.python",
-            "pattern": "(?<!\\.|\"|'|#)\\b([a-zA-Z0-9_]+)",
+            "//": "(?<!\\.|\"|'|#)\\b([a-zA-Z0-9_]+)",
+            "pattern": "(?<!\"|'|#)\\b([a-zA-Z0-9_]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.constants",
