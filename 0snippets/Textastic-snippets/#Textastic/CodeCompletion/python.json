@@ -31,7 +31,6 @@
         {
             "name": "python.keywords",
             "//": "Python 关键字（False、None、True 既是关键字也是常量",
-            "defaultAppend": "$0",
             "strings": [
                 "and",
                 "as",
@@ -41,7 +40,10 @@
                 "break",
                 "class",
                 "continue",
-                "def",
+                {
+                    "string":"def",
+                    "replace":"\n\ndef ${1:func}():\n\t\"\"\"${2:function doc}\n\t${3:documentation}\n\n\t\"\"\"\n\t${4:function}\n\n\n$0"
+                },
                 "del",
                 "elif",
                 "else",
