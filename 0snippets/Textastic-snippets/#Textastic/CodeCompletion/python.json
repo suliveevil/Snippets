@@ -2,13 +2,23 @@
     "description": "Textastic CodeCompletion for Python",
     "uuid": "B62DFA6C-7292-11EA-A8CB-97DD6C7D84B1",
     "completionSets": [{
+            "//": "Python 编码声明",
             "name": "python.file.header",
             "defaultAppend": "",
-            "strings": [{
-                "//": "Python 编码声明",
-                "string": "utf-8",
-                "replace": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n$0"
-            }]
+            "strings": [
+                {
+                    "string": "file",
+                    "replace": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n$0"
+                },
+                {
+                    "string": "python",
+                    "replace": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n$0"
+                },
+                {
+                    "string": "utf-8",
+                    "replace": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n$0"
+                }
+            ]
         },
         {
             "name": "python.comment",
@@ -576,7 +586,7 @@
             "name": "python.functions",
             "strings": [{
                     "string": "a/f/",
-                    "replace": "f(a)"
+                    "replace": "${1:funcName}(${2:argument})$0"
                 },
                 {
                     "//": "测试用",
@@ -587,21 +597,14 @@
         }
     ],
     "contexts": [{
-            "description": "Python File Header: 运行环境、编码声明",
+            "description": "Python 运行环境、编码声明、注释、函数",
             "scope": "source.python",
-            "pattern": "\\b([a-zA-Z]+)",
+            "pattern": "\\b([a-zA-Z0-9/]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "python.file.header"
-            ]
-        },
-        {
-            "description": "Python Comment 注释",
-            "scope": "source.python",
-            "pattern": "(com[a-zA-Z0-9]*)",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "python.comment"
+                "python.file.header",
+                "python.comment",
+                "python.functions"
             ]
         },
         {
@@ -616,7 +619,7 @@
         {
             "description": "Python Standard Library 标准库",
             "scope": "source.python",
-            "pattern": "(?<=from\\s|import\\s)([a-zA-Z0-9_]+)",
+            "pattern": "(?<=from|import)\\b([a-zA-Z0-9_]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.library.standardlibrary"
@@ -702,15 +705,6 @@
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.function.dict"
-            ]
-        },
-        {
-            "description": "Python Functions 方法（函数）",
-            "scope": "source.python",
-            "pattern": "(a\\/|ifm)[a-zA-Z0-9/]*",
-            "completionCaptureIndex": 1,
-            "completionSetNames": [
-                "python.functions"
             ]
         }
     ]
