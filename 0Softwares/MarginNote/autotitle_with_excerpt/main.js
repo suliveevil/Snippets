@@ -46,7 +46,7 @@ JSB.newAddon = function(mainPath){
           if(text && text.length){
             UndoManager.sharedInstance().undoGrouping('AutoTitle',note.notebookId,function(){
               note.noteTitle = text;
-              note.excerptText = '';
+              note.excerptText = text;
               Database.sharedInstance().setNotebookSyncDirty(note.notebookId);
             });
             NSNotificationCenter.defaultCenter().postNotificationNameObjectUserInfo('RefreshAfterDBChange',self,{topicid:note.notebookId});
@@ -63,16 +63,16 @@ JSB.newAddon = function(mainPath){
       if(self.autotitle){
         self.autotitle = false;
         if(lan == 'zh')
-          Application.sharedInstance().showHUD('自动设置标题已关闭',self.window,2);
+          Application.sharedInstance().showHUD('自动设置标题和摘录已关闭',self.window,2);
         else
-          Application.sharedInstance().showHUD('Auto title is turned off',self.window,2);
+          Application.sharedInstance().showHUD('Auto title with excerpt is turned off',self.window,2);
       }
       else{
         self.autotitle = true;
         if(lan == 'zh')
-          Application.sharedInstance().showHUD('创建摘录后，摘录内容将自动被设置为笔记标题',self.window,2);
+          Application.sharedInstance().showHUD('创建摘录后，摘录内容将自动被添加标题',self.window,2);
         else
-          Application.sharedInstance().showHUD('After creating an excerpt, the excerpt will be automatically set as the note title',self.window,2);
+          Application.sharedInstance().showHUD('After creating an excerpt, the excerpt will be automatically add the note title',self.window,2);
       }
       NSUserDefaults.standardUserDefaults().setObjectForKey(self.autotitle,'marginnote_autotitle');
       Application.sharedInstance().studyController(self.window).refreshAddonCommands();
