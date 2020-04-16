@@ -6,6 +6,7 @@
 */.DS_Store
 
 # macOS Thumbnails
+__MACOSX
 */__MACOSX/
 ._*
 
