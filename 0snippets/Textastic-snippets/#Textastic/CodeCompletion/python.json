@@ -1,6 +1,7 @@
 {
     "description": "Textastic CodeCompletion for Python",
     "uuid": "B62DFA6C-7292-11EA-A8CB-97DD6C7D84B1",
+    "//":"一切皆对象、数据结构",
     "completionSets": [{
             "//": "Python 编码声明",
             "name": "python.file.header",
@@ -29,7 +30,7 @@
             }]
         },
         {
-            "name": "python.keywords",
+            "name": "python.keyword",
             "//": "Python 关键字（False、None、True 既是关键字也是常量",
             "strings": [
                 "and",
@@ -286,6 +287,66 @@
             "name": "python.object",
             "defaultAppend": "",
             "strings": [
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"}
+            ]
+        },
+        {
+            "name": "python.object.sequence",
+            "defaultAppend": "",
+            "strings": [
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"}
+            ]
+        },
+        {
+            "name": "python.object.sequence.list",
+            "defaultAppend": "",
+            "strings": [
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"}
+            ]
+        },
+        {
+            "name": "python.object.method",
+            "defaultAppend": "",
+            "strings": [
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"}
+            ]
+        },
+        {
+            "name": "python.object.property",
+            "defaultAppend": "",
+            "strings": [
                 "__new__",
                 "__init__",
                 "__del__",
@@ -353,7 +414,7 @@
             ]
         },
         {
-            "name": "python.constants",
+            "name": "python.constant",
             "defaultAppend": "",
             "strings": [
                 "False",
@@ -618,7 +679,7 @@
             "pattern": "(?<!\\.|\"|'|#)\\b([a-zA-Z]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "python.keywords"
+                "python.keyword"
             ]
         },
         {
@@ -631,12 +692,12 @@
             ]
         },
         {
-            "description": "Python Object",
+            "description": "Python Object Methods",
             "scope": "source.python",
             "pattern": "",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "python.object"
+                "python.object.method"
             ]
         },
         {
@@ -646,7 +707,7 @@
             "pattern": "(?<!\"|'|#)\\b([a-zA-Z0-9_]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "python.constants",
+                "python.constant",
                 "python.function.builtin"
             ]
         },
