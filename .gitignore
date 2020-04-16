@@ -1,4 +1,6 @@
 # general
 .DS_Store
 *.DS_Store
+*/.DS_Store
+*/__MACOSX
 .history/
