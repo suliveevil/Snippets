@@ -195,7 +195,9 @@
     "contexts": [{
             "description": "Snippet-Scope 作用域",
             "scope": "source.json",
-            "pattern": "(\\b[a-zA-Z0-9]+\\b)",
+            "//":"后面必须有|\"或空格",
+            "pattern": "([a-zA-Z0-9]+)(?=\\||\\s|\")",
+            "//":"source.luajk",
             "completionCaptureIndex": 1,
             "completionSetNames": ["json.snippet.scope"]
         },

@@ -536,11 +536,14 @@
                 "append",
                 "clear",
                 "copy",
+                "count",
                 "extend",
+                "index",
                 "insert",
                 "pop",
                 "remove",
-                "reverse"
+                "reverse",
+                "sort"
             ]
         },
         {
@@ -676,7 +679,7 @@
         {
             "description": "Python Keywords 关键字",
             "scope": "source.python",
-            "pattern": "(?<!\\.|\"|'|#)\\b([a-zA-Z]+)",
+            "pattern": "(?<!\"|'|#)\\b([a-zA-Z]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.keyword"

@@ -1,1 +1,7 @@
-{"addonid":"marginnote.extension.deepl", "author":"MarginNote", "title":"DeepL Translator", "version":"1.0", "cert_key":"52246c10fe7ed4f2949a7f2ab32a8f65"}
+{
+    "addonid":"marginnote.extension.deepl",
+    "author":"MarginNote",
+    "title":"DeepL Translator",
+    "version":"1.0",
+    "cert_key":"52246c10fe7ed4f2949a7f2ab32a8f65"
+}

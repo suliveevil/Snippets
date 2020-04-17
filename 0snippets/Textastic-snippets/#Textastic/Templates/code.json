@@ -1,27 +1,33 @@
 {
-	"uuid": "E5AE1F52-7E49-11EA-A9DE-E7AC371A57AD",
-	"category": "Code",
-	"templates": [
-	    {
-			"name": "Bash File",
-			"fileExtension": "sh",
-			"snippet": ""
-		},
-	    {
-			"name": "JavaScript File",
-			"fileExtension": "js",
-			"snippet": ""
-		},
-		{
-			"name": "Python File",
-			"fileExtension": "py",
-			"snippet": "# -*- coding=utf-8 -*-\n\n$0\n"
-		},
-		
-		{
-			"name": "VimScript",
-			"fileExtension": "vim",
-			"snippet": ""
-		}
-	]
+    "uuid": "E5AE1F52-7E49-11EA-A9DE-E7AC371A57AD",
+    "category": "Code",
+    "templates": [
+        {
+            "name": "Bash File（.sh）",
+            "fileExtension": "sh",
+            "snippet": ""
+        },
+        {
+            "name": "C",
+            "fileExtension": "c",
+            "snippet": ""
+        },
+        {
+            "name": "JavaScript File（.js）",
+            "fileExtension": "js",
+            "snippet": ""
+        },
+        {
+            "name": "Python File（.py）",
+            "//":"缺少设置默认文件名功能",
+            "defaultFileName":"$CURRENTTIME",
+            "fileExtension": "py",
+            "snippet": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n\"\"\"${1:Description}\n$2\n\"\"\"\n\n$0\n"
+        },
+        {
+            "name": "VimScript",
+            "fileExtension": "vim",
+            "snippet": ""
+        }
+    ]
 }

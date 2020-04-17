@@ -1,0 +1,24 @@
+{
+    "name": "iSH",
+    "identifier": "app.ish.iSH",
+    "apps": [
+        {
+            "bundleIdentifier": "app.ish.iSH",
+            "name": "iSH",
+            "developerName": "Theodore Dubois and contributors",
+            "iconURL": "https://ish.app/assets/icon.png",
+            "tintColor": "000000",
+            "subtitle": "Linux shell for iOS",
+            "localizedDescription": "iSH is a project to get a Linux shell environment running locally on your iOS device, using a usermode x86 emulator.",
+            "screenshotURLs": [
+                "https://ish.app/assets/front-iphone.png"
+            ],
+            "version": "1.0.65",
+            "versionDate": "2020-03-09T02:52:02+00:00",
+            "versionDescription": "New stuff:\r\n- Half-broken tmpfs implementation\r\n- Caps lock mapping is now gone on iOS 13, because 13.4 adds a system-wide option\r\n- Kerberos works\r\n- AltStore installation is officially supported\r\n- adb works for connecting to Android devices over the network (not USB)\r\n- Added a way to fix your iSH setup if you mess up the launch/boot commands\r\n\r\nFixed bugs:\r\n- ceil(3) returning 4\r\n- R's nlm demo crashing\r\n- fish having some trouble changing process groups\r\n- git clone failing dramatically when your device only has one CPU\r\n- SO_ERROR codes not being translated\r\n- Java sockets failing with \"not a tty\"\r\n",
+            "downloadURL": "https://github.com/ish-app/ish/releases/download/builds/beta/65/iSH.ipa",
+            "size": 3818419
+        }
+    ],
+    "userInfo": {}
+}
