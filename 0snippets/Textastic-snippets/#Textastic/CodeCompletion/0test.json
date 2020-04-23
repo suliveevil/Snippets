@@ -75,7 +75,7 @@
         },
         {
             "//": "index is supported",
-            "name": "test.test",
+            "name": "test.test.index1",
             "defaultAppend": "$1--$0",
             "strings": [{
                     "string": "index",
@@ -86,12 +86,16 @@
         },
         {
             "//": "index2",
-            "name": "test.captureindex",
+            "name": "test.test.index2",
             "defaultAppend": "$1-$0",
             "strings": [
                 "aaa",
                 "bbb",
                 "ccc",
+                {
+                    "string": "index2",
+                    "replace": "+index2"
+                },
                 {
                     "string": "attr",
                     "replace": "attribute"
@@ -146,19 +150,19 @@
         {
             "description": "index 1",
             "scope": "text.html | text.html.markdown",
-            "pattern": "([a-zA-Z0-9]+)",
+            "pattern": "\\b([a-zA-Z0-9]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "test.test"
+                "test.test.index1"
             ]
         },
         {
             "description": "index 2",
             "scope": "text.html | text.html.markdown | meta.tag",
-            "pattern": "([a-zA-Z0-9]+)",
+            "pattern": "\\.([a-zA-Z0-9]+)",
             "completionCaptureIndex": 2,
             "completionSetNames": [
-                "test.captureindex"
+                "test.test.index2"
             ]
         },
         {

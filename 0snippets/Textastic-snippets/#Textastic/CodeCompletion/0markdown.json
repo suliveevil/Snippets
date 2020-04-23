@@ -31,44 +31,14 @@
             "defaultAppend": "",
             "strings": [{
                 "string": "codeblock",
-                "replace": "\n```${1:language}\n${2:your code}\n```\n$0"
+                "replace": "\n```$1\n${2:your code}\n```\n$3"
             }]
         },
         {
-            "name": "markdown.block.code.diagram",
-            "defaultAppend": "",
-            "strings": [{
-                    "string": "dot",
-                    "replace": "```${1:dot}\n${2:graphviz code}\n```\n$0"
-                },
-                {
-                    "string": "echarts",
-                    "replace": "```${1:echarts}\n${2:Badu Echarts}\n```\n$0"
-                },
-                {
-                    "string": "flow",
-                    "replace": "```${1:flow}\n${2:flowchart}\n```\n$0"
-                },
-                {
-                    "string": "graphviz",
-                    "replace": "```${1:dot}\n${2:graphviz}\n```\n$0"
-                },
-                {
-                    "string": "mermaid",
-                    "replace": "```${1:mermaid}\n${2:mermaid}\n```\n$0"
-                },
-                {
-                    "string": "sequence",
-                    "replace": "```${1:sequence}\n${2:sequence}\n```\n$0"
-                }
-            ]
-        },
-        {
             "name": "markdown.block.code.language",
-            "defaultAppend": "$0",
             "strings": [
-                "actionscript3",
-                "applescript",
+                {"string":"actionscript3","replace":"actionscript3"},
+                {"string":"applescript","replace":"applescript"},
                 "arduino",
                 "asciidoc",
                 "autohotkey",
@@ -153,6 +123,35 @@
             ]
         },
         {
+            "name": "markdown.block.diagram",
+            "defaultAppend": "",
+            "strings": [{
+                    "string": "dot",
+                    "replace": "```${1:dot}\n${2:graphviz code}\n```\n$0"
+                },
+                {
+                    "string": "echarts",
+                    "replace": "```${1:echarts}\n${2:Badu Echarts}\n```\n$0"
+                },
+                {
+                    "string": "flow",
+                    "replace": "```${1:flow}\n${2:flowchart}\n```\n$0"
+                },
+                {
+                    "string": "graphviz",
+                    "replace": "```${1:dot}\n${2:graphviz}\n```\n$0"
+                },
+                {
+                    "string": "mermaid",
+                    "replace": "```${1:mermaid}\n${2:mermaid}\n```\n$0"
+                },
+                {
+                    "string": "sequence",
+                    "replace": "```${1:sequence}\n${2:sequence}\n```\n$0"
+                }
+            ]
+        },
+        {
             "name": "markdown.fold",
             "defaultAppend": "",
             "strings": [{
@@ -194,21 +193,36 @@
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "markdown.blog.head",
-                "markdown.block.code",
                 "markdown.fold",
                 "markdown.regex.box",
                 "markdown.url"
             ]
         },
         {
+            "description": "markdown block diagram",
+            "scope": "text.html.markdown",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.block.diagram"
+            ]
+        },
+        {
+            "description": "",
+            "scope": "text.html.markdown",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.block.code"
+            ]
+        },
+        {
             "description": "markdown diagram",
             "scope": "text.html.markdown",
-            "//": "(?<=```)([a-zA-Z]*)",
-            "pattern": "([a-zA-Z]*)",
+            "pattern": "(```)([a-zA-Z]+)",
             "completionCaptureIndex": 2,
             "completionSetNames": [
-                "markdown.block.$1.diagram",
-                "markdown.block.$1.language"
+                "markdown.block.code.language"
             ]
         }
     ]

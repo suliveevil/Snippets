@@ -5,22 +5,10 @@
             "name": "json.snippet.scope",
             "defaultAppend": "",
             "strings": [
-                {
-                    "string": "ant",
-                    "replace": "text.xml.ant"
-                },
-                {
-                    "string": "applescript",
-                    "replace": "source.applescript"
-                },
-                {
-                    "string": "asp",
-                    "replace": "source.asp"
-                },
-                {
-                    "string": "bibtex",
-                    "replace": "text.bibtex"
-                },
+                {"string": "ant","replace": "text.xml.ant"},
+                {"string": "applescript","replace": "source.applescript"},
+                {"string": "asp","replace": "source.asp"},
+                {"string": "bibtex","replace": "text.bibtex"},
                 {
                     "string": "c++",
                     "replace": "source.c++"
@@ -196,7 +184,7 @@
             "description": "Snippet-Scope 作用域",
             "scope": "source.json",
             "//":"后面必须有|\"或空格",
-            "pattern": "([a-zA-Z0-9]+)(?=\\||\\s|\")",
+            "pattern": "(?<=\\||\")\\s{0,1}([a-zA-Z0-9]+)(?=\\|||)",
             "//":"source.luajk",
             "completionCaptureIndex": 1,
             "completionSetNames": ["json.snippet.scope"]
