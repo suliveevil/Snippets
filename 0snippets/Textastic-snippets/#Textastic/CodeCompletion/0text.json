@@ -1,21 +1,21 @@
 {
     "description": "Textastic CodeCompletion for Plain Text",
-    "uuid": "uuid",
+    "uuid": "91C2AF96-85C6-11EA-904F-33E45696D45E",
     "completionSets": [{
-        "name": "enviroment.situation1.situation2",
+        "name": "text.ipados.version",
         "defaultAppend": "",
         "strings": [{
-            "string": "string2match",
-            "replace": "snippet"
+            "string": "vvv",
+            "replace": "iPad Pro 11; iPadOS 13.4.1$0"
         }]
     }],
     "contexts": [{
         "description": "description",
         "scope": "text.plain",
-        "pattern": "(prefix[a-zA-Z0-9]*)",
+        "pattern": "[:：]\\s?(\\w*)",
         "completionCaptureIndex": 1,
         "completionSetNames": [
-            "enviroment.situation1.situation2"
+            "text.ipados.version"
         ]
     }]
 }
