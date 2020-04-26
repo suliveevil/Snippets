@@ -1,9 +1,10 @@
 {
     "description": "Textastic CodeCompletion for Python",
     "uuid": "B62DFA6C-7292-11EA-A8CB-97DD6C7D84B1",
-    "//":"一切皆对象、数据结构",
-    "completionSets": [{
-            "//": "Python 编码声明",
+    "//":"一切皆数据，Python 内：一切皆对象",
+    "completionSets": [
+        {
+            "//": "Shebang 和 Python 编码声明",
             "name": "python.file.header",
             "defaultAppend": "",
             "strings": [
@@ -22,6 +23,7 @@
             ]
         },
         {
+            "//":"注释",
             "name": "python.comment",
             "defaultAppend": "",
             "strings": [{
@@ -30,8 +32,78 @@
             }]
         },
         {
-            "name": "python.keyword",
+            "//":"Python 分隔符 Delimiter",
+            "name": "python.delimiter",
+            "strings": [
+                {"string": "(","replace": "($1)$0"},
+                {"string": ")","replace": ")$0"},
+                {"string": "[","replace": "[$1]$0"},
+                {"string": "]","replace": "]$0"},
+                {"string": "{","replace": "{$1}$0"},
+                {"string": "}","replace": "}$0"},
+                {"string": "（","replace": "($1)$0"},
+                {"string": "）","replace": ")$0"},
+                {"string": "【","replace": "[$1]$0"},
+                {"string": "】","replace": "]$0"},
+                {"string": "】","replace": "]$0"},
+                ",",
+                ":",
+                ";",
+                ".",
+                {"string": "，","replace": ",$0"},
+                {"string": "：","replace": ":$0"},
+                {"string": "；","replace": ";$0"},
+                {"string": "。","replace": ".$0"},
+                "@",
+                "=",
+                "->",
+                "+=",
+                "-=",
+                "*=",
+                "/=",
+                "//=",
+                "%=",
+                "@=",
+                "&=",
+                "|=",
+                {"string": "｜=","replace": "|=$0"},
+                "^=",
+                ">>=",
+                "<<=",
+                "**="
+            ]
+        },
+        {
+            "//":"Python 运算符 Operator",
+            "name": "python.operator",
+            "defaultAppend": "",
+            "strings": [
+                "+",
+                "-",
+                "*",
+                "**",
+                "/",
+                "//",
+                "%",
+                "@",
+                "<",
+                "<=",
+                "<<",
+                ">",
+                "==",
+                ">>",
+                "&",
+                "|",
+                "^",
+                "~",
+                {"string": "～","replace": "~"},
+                {"string": "：=","replace": ":="},
+                {"string": "！=","replace": "!="}
+            ]
+        },
+        {
             "//": "Python 关键字（False、None、True 既是关键字也是常量",
+            "name": "python.keyword",
             "strings": [
                 "and",
                 "as",
@@ -39,11 +111,16 @@
                 "async",
                 "await",
                 "break",
-                "class",
+                {
+                    "//":"代码块：类定义",
+                    "string": "class",
+                    "replace": "class ${1:ClassName}(${2:ParentObject}):\n\t$0"
+                },
                 "continue",
                 {
-                    "string":"def",
-                    "replace":"\n\ndef ${1:func}():\n\t\"\"\"${2:function doc}\n\t${3:documentation}\n\n\t\"\"\"\n\t${4:function}\n\n\n$0"
+                    "//":"代码块：函数体",
+                    "string": "def",
+                    "replace": "def ${1:function_name}(${2:parameter}):\n\t$0"
                 },
                 "del",
                 "elif",
@@ -51,10 +128,16 @@
                 "except",
                 "finally",
                 "for",
-                "from",
+                {
+                    "string":"from",
+                    "replace":"from $0"
+                },
                 "global",
                 "if",
-                "import",
+                {
+                    "string":"import",
+                    "replace":"import $0"
+                },
                 "in",
                 "is",
                 "lambda",
@@ -72,7 +155,7 @@
         },
         {
             "name": "python.library.standardlibrary",
-            "defaultAppend": " $0",
+            "defaultAppend": "$0",
             "strings": [
                 "__future__",
                 "__main__",
@@ -281,6 +364,26 @@
                 "zipfile",
                 "zipimport",
                 "zlib"
+            ]
+        },
+        {
+            "name": "python.re",
+            "defaultAppend": "",
+            "strings": [
+                "A",
+                "ASCII",
+                {
+                    "string":"compile",
+                    "replace":"compile(${1:pattern},${2:flags=0})$0"
+                },
+                {
+                    "string":"match",
+                    "replace":"match(${1:pattern},${2:StringObject})$0"
+                },
+                {
+                    "string":"search",
+                    "replace":"search(${1:r}'${2:RegularExpression}','${3:StringObject}')$0"
+                }
             ]
         },
         {
@@ -663,15 +766,59 @@
                     "replace": "if __name__ = '__main__':\n\t$1\n$0"
                 }
             ]
+        },
+        {
+            "name": "python.error",
+            "strings": [
+                {
+                    "string":"AttributeError",
+                    "string":"Exception",
+                    "string":"IOError",
+                    "string":"ImportError",
+                    "string":"IndexError",
+                    "string":"KeyError",
+                    "string":"NameError",
+                    "string":"SyntaxError",
+                    "string":"SystemError",
+                    "string":"ValueError"
+                }
+            ]
         }
     ],
-    "contexts": [{
-            "description": "Python 运行环境、编码声明、注释、函数",
+    "contexts": [
+        {
+            "description": "Python 运行环境、编码声明",
+            "scope": "source.python",
+            "pattern": "^([a-zA-Z0-9/]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "python.file.header"
+            ]
+        },
+        {
+            "description": "Python 分隔符",
+            "scope": "source.python",
+            "pattern": "([()\\[\\]{},:;.@=\\-+*&|^<>%/（）【】“”']+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "python.delimiter"
+            ]
+        },
+        {
+            "description": "Python 运算符",
+            "scope": "source.python",
+            "pattern": "([+\\-*/%@<>&｜|^～~:：=！!]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "python.operator"
+            ]
+        },
+        {
+            "description": "Python 注释、函数",
             "scope": "source.python",
             "pattern": "\\b([a-zA-Z0-9/]+)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "python.file.header",
                 "python.comment",
                 "python.functions"
             ]
@@ -688,10 +835,19 @@
         {
             "description": "Python Standard Library 标准库",
             "scope": "source.python",
-            "pattern": "(?<=from|import)\\b([a-zA-Z0-9_]+)",
+            "pattern": "(?<=from|import)\\s([a-zA-Z0-9_]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.library.standardlibrary"
+            ]
+        },
+        {
+            "description": "Python RE 正则表达式",
+            "scope": "source.python",
+            "pattern": "(?<=re\\.)([a-zA-Z0-9_]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "python.re"
             ]
         },
         {
@@ -717,7 +873,7 @@
         {
             "description": "Python Function Int",
             "scope": "source.python",
-            "pattern": "(?<=int\\.)([a-zA-Z0-9]+)",
+            "pattern": "(?<=int\\.)([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.function.int"
@@ -726,7 +882,7 @@
         {
             "description": "Python Function Float",
             "scope": "source.python",
-            "pattern": "(?<=float\\.)([a-zA-Z0-9]+)",
+            "pattern": "(?<=float\\.)([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.function.float"
@@ -735,7 +891,7 @@
         {
             "description": "Python Function Set",
             "scope": "source.python",
-            "pattern": "(?<=s\\.)([a-zA-Z0-9]+)",
+            "pattern": "(?<=s\\.)([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.function.sequence"
@@ -744,7 +900,7 @@
         {
             "description": "Python Function Str",
             "scope": "source.python",
-            "pattern": "(?<=str\\.)([a-zA-Z0-9]+)",
+            "pattern": "(?<=str\\.)([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.function.str"
@@ -753,7 +909,7 @@
         {
             "description": "Python Function Byte",
             "scope": "source.python",
-            "pattern": "(?<=bytes\\.|bytearray\\.)([a-zA-Z0-9]+)",
+            "pattern": "(?<=bytes\\.|bytearray\\.)([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.function.byte"
@@ -762,7 +918,7 @@
         {
             "description": "Python Function Set",
             "scope": "source.python",
-            "pattern": "(?<=set\\.)([a-zA-Z0-9]+)",
+            "pattern": "(?<=set\\.)([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.function.set"
@@ -771,10 +927,19 @@
         {
             "description": "Python Function Dict",
             "scope": "source.python",
-            "pattern": "(?<=dict\\.)([a-zA-Z0-9]+)",
+            "pattern": "(?<=dict\\.)([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
                 "python.function.dict"
+            ]
+        },
+        {
+            "description": "Python Error",
+            "scope": "source.python",
+            "pattern": "(?<=excerpt\\s\\(?)([a-zA-Z0-9]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "python.error"
             ]
         }
     ]
