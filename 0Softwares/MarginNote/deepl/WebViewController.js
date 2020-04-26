@@ -81,12 +81,17 @@ var WebViewController = JSB.defineClass('WebViewController : UIViewController', 
   webViewDidFailLoadWithError: function(webView, error) {
     UIApplication.sharedApplication().networkActivityIndicatorVisible = false;
     Application.sharedInstance().stopWaitHUDOnView(self.view);
+	var lan = NSLocale.preferredLanguages().length?NSLocale.preferredLanguages()[0].substring(0,2):'en';
 
-    var errorString = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><html><head><meta http-equiv='Content-Type' content='text/html;charset=utf-8'><title></title></head><body><div style='width: 100%%; text-align: center; font-size: 36pt; color: red;'>An error occurred:<br>%@</div></body></html>";
-    errorString = errorString.replace("%@", error.localizedDescription);
+    //var errorString = "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"><html><head><meta http-equiv='Content-Type' content='text/html;charset=utf-8'><title></title></head><body><div style='width: 100%%; text-align: center; font-size: 36pt; color: red;'>An error occurred:<br>%@</div></body></html>";
+    //errorString = errorString.replace("%@", error.localizedDescription);
     
-    self.webView.loadHTMLStringBaseURL(errorString, null);
-  },
+    //self.webView.loadHTMLStringBaseURL(errorString, null);
+     if(lan == 'zh')
+      Application.sharedInstance().showHUD('网页加载失败，请稍后重试',self.view.window,2);
+    else
+      Application.sharedInstance().showHUD('The page failed to load, please try again later',self.view.window,2);
+},
   changeLanguage: function(sender) {
     if(self.popoverController){
       self.popoverController.dismissPopoverAnimated(true);
@@ -119,6 +124,7 @@ var WebViewController = JSB.defineClass('WebViewController : UIViewController', 
 });
 
 WebViewController.prototype.translateText = function(text){
+    if(!this.webView||!this.webView.window)return;
     this.text = text;
     var url = 'https://www.deepl.com/translator#auto/' + this.lanCode + '/' + encodeURIComponent(this.text);
     this.webView.loadRequest(NSURLRequest.requestWithURL(NSURL.URLWithString(url)));
@@ -143,11 +149,11 @@ WebViewController.prototype.updateButton = function(){
       this.lanButton.setTitleForState('Italian',0);
   };
 WebViewController.prototype.updateOffset = function(){
-  if(!this.webView)return;
+  if(!this.webView||!this.webView.window)return;
   var webControlerler = this;
   this.webView.evaluateJavaScript('document.getElementsByClassName("lmt__side_container--target")[0].getBoundingClientRect().top + document.body.scrollTop+document.documentElement.scrollTop;',function(ret){
     if(!webControlerler.webView)return;
-    if(ret){
+    if(ret && !isNaN(parseFloat(ret))){
       webControlerler.webView.scrollView.contentOffset = {x:0,y:parseFloat(ret)+52};          
     }
     else{
