@@ -43,25 +43,23 @@ JSB.newAddon = function (mainPath) {
         onProcessExcerptText: function (sender) {
             if (!Application.sharedInstance().checkNotifySenderInWindow(sender, self.window)) return;//Don't process message from other window
             if (!self.autotitle_with_excerpt) return;
-            var noteid = sender.userInfo.noteid;
-            var note = Database.sharedInstance().getNoteById(noteid);
-            if (note && note.excerptText && note.excerptText.length > 0 && note.excerptText.length <= 250) {
-                var timerCount = 0;
+            let noteid = sender.userInfo.noteid;
+            let note = Database.sharedInstance().getNoteById(noteid);
+            if (note && note.noteTitle && note.excerptText && Math.abs(note.noteTitle.length - note.excerptText.length) > 5) return;
+            if (note && note.excerptText && note.excerptText.length > 0 && note.excerptText.length <= 100) {
+                let timerCount = 0;
                 NSTimer.scheduledTimerWithTimeInterval(1, true, function (timer) {
                     var text = note.excerptText.split("**").join("");
                     if (text && text.length) {
                         UndoManager.sharedInstance().undoGrouping('AutoTitleWithExcerpt', note.notebookId, function () {
                             note.noteTitle = text;
                             note.excerptText = text;
-                            // todo:
-                            //  创建后保存有延迟？
-                            //  导致如果不点空白处继续修改标题，显示异常。如果点击空白处将焦点移出该卡片，在修改标题，正常
                             Database.sharedInstance().setNotebookSyncDirty(note.notebookId);
                         });
                         NSNotificationCenter.defaultCenter().postNotificationNameObjectUserInfo('RefreshAfterDBChange', self, {topicid: note.notebookId});
                     }
                     timerCount++;
-                    if (timerCount >= 4) {
+                    if (timerCount >= 1) {
                         timer.invalidate();
                     }
                 });
