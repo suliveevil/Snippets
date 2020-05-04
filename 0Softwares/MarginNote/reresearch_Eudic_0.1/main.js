@@ -2,9 +2,10 @@ JSB.newAddon = function(mainPath) {
     // baseUrl can be modified as needed.
     // Google: http://www.google.com/search?q={keyword}
     // Baidu: http://www.baidu.com/s?wd={keyword}
-    // the baseUrl can also be URL Scheme such as eudic://dict/{keyword}
+    // the baseUrl can also be URL Scheme such as
+    // eudic://dict/{keyword}
     // eudic-de://dict/{keyword}
-    var baseUrl = "eudic-de://dict/";
+    var baseUrl = "eudic://dict/";
     //MARK: - Customized functions
     // URL generation
     function generateUrl(keyWords) {
