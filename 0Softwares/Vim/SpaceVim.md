@@ -2,4 +2,6 @@
 
 ## 安装
 
-curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
+```shell
+curl -sLf https://spacevim.org/cn/install.sh | bash -s -- --install neovim
+```
