@@ -402,6 +402,21 @@
             ]
         },
         {
+            "name": "python.object.attribute",
+            "defaultAppend": "",
+            "strings": [
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"},
+                {"string": "list","replace": "list"}
+            ]
+        },
+        {
             "name": "python.object.sequence",
             "defaultAppend": "",
             "strings": [
@@ -768,18 +783,28 @@
             ]
         },
         {
-            "name": "python.error",
+            "name": "python.builtins.error",
             "strings": [
                 "ArithmeticError",
                 "AssertionError",
                 "AttributeError",
                 "BaseException",
+                "BlockingIOError",
+                "BrokenPipeError",
                 "BufferError",
                 "BytesWarning",
+                "ChildProcessError",
+                "ConnectionAbortedError",
+                "ConnectionError",
+                "ConnectionResetError",
                 "DeprecationWarning",
                 "EOFError",
+                "Ellipsis",
                 "EnvironmentError",
                 "Exception",
+                "False",
+                "FileExistsError",
+                "FileNotFoundError",
                 "FloatingPointError",
                 "FutureWarning",
                 "GeneratorExit",
@@ -788,35 +813,47 @@
                 "ImportWarning",
                 "IndentationError",
                 "IndexError",
+                "InterruptedError",
+                "IsADirectoryError",
                 "KeyError",
                 "KeyboardInterrupt",
                 "LookupError",
                 "MemoryError",
                 "NameError",
+                "None",
+                "NotADirectoryError",
                 "NotImplemented",
                 "NotImplementedError",
                 "OSError",
                 "OverflowError",
                 "PendingDeprecationWarning",
+                "PermissionError",
+                "ProcessLookupError",
                 "ReferenceError",
+                "ResourceWarning",
                 "RuntimeError",
                 "RuntimeWarning",
                 "StandardError",
                 "StopIteration",
                 "SyntaxError",
+                "SyntaxWarning",
                 "SystemError",
                 "SystemExit",
                 "SytaxWarning",
                 "TabError",
+                "TimeoutError",
+                "True",
                 "TypeError",
                 "UnboundLocalError",
                 "UnicodeDecodeError",
                 "UnicodeEncodeError",
+                "UnicodeError",
                 "UnicodeTranslateError",
                 "UnicodeWarning",
                 "UserWarning",
                 "VMSError",
                 "ValueError",
+                "Warning",
                 "WindowsError",
                 "ZeroDivisionError"
             ]
@@ -976,7 +1013,7 @@
             "pattern": "((raise\\s)|(except\\s\\(?))([a-zA-Z0-9]*)",
             "completionCaptureIndex": 4,
             "completionSetNames": [
-                "python.error"
+                "python.builtins.error"
             ]
         }
     ]

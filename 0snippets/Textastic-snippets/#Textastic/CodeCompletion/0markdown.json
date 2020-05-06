@@ -10,6 +10,76 @@
             }]
         },
         {
+            "name": "markdown.blog.category",
+            "defaultAppend": "",
+            "strings": [
+                {"string": "随笔",         "replace": "随笔"},
+                {"string": "software",    "replace": "Software"},
+                {"string": "python",      "replace": "Python"},
+                {"string": "生活",         "replace": "生活"},
+                {"string": "hardware",    "replace": "Hardware"},
+                {"string": "it",          "replace": "IT"},
+                {"string": "学习",         "replace": "学习"},
+                {"string": "文学",         "replace": "文学"},
+                {"string": "english",     "replace": "English"},
+                {"string": "linux",       "replace": "Linux"},
+                {"string": "macos",       "replace": "macOS"},
+                {"string": "unix",        "replace": "Unix"},
+                {"string": "音乐",         "replace": "音乐"},
+                {"string": "math",        "replace": "Math"},
+                {"string": "git",         "replace": "git"},
+                {"string": "github",      "replace": "GitHub"},
+                {"string": "windows",     "replace": "Windows"},
+                {"string": "健身",         "replace": "健身"},
+                {"string": "automation",  "replace": "Automation"},
+                {"string": "book",        "replace": "Book"},
+                {"string": "ipados",      "replace": "iPadOS"}
+            ]
+        },
+        {
+            "name": "markdown.blog.tag",
+            "defaultAppend": "",
+            "strings": [
+                {"string": "apfs",            "replace": "APFS"},
+                {"string": "alfred",          "replace": "Alfred"},
+                {"string": "applescript",     "replace": "AppleScript"},
+                {"string": "automator",       "replace": "Automator"},
+                {"string": "betterandbetter", "replace": "BetterAndBetter"},
+                {"string": "cs",              "replace": "CS"},
+                {"string": "ee",              "replace": "EE"},
+                {"string": "electron",        "replace": "Electron"},
+                {"string": "english",         "replace": "English"},
+                {"string": "filesystem",      "replace": "FileSystem"},
+                {"string": "finder",          "replace": "Finder"},
+                {"string": "gui",             "replace": "GUI Scripting"},
+                {"string": "git",             "replace": "Git"},
+                {"string": "github",          "replace": "GitHub"},
+                {"string": "javascript",      "replace": "JavaScript"},
+                {"string": "jekyll",          "replace": "Jekyll"},
+                {"string": "katex",           "replace": "KaTeX"},
+                {"string": "keyboardmaestro", "replace": "Keyboard Maestro"},
+                {"string": "latex",           "replace": "LaTeX"},
+                {"string": "launchbar",       "replace": "LaunchBar"},
+                {"string": "leetcode",        "replace": "LeetCode"},
+                {"string": "",                "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"}
+            ]
+        },
+        {
             "name": "markdown.url",
             "defaultAppend": "",
             "strings": [{
@@ -31,7 +101,7 @@
             "defaultAppend": "",
             "strings": [{
                 "string": "codeblock",
-                "replace": "\n```$1\n${2:your code}\n```\n$3"
+                "replace": "\n```$0\n${1:your code}\n```\n"
             }]
         },
         {
