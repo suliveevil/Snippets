@@ -1,0 +1,36 @@
+{
+    "description": "Textastic CodeCompletion for ScPL",
+    "uuid": "1980D92A-8FC3-11EA-9A4D-472982EF47BE",
+    "completionSets":[
+        {
+            "name": "scpl.test",
+            "strings": [
+                {"string": "scpl","replace": "ScPL"}
+            ]
+        },
+        {
+            "name": "scpl.test2",
+            "strings": [
+                {"string": "scpl","replace": "ScPL"}
+            ]
+        }
+    ],
+    "contexts": [
+        {
+            "description":            "description",
+            "scope":                  "source.scpl",
+            "fileType":               "scpl",
+            "pattern":                "([a-zA-Z0-9]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames":     ["scpl.test"]
+        },
+        {
+            "description":            "description",
+            "scope":                  "source.scpl",
+            "fileExtension":          ["scpl"],
+            "pattern":                "([a-zA-Z0-9]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames":     ["scpl.test2"]
+        }
+    ]
+}
