@@ -5,11 +5,11 @@
         {
             "name": "scpl.test",
             "strings": [
-                {"string": "scpl","replace": "ScPL"}
+                {"string": "scpl1","replace": "ScPL"}
             ]
         },
         {
-            "name": "scpl.test2",
+            "name": "scpl2.test2",
             "strings": [
                 {"string": "scpl","replace": "ScPL"}
             ]
@@ -18,7 +18,7 @@
     "contexts": [
         {
             "description":            "description",
-            "scope":                  "source.scpl",
+            "scope":                  "source.scpl | text.plain",
             "fileType":               "scpl",
             "pattern":                "([a-zA-Z0-9]*)",
             "completionCaptureIndex": 1,

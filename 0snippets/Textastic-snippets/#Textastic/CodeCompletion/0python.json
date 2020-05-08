@@ -857,16 +857,45 @@
                 "WindowsError",
                 "ZeroDivisionError"
             ]
+        },
+        {
+            "name": "python.leetcode&lintcode",
+            "strings": [
+                {
+                    "string":"leetc",
+                    "replace":"#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"LeetCode-\n\n\"\"\"\n## input\n\n## Solution\n\n## output",
+                },
+                {
+                    "string":"lintc",
+                    "replace":"#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"LintCode-\n\n\"\"\"\n## input\n\n## Solution\n\n## output",
+                }
+            ]
+        },
+        {
+            "name": "python.decorator.timer",
+            "strings": [
+                {
+                    "//":"timer_function",
+                    "string":"timer",
+                    "replace":"from functools import wraps\nimport time\n\n\ndef timer_func(function):\n\t@wraps(function)\n\tdef function_timer(*args, **kwargs):\n\t\tprint('[Function: {name} start...]'.format(name=function.__name__))\n\t\tt0 = time.time()\n\t\tresult = function(*args, **kwargs)\n\t\tt1 = time.time()\n\t\tprint('[Function: {name} finished,\\n Time Spend: {time:.9f}s]'.format(\n\t\t\tname=function.__name__, time=t1 - t0))\n\t\treturn result\n\n\treturn function_timer\n\n\n@timer_func\ndef ${1:yourFunction}():\n    \n\nif __name__ == '__main__':\n\t$COMPLETION(para)",
+                },
+                {
+                    "string":"timer_context",
+                    "replace":"#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\"\"\"LintCode-\n\n\"\"\"\n## input\n\n## Solution\n\n## output",
+                }
+            ]
         }
     ],
     "contexts": [
         {
-            "description": "Python 运行环境、编码声明",
+            "description": "Python 运行环境、编码声明、LeetCode、LintCode",
             "scope": "source.python",
-            "pattern": "^([a-zA-Z0-9/]*)",
+            "pattern": "^([a-zA-Z0-9/_\\-]*)",
             "completionCaptureIndex": 1,
             "completionSetNames": [
-                "python.file.header"
+                "python.file.header",
+                "python.decorator.timer",
+                "python.leetcode&lintcode"
             ]
         },
         {
