@@ -10,13 +10,18 @@ var MarkDownEditController = JSB.defineClass('MarkDownEditController : UIViewCon
     self.webView.scrollView.delegate = self;
     self.view.addSubview(self.webView);
     
+    self.tempPath = Application.sharedInstance().tempPath + NSUUID.UUID().UUIDString();
+    NSFileManager.defaultManager().createDirectoryAtPathWithIntermediateDirectoriesAttributes(self.tempPath,true,{});
+    
+    NSFileManager.defaultManager().copyItemAtPathToPath(self.mainPath + '/editormd',self.tempPath + '/editormd');
   },
   viewWillAppear: function(animated) {
     self.loaded = false;
     self.webView.delegate = self;
     self.view.backgroundColor = Application.sharedInstance().defaultNotebookColor;
     self.webView.backgroundColor = Application.sharedInstance().defaultNotebookColor;
-    self.webView.loadRequest(NSURLRequest.requestWithURL(NSURL.fileURLWithPath(self.mainPath + '/editormd/edit.html')));
+    self.webView.loadFileURLAllowingReadAccessToURL(NSURL.fileURLWithPath(self.tempPath + '/editormd/edit.html'),NSURL.fileURLWithPath(Application.sharedInstance().tempPath));
+    //self.webView.loadRequest(NSURLRequest.requestWithURL(NSURL.fileURLWithPath(self.mainPath + '/editormd/edit.html')));
   },
   viewWillDisappear: function(animated) {
     if(!self.loaded){

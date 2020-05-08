@@ -9,14 +9,18 @@ var HtmlEditController = JSB.defineClass('HtmlEditController : UIViewController'
     self.webView.delegate = self;
     self.webView.scrollView.delegate = self;
     self.view.addSubview(self.webView);
+    self.tempPath = Application.sharedInstance().tempPath + NSUUID.UUID().UUIDString();
+    NSFileManager.defaultManager().createDirectoryAtPathWithIntermediateDirectoriesAttributes(self.tempPath,true,{});
     
+    NSFileManager.defaultManager().copyItemAtPathToPath(self.mainPath + '/CKEditor',self.tempPath + '/CKEditor');
   },
   viewWillAppear: function(animated) {
     self.loaded = false;
     self.webView.delegate = self;
     self.view.backgroundColor = Application.sharedInstance().defaultNotebookColor;
     self.webView.backgroundColor = Application.sharedInstance().defaultNotebookColor;
-    self.webView.loadRequest(NSURLRequest.requestWithURL(NSURL.fileURLWithPath(self.mainPath + '/CKEditor/editor.html')));
+    self.webView.loadFileURLAllowingReadAccessToURL(NSURL.fileURLWithPath(self.tempPath + '/CKEditor/editor.html'),NSURL.fileURLWithPath(Application.sharedInstance().tempPath));
+    //self.webView.loadRequest(NSURLRequest.requestWithURL(NSURL.fileURLWithPath(self.mainPath + '/CKEditor/editor.html')));
   },
   viewWillDisappear: function(animated) {
     if(!self.loaded){
@@ -30,12 +34,17 @@ var HtmlEditController = JSB.defineClass('HtmlEditController : UIViewController'
             self.html = ret;
           }
           //calculate size
-          self.webView.evaluateJavaScript('CKEDITOR.instances.editor1.resize(400,1600);\
-            var size = {width:CKEDITOR.instances.editor1.editable().$.offsetWidth,height:CKEDITOR.instances.editor1.editable().$.offsetHeight};\
-            size;',function(ret){
-              var size = JSON.parse(ret);
-              self.retfunc({html:self.html,dirty:true,size:size});
+          self.webView.evaluateJavaScript('CKEDITOR.instances.editor1.resize(400,1600);',function(){
+            NSTimer.scheduledTimerWithTimeInterval(0.2,false,function(timer){
+              self.webView.evaluateJavaScript('\
+                var size = {width:CKEDITOR.instances.editor1.editable().$.offsetWidth,height:CKEDITOR.instances.editor1.editable().$.offsetHeight};\
+                size;',function(ret){
+                  var size = JSON.parse(ret);
+                  size.height += 40;
+                  self.retfunc({html:self.html,dirty:true,size:size});
+                });
             });
+          });
         });
       }
       else{

@@ -51,7 +51,7 @@
                     if(editormd.kaTeXLoaded){
                         window.setTimeout(function(){
                             window.webkit.messageHandlers.uiwebviewhandler.postMessage({type:'onlocation',location:'RenderView/FinishLoading'});//Tell MarginNote that rendering has ended
-                        },100);
+                        },200);
                         window.clearInterval(timer);
                     }
                 },100);

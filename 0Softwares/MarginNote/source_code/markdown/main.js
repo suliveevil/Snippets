@@ -14,6 +14,10 @@ JSB.newAddon = function(mainPath){
         return {'viewController':self.htmlController};
       };
       var renderFunc = function(html,text,respath){
+        var removedTo = NSUUID.UUID().UUIDString();
+        NSFileManager.defaultManager().moveItemAtPathToPath(respath + '/css',respath + '/css' + removedTo);
+        NSFileManager.defaultManager().moveItemAtPathToPath(respath + '/js',respath + '/js' + removedTo);
+        NSFileManager.defaultManager().moveItemAtPathToPath(respath + '/lib',respath + '/lib' + removedTo);
         NSFileManager.defaultManager().copyItemAtPathToPath(mainPath + '/editormd/css',respath + '/css');
         NSFileManager.defaultManager().copyItemAtPathToPath(mainPath + '/editormd/js',respath + '/js');
         NSFileManager.defaultManager().copyItemAtPathToPath(mainPath + '/editormd/lib',respath + '/lib');

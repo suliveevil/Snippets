@@ -4,6 +4,7 @@ JSB.newAddon = function(mainPath){
     //Window initialize
     sceneWillConnect: function() {
       self.htmlController = HtmlEditController.new();
+      Application.sharedInstance().studyController(self.window).addChildViewController(self.htmlController); //To fix 3.6.8 bug.
       self.htmlController.mainPath = mainPath;
       var editorFunc = function(html,text,respath,retfunc){
         self.htmlController.html = html;
@@ -19,6 +20,7 @@ JSB.newAddon = function(mainPath){
     },
     //Window disconnect
     sceneDidDisconnect: function() {
+      self.htmlController.removeFromParentViewController();
       Application.sharedInstance().unregsiterHtmlCommentEditor('MNCKEditor');
     },
     //Window resign active
