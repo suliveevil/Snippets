@@ -1,0 +1,209 @@
+{
+    "description": "description",
+    "uuid": "6B854C4C-72F9-11EA-BB9C-57DD78216B54",
+    "completionSets": [
+        {
+            "name": "regex.assertion.pla",
+            "defaultAppend": "",
+            "strings": [{
+                "//": "输入字符后面必须是",
+                "string": "pla",
+                "replace": "正向先行断言: 输入字符后面必须是"
+            }]
+        },
+        {
+            "name": "regex.assertion.plb",
+            "defaultAppend": "",
+            "strings": [{
+                "//": "输入字符前面必须是",
+                "string": "plb",
+                "replace": "正向后行断言：输入字符前面必须是"
+            }]
+        },
+        {
+            "name": "regex.assertion.nla",
+            "defaultAppend": "",
+            "strings": [{
+                "//": "输入字符后面不能有",
+                "string": "nla",
+                "replace": "负向先行断言：输入字符后面不能有"
+            }]
+        },
+        {
+            "name": "regex.assertion.nlb",
+            "defaultAppend": "",
+            "strings": [{
+                "//": "输入字符前面不能有",
+                "string": "nlb",
+                "replace": "负向后行断言：输入字符前面不能有"
+            }]
+        },
+        {
+            "//": "choice is not supported",
+            "name": "test.choice",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "choice",
+                "replace": "choose${1:|const,var|}\n$2"
+            }]
+        },
+        {
+            "//": "variable is supported",
+            "name": "test.variable",
+            "defaultAppend": "",
+            "strings": [{
+                    "//": "✅",
+                    "string": "variable",
+                    "replace": "variable\n$COMPLETION\n"
+                },
+                {
+                    "//": "",
+                    "string": "clipboard",
+                    "replace": "-\n$CLIPBOARD\n-$0"
+                },
+                {
+                    "//": "❌",
+                    "string": "date",
+                    "replace": "$CURRENT_DATE\n$0"
+                },
+                {
+                    "//": "❌",
+                    "string": "year",
+                    "replace": "$CURRENT_YEAR\n$0"
+                }
+            ]
+        },
+        {
+            "//": "index is supported",
+            "name": "test.test.index1",
+            "defaultAppend": "$1--$0",
+            "strings": [{
+                    "string": "index",
+                    "replace": "${1:attr1}\n${2:attr2}\n${3:attr3}"
+                },
+                "index1"
+            ]
+        },
+        {
+            "//": "index2",
+            "name": "test.test.index2",
+            "defaultAppend": "$1-$0",
+            "strings": [
+                "aaa",
+                "bbb",
+                "ccc",
+                {
+                    "string": "index2",
+                    "replace": "+index2"
+                },
+                {
+                    "string": "attr",
+                    "replace": "attribute"
+                }
+            ]
+        },
+        {
+            "name": "test.test.snippet",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "string2match",
+                "replace": "${1:document.}getElement${2/(T)|(C)|(I)/(?1:s)(?2:s)/}By${2:T}${2/(T)|(I)|(C)|.*/(?1:agName)(?2:d)(?3:lassName)/}('$3')$0"
+            }]
+        },
+        {
+            "name": "markdown.normal",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "normal",
+                "replace": "normal\n$0"
+            }]
+        }
+    ],
+    "contexts": [
+        {
+            "description": "normal(baseline)",
+            "scope": "text.html.markdown",
+            "pattern": "(no[a-zA-Z0-9]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.normal"
+            ]
+        },
+        {
+            "description": "test",
+            "scope": "source.json | text.html.markdown | source.python",
+            "pattern": "(cho)[a-zA-Z0-9]*",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "test.choice"
+            ]
+        },
+        {
+            "description": "test",
+            "scope": "source.json | text.html.markdown | source.python",
+            "pattern": "(.{2,})[a-zA-Z0-9]*",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "test.variable"
+            ]
+        },
+        {
+            "description": "index 1",
+            "scope": "text.html | text.html.markdown",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "test.test.index1"
+            ]
+        },
+        {
+            "description": "index 2",
+            "scope": "text.html | text.html.markdown | meta.tag",
+            "pattern": "\\.([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 2,
+            "completionSetNames": [
+                "test.test.index2"
+            ]
+        },
+        {
+            "description": "regex 正向先行",
+            "scope": "source.json | text.html.markdown | source.python",
+            "//": "后面必须是",
+            "pattern": "(pl(?=\\s))",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "regex.assertion.pla"
+            ]
+        },
+        {
+            "description": "regex 正向后行",
+            "scope": "source.json | text.html.markdown | source.python",
+            "//": "前面必须是",
+            "pattern": "(pl(?<=\\S))",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "regex.assertion.plb"
+            ]
+        },
+        {
+            "description": "regex 负向先行",
+            "scope": "source.json | text.html.markdown | source.python",
+            "//": "后面必须不能是",
+            "pattern": "",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "regex.assertion.nla"
+            ]
+        },
+        {
+            "description": "regex 负向后行",
+            "scope": "source.json | text.html.markdown | source.python",
+            "//": "前面必须不能是",
+            "pattern": "(?<!:)(?:^|\\s|;)([a-zA-Z\\-+]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "regex.assertion.nlb"
+            ]
+        }
+    ]
+}
