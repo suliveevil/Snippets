@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LiveViewEdgeToEdge</key>
+	<true/>
+	<key>LiveViewMode</key>
+	<string>VisibleByDefault</string>
+	<key>Name</key>
+	<string>Name</string>
+	<key>PlaygroundLoggingMode</key>
+	<string>Off</string>
+	<key>UserModuleSourceFilesToOpen</key>
+	<array>
+		<string>UserModules/MyFiles.playgroundmodule/Sources/SharedCode.swift</string>
+	</array>
+	<key>UserModuleCodeCompletionDirectives</key>
+	<array>
+		<string>everything, hide</string>
+		<string>currentmodule, show</string>
+		<string>module, show, MyFiles</string>
+		<string>literal, show, color, integer, string</string>
+		<string>keyword, show, if, func, var, let</string>
+		<string>identifier, hide, start(mazeType:using:)</string>
+		<string>identifier, show, ., Simulation, configureCell, =, &lt;=, &gt;=, &lt;, &gt;, ==, !=, +, -, true, false, &amp;&amp;, ||, !, *, /, alive, dead, idle, pulsar, glider, pentadecathlon, capitalL, cellDimension, placePattern(_:atColumn:row:), cell, speed, state, numberOfAliveNeighbors, simulation, set(_:forState:), Pattern, configureCell(cell:), advancedConfigureCell(cell:)</string>
+	</array>
+</dict>
+</plist>
