@@ -18,14 +18,14 @@
             "snippet": ""
         },
         {
-            "name": ".py    - Python File",
+            "name": ".py\t\t- Python File",
             "//":"缺少设置默认文件名功能",
             "defaultFileName":"$CURRENTTIME",
             "fileExtension": "filename.py",
             "snippet": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n\"\"\"${1:Description}\n$2\n\"\"\"\n\n$0\n"
         },
         {
-            "name": ".vim   - VimScript",
+            "name": ".vim\t\t- VimScript",
             "fileExtension": "filename.vim",
             "snippet": ""
         }
