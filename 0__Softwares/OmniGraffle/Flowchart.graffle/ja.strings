@@ -1,0 +1,39 @@
+/*  Canvases  */
+"Flowchart" = "フローチャート"; 
+
+/*  Layers  */
+"flowchart" = "フローチャート"; 
+
+/*  Graphics  */
+"start" = "start"; 
+"Start" = "開始"; 
+"decision" = "decision"; 
+"Decision" = "決定"; 
+"join" = "join"; 
+"Join" = "加入"; 
+"login" = "login"; 
+"Login" = "ログイン"; 
+"member data" = "member data"; 
+"Member \nData Input" = "メンバー\nデータ入力"; 
+"member database" = "member database"; 
+"Member Database" = "メンバー\nデータベース"; 
+"view events" = "view events"; 
+"View Events" = "イベントを表示"; 
+"event database" = "event database"; 
+"Event Database" = "イベントデータベース"; 
+"select event" = "select event"; 
+"Select Event" = "イベントを選択"; 
+"no" = "no"; 
+"No" = "いいえ"; 
+"stop" = "stop"; 
+"Stop" = "停止"; 
+"yes" = "yes"; 
+"Yes" = "はい"; 
+"contact customer" = "contact customer"; 
+"Contact \nCustomer" = "顧客に連絡"; 
+"send agreement" = "send agreement"; 
+"Send\nAgreement" = "同意書を送信"; 
+"record results" = "record results"; 
+"Record\nResults" = "結果を記録"; 
+"stop" = "stop"; 
+"Stop" = "停止"; 

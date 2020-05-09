@@ -1,0 +1,39 @@
+/*  Canvases  */
+"Flowchart" = "순서도"; 
+
+/*  Layers  */
+"flowchart" = "순서도"; 
+
+/*  Graphics  */
+"start" = "start"; 
+"Start" = "시작"; 
+"decision" = "decision"; 
+"Decision" = "결정"; 
+"join" = "join"; 
+"Join" = "가입"; 
+"login" = "login"; 
+"Login" = "로그인"; 
+"member data" = "member data"; 
+"Member \nData Input" = "멤버 데이터 입력"; 
+"member database" = "member database"; 
+"Member Database" = "멤버 \n데이터베이스"; 
+"view events" = "view events"; 
+"View Events" = "이벤트 보기"; 
+"event database" = "event database"; 
+"Event Database" = "이벤트 \n데이터베이스"; 
+"select event" = "select event"; 
+"Select Event" = "이벤트 선택"; 
+"no" = "no"; 
+"No" = "아니요"; 
+"stop" = "stop"; 
+"Stop" = "중지"; 
+"yes" = "yes"; 
+"Yes" = "예"; 
+"contact customer" = "contact customer"; 
+"Contact \nCustomer" = "고객 연락"; 
+"send agreement" = "send agreement"; 
+"Send\nAgreement" = "계약 전송"; 
+"record results" = "record results"; 
+"Record\nResults" = "결과 기록"; 
+"stop" = "stop"; 
+"Stop" = "중지"; 

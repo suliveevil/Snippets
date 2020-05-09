@@ -1,0 +1,39 @@
+/*  Canvases  */
+"Flowchart" = "Блок-схема"; 
+
+/*  Layers  */
+"flowchart" = "Блок-схема"; 
+
+/*  Graphics  */
+"start" = "start"; 
+"Start" = "Начало"; 
+"decision" = "decision"; 
+"Decision" = "Решение"; 
+"join" = "join"; 
+"Join" = "Регистрация"; 
+"login" = "login"; 
+"Login" = "Вход"; 
+"member data" = "member data"; 
+"Member \nData Input" = "Ввод данных пользователя"; 
+"member database" = "member database"; 
+"Member Database" = "БД пользователей"; 
+"view events" = "view events"; 
+"View Events" = "Просмотр событий"; 
+"event database" = "event database"; 
+"Event Database" = "БД \nсобытий"; 
+"select event" = "select event"; 
+"Select Event" = "Выбор \nсобытия"; 
+"no" = "no"; 
+"No" = "Нет"; 
+"stop" = "stop"; 
+"Stop" = "Стоп"; 
+"yes" = "yes"; 
+"Yes" = "Да"; 
+"contact customer" = "contact customer"; 
+"Contact \nCustomer" = "Обращение \nк клиенту"; 
+"send agreement" = "send agreement"; 
+"Send\nAgreement" = "Отправка договора"; 
+"record results" = "record results"; 
+"Record\nResults" = "Запись результатов"; 
+"stop" = "stop"; 
+"Stop" = "Стоп"; 

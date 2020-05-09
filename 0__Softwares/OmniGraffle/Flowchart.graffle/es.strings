@@ -1,0 +1,39 @@
+/*  Canvases  */
+"Flowchart" = "Diagrama de flujo"; 
+
+/*  Layers  */
+"flowchart" = "diagrama de flujo"; 
+
+/*  Graphics  */
+"start" = "inicio"; 
+"Start" = "Inicio"; 
+"decision" = "decisión"; 
+"Decision" = "Decisión"; 
+"join" = "unirse"; 
+"Join" = "Unirse"; 
+"login" = "iniciar sesión"; 
+"Login" = "Iniciar sesión"; 
+"member data" = "datos de miembro"; 
+"Member \nData Input" = "Entrada de \ndatos de \nmiembro"; 
+"member database" = "bd de miembros"; 
+"Member Database" = "BD de miembros"; 
+"view events" = "ver eventos"; 
+"View Events" = "Ver eventos"; 
+"event database" = "bd de eventos"; 
+"Event Database" = "BD de eventos"; 
+"select event" = "seleccionar evento"; 
+"Select Event" = "Seleccionar \nevento"; 
+"no" = "no"; 
+"No" = "No"; 
+"stop" = "detener"; 
+"Stop" = "Detener"; 
+"yes" = "sí"; 
+"Yes" = "Sí"; 
+"contact customer" = "contactar con cliente"; 
+"Contact \nCustomer" = "Contactar con cliente"; 
+"send agreement" = "enviar contrato"; 
+"Send\nAgreement" = "Enviar contrato"; 
+"record results" = "registrar resultados"; 
+"Record\nResults" = "Registrar resultados"; 
+"stop" = "fin"; 
+"Stop" = "Fin"; 

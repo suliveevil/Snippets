@@ -1,0 +1,39 @@
+/*  Canvases  */
+"Flowchart" = "Organigramme"; 
+
+/*  Layers  */
+"flowchart" = "organigramme"; 
+
+/*  Graphics  */
+"start" = "start"; 
+"Start" = "Début"; 
+"decision" = "decision"; 
+"Decision" = "Décision"; 
+"join" = "join"; 
+"Join" = "Participer"; 
+"login" = "login"; 
+"Login" = "Ouvrir une session"; 
+"member data" = "member data"; 
+"Member \nData Input" = "Saisie des données de membre"; 
+"member database" = "member database"; 
+"Member Database" = "Base de données des membres"; 
+"view events" = "view events"; 
+"View Events" = "Afficher les événements"; 
+"event database" = "event database"; 
+"Event Database" = "Base de données des événements"; 
+"select event" = "select event"; 
+"Select Event" = "Sélectionner \nun événement"; 
+"no" = "no"; 
+"No" = "Non"; 
+"stop" = "stop"; 
+"Stop" = "Arrêter"; 
+"yes" = "yes"; 
+"Yes" = "Oui"; 
+"contact customer" = "contact customer"; 
+"Contact \nCustomer" = "Contacter\n le client"; 
+"send agreement" = "send agreement"; 
+"Send\nAgreement" = "Envoyer l’accord"; 
+"record results" = "record results"; 
+"Record\nResults" = "Enregistrer les résultats"; 
+"stop" = "stop"; 
+"Stop" = "Arrêter"; 
