@@ -1,0 +1,597 @@
+map
+----
+   <C-P>         <Plug>(ctrlp)
+   <Plug>(easymotion-dotrepeat) * :<C-U>call EasyMotion#DotRepeat()<CR>
+   <Plug>(easymotion-prefix)B   <Plug>(easymotion-B)
+   <Plug>(easymotion-prefix)E   <Plug>(easymotion-E)
+   <Plug>(easymotion-prefix)F   <Plug>(easymotion-F)
+   <Plug>(easymotion-prefix)N   <Plug>(easymotion-N)
+   <Plug>(easymotion-prefix)T   <Plug>(easymotion-T)
+   <Plug>(easymotion-prefix)W   <Plug>(easymotion-W)
+   <Plug>(easymotion-prefix)b   <Plug>(easymotion-b)
+   <Plug>(easymotion-prefix)e   <Plug>(easymotion-e)
+   <Plug>(easymotion-prefix)f   <Plug>(easymotion-f)
+   <Plug>(easymotion-prefix)gE   <Plug>(easymotion-gE)
+   <Plug>(easymotion-prefix)ge   <Plug>(easymotion-ge)
+   <Plug>(easymotion-prefix)j   <Plug>(easymotion-j)
+   <Plug>(easymotion-prefix)k   <Plug>(easymotion-k)
+   <Plug>(easymotion-prefix)n   <Plug>(easymotion-n)
+   <Plug>(easymotion-prefix)s   <Plug>(easymotion-s)
+   <Plug>(easymotion-prefix)t   <Plug>(easymotion-t)
+   <Plug>(easymotion-prefix)w   <Plug>(easymotion-w)
+   <Plug>unimpairedMoveSelectionDown * :<C-U>call <SNR>94_MoveSelectionDown(v:count1)<CR>
+   <Plug>unimpairedMoveSelectionUp * :<C-U>call <SNR>94_MoveSelectionUp(v:count1)<CR>
+   <Space><Space>   <Plug>(easymotion-prefix)
+   <Space>zz     :call ToggleFold()<CR>
+   H           * ^
+   L           * $
+n  -             <Plug>VinegarUp
+n  <C-Down>      <Plug>(VM-Add-Cursor-Down)
+n  <C-N>         <Plug>(VM-Find-Under)
+n  <C-S>       * :w<CR>
+n  <C-Up>        <Plug>(VM-Add-Cursor-Up)
+n  <D-a>       * :if &slm != ""|exe ":norm gggH<C-O>G"| else|exe ":norm ggVG"|endif<CR>
+n  <D-f>       * /
+n  <D-g>       * n
+n  <D-n>       * :confirm enew<CR>
+n  <D-o>       * :browse confirm e<CR>
+n  <D-s>       * :if expand("%") == ""|browse confirm w| else|confirm w|endif<CR>
+n  <D-v>       * "+gP
+n  <D-w>       * :if winheight(2) < 0 | confirm enew | else | confirm close | endif<CR>
+n  <D-z>       * u
+n  <F4>          <Plug>(MakeDigraph)
+n  <P          & :<C-U>call <SNR>94_putline(v:count1 . '[p', 'Above')<CR><']
+n  <Plug>(EasyAlign) * :set opfunc=<SNR>83_easy_align_op<CR>g@
+n  <Plug>(EasyAlignOperator) * :set opfunc=<SNR>83_easy_align_op<CR>g@
+n  <Plug>(EasyAlignRepeat) * :call <SNR>83_easy_align_repeat()<CR>
+n  <Plug>(Limelight) * :set opfunc=limelight#operator<CR>g@
+n  <Plug>(LiveEasyAlign) * :set opfunc=<SNR>83_live_easy_align_op<CR>g@
+n  <Plug>(MakeDigraph) & :set opfunc=unicode#GetDigraph<CR>g@
+n  <Plug>(UnicodeGA) & :<C-U>UnicodeName<CR>
+n  <Plug>(UnicodeSwapCompleteName) & :<C-U>call <SNR>81_ToggleUnicodeCompletion()<CR>
+n  <Plug>(VM-Add-Cursor-At-Pos) * :call vm#commands#add_cursor_at_pos(0)<CR>
+n  <Plug>(VM-Add-Cursor-At-Word) * :call vm#commands#add_cursor_at_word(1, 1)<CR>
+n  <Plug>(VM-Add-Cursor-Down) * :<C-U>call vm#commands#add_cursor_down(0, v:count1)<CR>
+n  <Plug>(VM-Add-Cursor-Up) * :<C-U>call vm#commands#add_cursor_up(0, v:count1)<CR>
+n  <Plug>(VM-Find-Under) * :<C-U>call vm#commands#ctrln(v:count1)<CR>
+n  <Plug>(VM-Left-Mouse) * <LeftMouse>
+n  <Plug>(VM-Mouse-Column) * :call vm#commands#mouse_column()<CR>
+n  <Plug>(VM-Mouse-Cursor)   <Plug>(VM-Left-Mouse)<Plug>(VM-Add-Cursor-At-Pos)
+n  <Plug>(VM-Mouse-Word)   <Plug>(VM-Left-Mouse)<Plug>(VM-Find-Under)
+n  <Plug>(VM-Reselect-Last) * :call vm#commands#reselect_last()<CR>
+n  <Plug>(VM-Select-All) * :call vm#commands#find_all(0, 1)<CR>
+n  <Plug>(VM-Select-B) * :<C-U>call vm#commands#motion('B', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-BBW) * :<C-U>call vm#commands#motion('BBW', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-Cursor-Down) * :<C-U>call vm#commands#add_cursor_down(1, v:count1)<CR>
+n  <Plug>(VM-Select-Cursor-Up) * :<C-U>call vm#commands#add_cursor_up(1, v:count1)<CR>
+n  <Plug>(VM-Select-E) * :<C-U>call vm#commands#motion('E', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-W) * :<C-U>call vm#commands#motion('W', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-b) * :<C-U>call vm#commands#motion('b', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-e) * :<C-U>call vm#commands#motion('e', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-gE) * :<C-U>call vm#commands#motion('gE', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-ge) * :<C-U>call vm#commands#motion('ge', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-h) * :<C-U>call vm#commands#motion('h', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-j) * :<C-U>call vm#commands#motion('j', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-k) * :<C-U>call vm#commands#motion('k', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-l) * :<C-U>call vm#commands#motion('l', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Select-w) * :<C-U>call vm#commands#motion('w', v:count1, 1, 0)<CR>
+n  <Plug>(VM-Start-Regex-Search) * @=vm#commands#find_by_regex(1)<CR>
+n  <Plug>(ctrlp) * :<C-U>CtrlP<CR>
+n  <Plug>(easymotion-overwin-f) * :<C-U>call EasyMotion#OverwinF(1)<CR>
+n  <Plug>(easymotion-overwin-f2) * :<C-U>call EasyMotion#OverwinF(2)<CR>
+n  <Plug>(easymotion-overwin-line) * :<C-U>call EasyMotion#overwin#line()<CR>
+n  <Plug>(easymotion-overwin-w) * :<C-U>call EasyMotion#overwin#w()<CR>
+n  <Plug>CSurround * :<C-U>call <SNR>93_changesurround(1)<CR>
+n  <Plug>Csurround * :<C-U>call <SNR>93_changesurround()<CR>
+n  <Plug>Dsurround * :<C-U>call <SNR>93_dosurround(<SNR>93_inputtarget())<CR>
+n  <Plug>NERDCommenterAlignBoth * :call NERDComment("n", "AlignBoth")<CR>
+n  <Plug>NERDCommenterAlignLeft * :call NERDComment("n", "AlignLeft")<CR>
+n  <Plug>NERDCommenterAltDelims * :call <SNR>55_SwitchToAlternativeDelimiters(1)<CR>
+n  <Plug>NERDCommenterAppend * :call NERDComment("n", "Append")<CR>
+n  <Plug>NERDCommenterComment * :call NERDComment("n", "Comment")<CR>
+n  <Plug>NERDCommenterInvert * :call NERDComment("n", "Invert")<CR>
+n  <Plug>NERDCommenterMinimal * :call NERDComment("n", "Minimal")<CR>
+n  <Plug>NERDCommenterNested * :call NERDComment("n", "Nested")<CR>
+n  <Plug>NERDCommenterSexy * :call NERDComment("n", "Sexy")<CR>
+n  <Plug>NERDCommenterToEOL * :call NERDComment("n", "ToEOL")<CR>
+n  <Plug>NERDCommenterToggle * :call NERDComment("n", "Toggle")<CR>
+n  <Plug>NERDCommenterUncomment * :call NERDComment("n", "Uncomment")<CR>
+n  <Plug>NERDCommenterYank * :call NERDComment("n", "Yank")<CR>
+n  <Plug>NetrwBrowseX * :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())<CR>
+n  <Plug>SurroundRepeat * .
+n  <Plug>VinegarSplitUp * :call <SNR>95_opendir('split')<CR>
+n  <Plug>VinegarTabUp * :call <SNR>95_opendir('tabedit')<CR>
+n  <Plug>VinegarUp * :call <SNR>95_opendir('edit')<CR>
+n  <Plug>VinegarVerticalSplitUp * :call <SNR>95_opendir('vsplit')<CR>
+n  <Plug>YSsurround * <SNR>93_opfunc2('setup').'_'
+n  <Plug>YSurround * <SNR>93_opfunc2('setup')
+n  <Plug>Yssurround * '^'.v:count1.<SNR>93_opfunc('setup').'g_'
+n  <Plug>Ysurround * <SNR>93_opfunc('setup')
+n  <Plug>unimpairedAFirst * :<C-U>exe "".(v:count ? v:count : "")."first"<CR>
+n  <Plug>unimpairedALast * :<C-U>exe "".(v:count ? v:count : "")."last"<CR>
+n  <Plug>unimpairedANext * :<C-U>exe "".(v:count ? v:count : "")."next"<CR>
+n  <Plug>unimpairedAPrevious * :<C-U>exe "".(v:count ? v:count : "")."previous"<CR>
+n  <Plug>unimpairedBFirst * :<C-U>exe "".(v:count ? v:count : "")."bfirst"<CR>
+n  <Plug>unimpairedBLast * :<C-U>exe "".(v:count ? v:count : "")."blast"<CR>
+n  <Plug>unimpairedBNext * :<C-U>exe "".(v:count ? v:count : "")."bnext"<CR>
+n  <Plug>unimpairedBPrevious * :<C-U>exe "".(v:count ? v:count : "")."bprevious"<CR>
+n  <Plug>unimpairedBlankDown * :<C-U>call <SNR>94_BlankDown(v:count1)<CR>
+n  <Plug>unimpairedBlankUp * :<C-U>call <SNR>94_BlankUp(v:count1)<CR>
+n  <Plug>unimpairedContextNext * :<C-U>call <SNR>94_Context(0)<CR>
+n  <Plug>unimpairedContextPrevious * :<C-U>call <SNR>94_Context(1)<CR>
+n  <Plug>unimpairedDirectoryNext * :<C-U>edit <C-R>=<SNR>94_fnameescape(fnamemodify(<SNR>94_FileByOffset(v:count1), ':.'))<CR><CR>
+n  <Plug>unimpairedDirectoryPrevious * :<C-U>edit <C-R>=<SNR>94_fnameescape(fnamemodify(<SNR>94_FileByOffset(-v:count1), ':.'))<CR><CR>
+n  <Plug>unimpairedLFirst * :<C-U>exe "".(v:count ? v:count : "")."lfirst"<CR>zv
+n  <Plug>unimpairedLLast * :<C-U>exe "".(v:count ? v:count : "")."llast"<CR>zv
+n  <Plug>unimpairedLNFile * :<C-U>exe "".(v:count ? v:count : "")."lnfile"<CR>zv
+n  <Plug>unimpairedLNext * :<C-U>exe "".(v:count ? v:count : "")."lnext"<CR>zv
+n  <Plug>unimpairedLPFile * :<C-U>exe "".(v:count ? v:count : "")."lpfile"<CR>zv
+n  <Plug>unimpairedLPrevious * :<C-U>exe "".(v:count ? v:count : "")."lprevious"<CR>zv
+n  <Plug>unimpairedMoveDown * :<C-U>call <SNR>94_Move('+',v:count1,'Down')<CR>
+n  <Plug>unimpairedMoveUp * :<C-U>call <SNR>94_Move('--',v:count1,'Up')<CR>
+n  <Plug>unimpairedPaste * :call <SNR>94_setup_paste()<CR>
+n  <Plug>unimpairedPutAbove * :call <SNR>94_putline('[p', 'Above')<CR>
+n  <Plug>unimpairedPutBelow * :call <SNR>94_putline(']p', 'Below')<CR>
+n  <Plug>unimpairedQFirst * :<C-U>exe "".(v:count ? v:count : "")."cfirst"<CR>zv
+n  <Plug>unimpairedQLast * :<C-U>exe "".(v:count ? v:count : "")."clast"<CR>zv
+n  <Plug>unimpairedQNFile * :<C-U>exe "".(v:count ? v:count : "")."cnfile"<CR>zv
+n  <Plug>unimpairedQNext * :<C-U>exe "".(v:count ? v:count : "")."cnext"<CR>zv
+n  <Plug>unimpairedQPFile * :<C-U>exe "".(v:count ? v:count : "")."cpfile"<CR>zv
+n  <Plug>unimpairedQPrevious * :<C-U>exe "".(v:count ? v:count : "")."cprevious"<CR>zv
+n  <Plug>unimpairedTFirst * :<C-U>exe "".(v:count ? v:count : "")."tfirst"<CR>
+n  <Plug>unimpairedTLast * :<C-U>exe "".(v:count ? v:count : "")."tlast"<CR>
+n  <Plug>unimpairedTNext * :<C-U>exe "".(v:count ? v:count : "")."tnext"<CR>
+n  <Plug>unimpairedTPNext * :<C-U>exe "p".(v:count ? v:count : "")."tnext"<CR>
+n  <Plug>unimpairedTPPrevious * :<C-U>exe "p".(v:count ? v:count : "")."tprevious"<CR>
+n  <Plug>unimpairedTPrevious * :<C-U>exe "".(v:count ? v:count : "")."tprevious"<CR>
+n  <Plug>unimpaired_line_string_decode * <SNR>94_TransformSetup("string_decode")."_"
+n  <Plug>unimpaired_line_string_encode * <SNR>94_TransformSetup("string_encode")."_"
+n  <Plug>unimpaired_line_url_decode * <SNR>94_TransformSetup("url_decode")."_"
+n  <Plug>unimpaired_line_url_encode * <SNR>94_TransformSetup("url_encode")."_"
+n  <Plug>unimpaired_line_xml_decode * <SNR>94_TransformSetup("xml_decode")."_"
+n  <Plug>unimpaired_line_xml_encode * <SNR>94_TransformSetup("xml_encode")."_"
+n  <Plug>unimpaired_string_decode * <SNR>94_TransformSetup("string_decode")
+n  <Plug>unimpaired_string_encode * <SNR>94_TransformSetup("string_encode")
+n  <Plug>unimpaired_url_decode * <SNR>94_TransformSetup("url_decode")
+n  <Plug>unimpaired_url_encode * <SNR>94_TransformSetup("url_encode")
+n  <Plug>unimpaired_xml_decode * <SNR>94_TransformSetup("xml_decode")
+n  <Plug>unimpaired_xml_encode * <SNR>94_TransformSetup("xml_encode")
+n  <S-D-s>     * :browse confirm saveas<CR>
+n  <S-Left>      <Plug>(VM-Select-h)
+n  <S-Right>     <Plug>(VM-Select-l)
+n  <Space>     * :WhichKey ' '<CR>
+n  <Space>++   * :ifont +<CR>
+n  <Space>--   * :ifont -<CR>
+n  <Space>1    * :echom "THis is one"<CR>
+n  <Space>a<Tab> * :echom "Hello, World"<CR>
+n  <Space>bD   * :bdelete!<CR>
+n  <Space>bd   * :bdelete <CR>
+n  <Space>bh   * :bhide<CR>
+n  <Space>bl   * :ls<CR>
+n  <Space>bn   * :bnext<CR>
+n  <Space>bo   * :enew<CR>
+n  <Space>bp   * :bprevious<CR>
+n  <Space>c$     <Plug>NERDCommenterToEOL
+n  <Space>c<Space>   <Plug>NERDCommenterToggle
+n  <Space>cA     <Plug>NERDCommenterAppend
+n  <Space>ca     <Plug>NERDCommenterAltDelims
+n  <Space>cb     <Plug>NERDCommenterAlignBoth
+n  <Space>cc     <Plug>NERDCommenterComment
+n  <Space>ci     <Plug>NERDCommenterInvert
+n  <Space>cl     <Plug>NERDCommenterAlignLeft
+n  <Space>cm     <Plug>NERDCommenterMinimal
+n  <Space>cn     <Plug>NERDCommenterNested
+n  <Space>cs     <Plug>NERDCommenterSexy
+n  <Space>cu     <Plug>NERDCommenterUncomment
+n  <Space>cy     <Plug>NERDCommenterYank
+n  <Space>j    * <C-]>
+n  <Space>k    * <Esc>
+n  <Space>p    * :CtrlP<CR>
+n  <Space>tt   * :TagbarToggle<CR>
+n  <Space>un     <Plug>(UnicodeSwapCompleteName)
+n  <Space>v    * <C-V>
+n  <p          & :<C-U>call <SNR>94_putline(v:count1 . ']p', 'Below')<CR><']
+n  =P          & :<C-U>call <SNR>94_putline(v:count1 . '[p', 'Above')<CR>=']
+n  =o            <SNR>94_legacy_option_map(nr2char(getchar()))
+n  =op         * <Nop>
+n  =p          & :<C-U>call <SNR>94_putline(v:count1 . ']p', 'Below')<CR>=']
+n  >P          & :<C-U>call <SNR>94_putline(v:count1 . '[p', 'Above')<CR>>']
+n  >p          & :<C-U>call <SNR>94_putline(v:count1 . ']p', 'Below')<CR>>']
+n  N           * 'nN'[v:searchforward]
+n  [<C-L>        <Plug>unimpairedLPFile
+n  [<C-Q>        <Plug>unimpairedQPFile
+n  [<C-T>        <Plug>unimpairedTPPrevious
+n  [<Space>      <Plug>unimpairedBlankUp
+n  [A            <Plug>unimpairedAFirst
+n  [B            <Plug>unimpairedBFirst
+n  [L            <Plug>unimpairedLFirst
+n  [P            <Plug>unimpairedPutAbove
+n  [Q            <Plug>unimpairedQFirst
+n  [T            <Plug>unimpairedTFirst
+n  [a            <Plug>unimpairedAPrevious
+n  [b            <Plug>unimpairedBPrevious
+n  [e            <Plug>unimpairedMoveUp
+n  [f            <Plug>unimpairedDirectoryPrevious
+n  [l            <Plug>unimpairedLPrevious
+n  [n            <Plug>unimpairedContextPrevious
+n  [o+         & :set cursorline cursorcolumn<CR>
+n  [o-         & :setlocal cursorline<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [o_         & :setlocal cursorline<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [ob         & :set background=light<CR>
+n  [oc         & :setlocal cursorline<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [od         & :diffthis<CR>
+n  [oh         & :set hlsearch<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [oi         & :set ignorecase<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [ol         & :setlocal list<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [on         & :setlocal number<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [op         & :call <SNR>94_setup_paste()<CR>O
+n  [or         & :setlocal relativenumber<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [os         & :setlocal spell<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [ou         & :setlocal cursorcolumn<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [ov         & :set virtualedit+=all<CR>
+n  [ow         & :setlocal wrap<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [ox         & :set cursorline cursorcolumn<CR>
+n  [o|         & :setlocal cursorcolumn<C-R>=<SNR>94_statusbump()<CR><CR>
+n  [p            <Plug>unimpairedPutAbove
+n  [q            <Plug>unimpairedQPrevious
+n  [t            <Plug>unimpairedTPrevious
+n  [u            <Plug>unimpaired_url_encode
+n  [uu           <Plug>unimpaired_line_url_encode
+n  [x            <Plug>unimpaired_xml_encode
+n  [xx           <Plug>unimpaired_line_xml_encode
+n  [y            <Plug>unimpaired_string_encode
+n  [yy           <Plug>unimpaired_line_string_encode
+n  \\/           <Plug>(VM-Start-Regex-Search)
+n  \\A           <Plug>(VM-Select-All)
+n  \\\           <Plug>(VM-Add-Cursor-At-Pos)
+n  \\gS          <Plug>(VM-Reselect-Last)
+n  ]<C-L>        <Plug>unimpairedLNFile
+n  ]<C-Q>        <Plug>unimpairedQNFile
+n  ]<C-T>        <Plug>unimpairedTPNext
+n  ]<Space>      <Plug>unimpairedBlankDown
+n  ]A            <Plug>unimpairedALast
+n  ]B            <Plug>unimpairedBLast
+n  ]L            <Plug>unimpairedLLast
+n  ]P            <Plug>unimpairedPutBelow
+n  ]Q            <Plug>unimpairedQLast
+n  ]T            <Plug>unimpairedTLast
+n  ]a            <Plug>unimpairedANext
+n  ]b            <Plug>unimpairedBNext
+n  ]e            <Plug>unimpairedMoveDown
+n  ]f            <Plug>unimpairedDirectoryNext
+n  ]l            <Plug>unimpairedLNext
+n  ]n            <Plug>unimpairedContextNext
+n  ]o+         & :set nocursorline nocursorcolumn<CR>
+n  ]o-         & :setlocal nocursorline<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]o_         & :setlocal nocursorline<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]ob         & :set background=dark<CR>
+n  ]oc         & :setlocal nocursorline<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]od         & :diffoff<CR>
+n  ]oh         & :set nohlsearch<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]oi         & :set noignorecase<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]ol         & :setlocal nolist<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]on         & :setlocal nonumber<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]op         & :call <SNR>94_setup_paste()<CR>o
+n  ]or         & :setlocal norelativenumber<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]os         & :setlocal nospell<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]ou         & :setlocal nocursorcolumn<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]ov         & :set virtualedit-=all<CR>
+n  ]ow         & :setlocal nowrap<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]ox         & :set nocursorline nocursorcolumn<CR>
+n  ]o|         & :setlocal nocursorcolumn<C-R>=<SNR>94_statusbump()<CR><CR>
+n  ]p            <Plug>unimpairedPutBelow
+n  ]q            <Plug>unimpairedQNext
+n  ]t            <Plug>unimpairedTNext
+n  ]u            <Plug>unimpaired_url_decode
+n  ]uu           <Plug>unimpaired_line_url_decode
+n  ]x            <Plug>unimpaired_xml_decode
+n  ]xx           <Plug>unimpaired_line_xml_decode
+n  ]y            <Plug>unimpaired_string_decode
+n  ]yy           <Plug>unimpaired_line_string_decode
+n  cS            <Plug>CSurround
+n  co            <SNR>94_legacy_option_map(nr2char(getchar()))
+n  cop         * <Nop>
+n  cs            <Plug>Csurround
+n  ds            <Plug>Dsurround
+n  ga          * :UnicodeName<CR>
+n  gx            <Plug>NetrwBrowseX
+n  n           * 'Nn'[v:searchforward]
+n  yS            <Plug>YSurround
+n  ySS           <Plug>YSsurround
+n  ySs           <Plug>YSsurround
+n  yo+         & :set <C-R>=<SNR>94_cursor_options()<CR><CR>
+n  yo-         & :setlocal <C-R>=<SNR>94_toggle("cursorline")<CR><CR>
+n  yo_         & :setlocal <C-R>=<SNR>94_toggle("cursorline")<CR><CR>
+n  yob         & :set background=<C-R>=&background == "dark" ? "light" : "dark"<CR><CR>
+n  yoc         & :setlocal <C-R>=<SNR>94_toggle("cursorline")<CR><CR>
+n  yod         & :<C-R>=&diff ? "diffoff" : "diffthis"<CR><CR>
+n  yoh         & :set <C-R>=<SNR>94_toggle("hlsearch")<CR><CR>
+n  yoi         & :set <C-R>=<SNR>94_toggle("ignorecase")<CR><CR>
+n  yol         & :setlocal <C-R>=<SNR>94_toggle("list")<CR><CR>
+n  yon         & :setlocal <C-R>=<SNR>94_toggle("number")<CR><CR>
+n  yop         & :call <SNR>94_setup_paste()<CR>0C
+n  yor         & :setlocal <C-R>=<SNR>94_toggle("relativenumber")<CR><CR>
+n  yos         & :setlocal <C-R>=<SNR>94_toggle("spell")<CR><CR>
+n  you         & :setlocal <C-R>=<SNR>94_toggle("cursorcolumn")<CR><CR>
+n  yov         & :set <C-R>=(&virtualedit =~# "all") ? "virtualedit-=all" : "virtualedit+=all"<CR><CR>
+n  yow         & :setlocal <C-R>=<SNR>94_toggle("wrap")<CR><CR>
+n  yox         & :set <C-R>=<SNR>94_cursor_options()<CR><CR>
+n  yo|         & :setlocal <C-R>=<SNR>94_toggle("cursorcolumn")<CR><CR>
+n  ys            <Plug>Ysurround
+n  yss           <Plug>Yssurround
+no <Space>q    * <Esc>
+nos<Plug>(easymotion-B) * :<C-U>call EasyMotion#WBW(0,1)<CR>
+nos<Plug>(easymotion-E) * :<C-U>call EasyMotion#EW(0,0)<CR>
+nos<Plug>(easymotion-F) * :<C-U>call EasyMotion#S(1,0,1)<CR>
+nos<Plug>(easymotion-F2) * :<C-U>call EasyMotion#S(2,0,1)<CR>
+nos<Plug>(easymotion-Fl) * :<C-U>call EasyMotion#SL(1,0,1)<CR>
+nos<Plug>(easymotion-Fl2) * :<C-U>call EasyMotion#SL(2,0,1)<CR>
+nos<Plug>(easymotion-Fln) * :<C-U>call EasyMotion#SL(-1,0,1)<CR>
+nos<Plug>(easymotion-Fn) * :<C-U>call EasyMotion#S(-1,0,1)<CR>
+nos<Plug>(easymotion-N) * :<C-U>call EasyMotion#Search(0,1,0)<CR>
+nos<Plug>(easymotion-T) * :<C-U>call EasyMotion#T(1,0,1)<CR>
+nos<Plug>(easymotion-T2) * :<C-U>call EasyMotion#T(2,0,1)<CR>
+nos<Plug>(easymotion-Tl) * :<C-U>call EasyMotion#TL(1,0,1)<CR>
+nos<Plug>(easymotion-Tl2) * :<C-U>call EasyMotion#TL(2,0,1)<CR>
+nos<Plug>(easymotion-Tln) * :<C-U>call EasyMotion#TL(-1,0,1)<CR>
+nos<Plug>(easymotion-Tn) * :<C-U>call EasyMotion#T(-1,0,1)<CR>
+nos<Plug>(easymotion-W) * :<C-U>call EasyMotion#WBW(0,0)<CR>
+nos<Plug>(easymotion-activate) * :<C-U>call EasyMotion#activate(0)<CR>
+nos<Plug>(easymotion-b) * :<C-U>call EasyMotion#WB(0,1)<CR>
+nos<Plug>(easymotion-bd-E) * :<C-U>call EasyMotion#EW(0,2)<CR>
+nos<Plug>(easymotion-bd-W) * :<C-U>call EasyMotion#WBW(0,2)<CR>
+nos<Plug>(easymotion-bd-e) * :<C-U>call EasyMotion#E(0,2)<CR>
+nos<Plug>(easymotion-bd-el) * :<C-U>call EasyMotion#EL(0,2)<CR>
+nos<Plug>(easymotion-bd-f) * :<C-U>call EasyMotion#S(1,0,2)<CR>
+nos<Plug>(easymotion-bd-f2) * :<C-U>call EasyMotion#S(2,0,2)<CR>
+nos<Plug>(easymotion-bd-fl) * :<C-U>call EasyMotion#SL(1,0,2)<CR>
+nos<Plug>(easymotion-bd-fl2) * :<C-U>call EasyMotion#SL(2,0,2)<CR>
+nos<Plug>(easymotion-bd-fln) * :<C-U>call EasyMotion#SL(-1,0,2)<CR>
+nos<Plug>(easymotion-bd-fn) * :<C-U>call EasyMotion#S(-1,0,2)<CR>
+nos<Plug>(easymotion-bd-jk) * :<C-U>call EasyMotion#JK(0,2)<CR>
+nos<Plug>(easymotion-bd-n) * :<C-U>call EasyMotion#Search(0,2,0)<CR>
+nos<Plug>(easymotion-bd-t) * :<C-U>call EasyMotion#T(1,0,2)<CR>
+nos<Plug>(easymotion-bd-t2) * :<C-U>call EasyMotion#T(2,0,2)<CR>
+nos<Plug>(easymotion-bd-tl) * :<C-U>call EasyMotion#TL(1,0,2)<CR>
+nos<Plug>(easymotion-bd-tl2) * :<C-U>call EasyMotion#TL(2,0,2)<CR>
+nos<Plug>(easymotion-bd-tln) * :<C-U>call EasyMotion#TL(-1,0,2)<CR>
+nos<Plug>(easymotion-bd-tn) * :<C-U>call EasyMotion#T(-1,0,2)<CR>
+nos<Plug>(easymotion-bd-w) * :<C-U>call EasyMotion#WB(0,2)<CR>
+nos<Plug>(easymotion-bd-wl) * :<C-U>call EasyMotion#WBL(0,2)<CR>
+nos<Plug>(easymotion-bl) * :<C-U>call EasyMotion#WBL(0,1)<CR>
+nos<Plug>(easymotion-e) * :<C-U>call EasyMotion#E(0,0)<CR>
+nos<Plug>(easymotion-el) * :<C-U>call EasyMotion#EL(0,0)<CR>
+nos<Plug>(easymotion-eol-bd-jk) * :<C-U>call EasyMotion#Eol(0,2)<CR>
+nos<Plug>(easymotion-eol-j) * :<C-U>call EasyMotion#Eol(0,0)<CR>
+nos<Plug>(easymotion-eol-k) * :<C-U>call EasyMotion#Eol(0,1)<CR>
+nos<Plug>(easymotion-f) * :<C-U>call EasyMotion#S(1,0,0)<CR>
+nos<Plug>(easymotion-f2) * :<C-U>call EasyMotion#S(2,0,0)<CR>
+nos<Plug>(easymotion-fl) * :<C-U>call EasyMotion#SL(1,0,0)<CR>
+nos<Plug>(easymotion-fl2) * :<C-U>call EasyMotion#SL(2,0,0)<CR>
+nos<Plug>(easymotion-fln) * :<C-U>call EasyMotion#SL(-1,0,0)<CR>
+nos<Plug>(easymotion-fn) * :<C-U>call EasyMotion#S(-1,0,0)<CR>
+nos<Plug>(easymotion-gE) * :<C-U>call EasyMotion#EW(0,1)<CR>
+nos<Plug>(easymotion-ge) * :<C-U>call EasyMotion#E(0,1)<CR>
+nos<Plug>(easymotion-gel) * :<C-U>call EasyMotion#EL(0,1)<CR>
+nos<Plug>(easymotion-iskeyword-b) * :<C-U>call EasyMotion#WBK(0,1)<CR>
+nos<Plug>(easymotion-iskeyword-bd-e) * :<C-U>call EasyMotion#EK(0,2)<CR>
+nos<Plug>(easymotion-iskeyword-bd-w) * :<C-U>call EasyMotion#WBK(0,2)<CR>
+nos<Plug>(easymotion-iskeyword-e) * :<C-U>call EasyMotion#EK(0,0)<CR>
+nos<Plug>(easymotion-iskeyword-ge) * :<C-U>call EasyMotion#EK(0,1)<CR>
+nos<Plug>(easymotion-iskeyword-w) * :<C-U>call EasyMotion#WBK(0,0)<CR>
+nos<Plug>(easymotion-j) * :<C-U>call EasyMotion#JK(0,0)<CR>
+nos<Plug>(easymotion-jumptoanywhere) * :<C-U>call EasyMotion#JumpToAnywhere(0,2)<CR>
+nos<Plug>(easymotion-k) * :<C-U>call EasyMotion#JK(0,1)<CR>
+nos<Plug>(easymotion-lineanywhere) * :<C-U>call EasyMotion#LineAnywhere(0,2)<CR>
+nos<Plug>(easymotion-linebackward) * :<C-U>call EasyMotion#LineAnywhere(0,1)<CR>
+nos<Plug>(easymotion-lineforward) * :<C-U>call EasyMotion#LineAnywhere(0,0)<CR>
+nos<Plug>(easymotion-n) * :<C-U>call EasyMotion#Search(0,0,0)<CR>
+nos<Plug>(easymotion-next) * :<C-U>call EasyMotion#NextPrevious(0,0)<CR>
+nos<Plug>(easymotion-prev) * :<C-U>call EasyMotion#NextPrevious(0,1)<CR>
+nos<Plug>(easymotion-repeat) * :<C-U>call EasyMotion#Repeat(0)<CR>
+nos<Plug>(easymotion-s) * :<C-U>call EasyMotion#S(1,0,2)<CR>
+nos<Plug>(easymotion-s2) * :<C-U>call EasyMotion#S(2,0,2)<CR>
+nos<Plug>(easymotion-sl) * :<C-U>call EasyMotion#SL(1,0,2)<CR>
+nos<Plug>(easymotion-sl2) * :<C-U>call EasyMotion#SL(2,0,2)<CR>
+nos<Plug>(easymotion-sln) * :<C-U>call EasyMotion#SL(-1,0,2)<CR>
+nos<Plug>(easymotion-sn) * :<C-U>call EasyMotion#S(-1,0,2)<CR>
+nos<Plug>(easymotion-sol-bd-jk) * :<C-U>call EasyMotion#Sol(0,2)<CR>
+nos<Plug>(easymotion-sol-j) * :<C-U>call EasyMotion#Sol(0,0)<CR>
+nos<Plug>(easymotion-sol-k) * :<C-U>call EasyMotion#Sol(0,1)<CR>
+nos<Plug>(easymotion-t) * :<C-U>call EasyMotion#T(1,0,0)<CR>
+nos<Plug>(easymotion-t2) * :<C-U>call EasyMotion#T(2,0,0)<CR>
+nos<Plug>(easymotion-tl) * :<C-U>call EasyMotion#TL(1,0,0)<CR>
+nos<Plug>(easymotion-tl2) * :<C-U>call EasyMotion#TL(2,0,0)<CR>
+nos<Plug>(easymotion-tln) * :<C-U>call EasyMotion#TL(-1,0,0)<CR>
+nos<Plug>(easymotion-tn) * :<C-U>call EasyMotion#T(-1,0,0)<CR>
+nos<Plug>(easymotion-vim-N) * :<C-U>call EasyMotion#Search(0,1,1)<CR>
+nos<Plug>(easymotion-vim-n) * :<C-U>call EasyMotion#Search(0,0,1)<CR>
+nos<Plug>(easymotion-w) * :<C-U>call EasyMotion#WB(0,0)<CR>
+nos<Plug>(easymotion-wl) * :<C-U>call EasyMotion#WBL(0,0)<CR>
+o  <D-a>         <Esc><D-a>
+o  <D-f>         <Esc><D-f>
+o  <D-g>         <Esc><D-g>
+o  <D-n>         <Esc><D-n>
+o  <D-o>         <Esc><D-o>
+o  <D-s>         <Esc><D-s>
+o  <D-w>         <Esc><D-w>
+o  <D-z>         <Esc><D-z>
+o  <Plug>unimpairedContextNext * :<C-U>call <SNR>94_ContextMotion(0)<CR>
+o  <Plug>unimpairedContextPrevious * :<C-U>call <SNR>94_ContextMotion(1)<CR>
+o  <S-D-s>       <Esc><D-s>
+o  [n            <Plug>unimpairedContextPrevious
+o  ]n            <Plug>unimpairedContextNext
+s  <BS>        * <C-G>"_c
+s  <C-H>       * <C-G>"_c
+s  <C-R>       * <C-G>"_c<C-R>
+s  <C-Tab>     * <Esc>:call UltiSnips#ListSnippets()<CR>
+s  <CR>        * <Esc>:call UltiSnips#ExpandSnippet()<CR>
+s  <Del>       * <C-G>"_c
+s  jk          * <Esc>
+v  <D-a>         <Esc><D-a>
+v  <D-c>       * "+y
+v  <D-f>         <Esc><D-f>
+v  <D-g>         <Esc><D-g>
+v  <D-n>         <Esc><D-n>gv
+v  <D-o>         <Esc><D-o>gv
+v  <D-s>         <Esc><D-s>gv
+v  <D-v>       & "-c<Esc>:call paste#Paste()<CR>
+v  <D-w>         <Esc><D-w>gv
+v  <D-x>       * "+x
+v  <D-z>         <Esc><D-z>gv
+v  <F4>          <Plug>(MakeDigraph)
+v  <Plug>(EasyAlign) * :<C-U>call <SNR>83_easy_align_op(visualmode(), 1)<CR>
+v  <Plug>(EasyAlignRepeat) * :<C-U>call <SNR>83_repeat_in_visual()<CR>
+v  <Plug>(LiveEasyAlign) * :<C-U>call <SNR>83_live_easy_align_op(visualmode(), 1)<CR>
+v  <Plug>(MakeDigraph) & :<C-U>call unicode#GetDigraph(visualmode(), 1)<CR>
+v  <Plug>NetrwBrowseXVis * :<C-U>call netrw#BrowseXVis()<CR>
+v  <Plug>VSurround * :<C-U>call <SNR>93_opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>
+v  <Plug>VgSurround * :<C-U>call <SNR>93_opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>
+v  <S-D-s>       <Esc><D-s>gv
+v  <Space>q    * <Esc>
+v  gx            <Plug>NetrwBrowseXVis
+x  <BS>          "-d
+x  <C-N>         <Plug>(VM-Find-Subword-Under)
+x  <CR>        * :call UltiSnips#SaveLastVisualSelection()<CR>gvs
+x  <Plug>(Limelight) * :Limelight<CR>
+x  <Plug>(VM-Find-Subword-Under) * <SNR>97_Visual('under')
+x  <Plug>(VM-Visual-Add) * <Esc>:call vm#commands#visual_add()<CR>
+x  <Plug>(VM-Visual-All) * <SNR>97_Visual('all')
+x  <Plug>(VM-Visual-Cursors) * <Esc>:call vm#commands#visual_cursors()<CR>
+x  <Plug>(VM-Visual-Find)   vm#operators#find(1, 1)
+x  <Plug>(VM-Visual-Reduce) * :<C-U>call vm#visual#reduce()<CR>
+x  <Plug>(VM-Visual-Regex) * :call vm#commands#find_by_regex(2)<CR>:call feedkeys('/', 'n')<CR>
+x  <Plug>(easymotion-B) * <Esc>:<C-U>call EasyMotion#WBW(1,1)<CR>
+x  <Plug>(easymotion-E) * <Esc>:<C-U>call EasyMotion#EW(1,0)<CR>
+x  <Plug>(easymotion-F) * <Esc>:<C-U>call EasyMotion#S(1,1,1)<CR>
+x  <Plug>(easymotion-F2) * <Esc>:<C-U>call EasyMotion#S(2,1,1)<CR>
+x  <Plug>(easymotion-Fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,1)<CR>
+x  <Plug>(easymotion-Fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,1)<CR>
+x  <Plug>(easymotion-Fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,1)<CR>
+x  <Plug>(easymotion-Fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,1)<CR>
+x  <Plug>(easymotion-N) * <Esc>:<C-U>call EasyMotion#Search(1,1,0)<CR>
+x  <Plug>(easymotion-T) * <Esc>:<C-U>call EasyMotion#T(1,1,1)<CR>
+x  <Plug>(easymotion-T2) * <Esc>:<C-U>call EasyMotion#T(2,1,1)<CR>
+x  <Plug>(easymotion-Tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,1)<CR>
+x  <Plug>(easymotion-Tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,1)<CR>
+x  <Plug>(easymotion-Tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,1)<CR>
+x  <Plug>(easymotion-Tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,1)<CR>
+x  <Plug>(easymotion-W) * <Esc>:<C-U>call EasyMotion#WBW(1,0)<CR>
+x  <Plug>(easymotion-activate) * :<C-U>call EasyMotion#activate(1)<CR>
+x  <Plug>(easymotion-b) * <Esc>:<C-U>call EasyMotion#WB(1,1)<CR>
+x  <Plug>(easymotion-bd-E) * <Esc>:<C-U>call EasyMotion#EW(1,2)<CR>
+x  <Plug>(easymotion-bd-W) * <Esc>:<C-U>call EasyMotion#WBW(1,2)<CR>
+x  <Plug>(easymotion-bd-e) * <Esc>:<C-U>call EasyMotion#E(1,2)<CR>
+x  <Plug>(easymotion-bd-el) * <Esc>:<C-U>call EasyMotion#EL(1,2)<CR>
+x  <Plug>(easymotion-bd-f) * <Esc>:<C-U>call EasyMotion#S(1,1,2)<CR>
+x  <Plug>(easymotion-bd-f2) * <Esc>:<C-U>call EasyMotion#S(2,1,2)<CR>
+x  <Plug>(easymotion-bd-fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,2)<CR>
+x  <Plug>(easymotion-bd-fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,2)<CR>
+x  <Plug>(easymotion-bd-fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,2)<CR>
+x  <Plug>(easymotion-bd-fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,2)<CR>
+x  <Plug>(easymotion-bd-jk) * <Esc>:<C-U>call EasyMotion#JK(1,2)<CR>
+x  <Plug>(easymotion-bd-n) * <Esc>:<C-U>call EasyMotion#Search(1,2,0)<CR>
+x  <Plug>(easymotion-bd-t) * <Esc>:<C-U>call EasyMotion#T(1,1,2)<CR>
+x  <Plug>(easymotion-bd-t2) * <Esc>:<C-U>call EasyMotion#T(2,1,2)<CR>
+x  <Plug>(easymotion-bd-tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,2)<CR>
+x  <Plug>(easymotion-bd-tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,2)<CR>
+x  <Plug>(easymotion-bd-tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,2)<CR>
+x  <Plug>(easymotion-bd-tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,2)<CR>
+x  <Plug>(easymotion-bd-w) * <Esc>:<C-U>call EasyMotion#WB(1,2)<CR>
+x  <Plug>(easymotion-bd-wl) * <Esc>:<C-U>call EasyMotion#WBL(1,2)<CR>
+x  <Plug>(easymotion-bl) * <Esc>:<C-U>call EasyMotion#WBL(1,1)<CR>
+x  <Plug>(easymotion-e) * <Esc>:<C-U>call EasyMotion#E(1,0)<CR>
+x  <Plug>(easymotion-el) * <Esc>:<C-U>call EasyMotion#EL(1,0)<CR>
+x  <Plug>(easymotion-eol-bd-jk) * <Esc>:<C-U>call EasyMotion#Eol(1,2)<CR>
+x  <Plug>(easymotion-eol-j) * <Esc>:<C-U>call EasyMotion#Eol(1,0)<CR>
+x  <Plug>(easymotion-eol-k) * <Esc>:<C-U>call EasyMotion#Eol(1,1)<CR>
+x  <Plug>(easymotion-f) * <Esc>:<C-U>call EasyMotion#S(1,1,0)<CR>
+x  <Plug>(easymotion-f2) * <Esc>:<C-U>call EasyMotion#S(2,1,0)<CR>
+x  <Plug>(easymotion-fl) * <Esc>:<C-U>call EasyMotion#SL(1,1,0)<CR>
+x  <Plug>(easymotion-fl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,0)<CR>
+x  <Plug>(easymotion-fln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,0)<CR>
+x  <Plug>(easymotion-fn) * <Esc>:<C-U>call EasyMotion#S(-1,1,0)<CR>
+x  <Plug>(easymotion-gE) * <Esc>:<C-U>call EasyMotion#EW(1,1)<CR>
+x  <Plug>(easymotion-ge) * <Esc>:<C-U>call EasyMotion#E(1,1)<CR>
+x  <Plug>(easymotion-gel) * <Esc>:<C-U>call EasyMotion#EL(1,1)<CR>
+x  <Plug>(easymotion-iskeyword-b) * <Esc>:<C-U>call EasyMotion#WBK(1,1)<CR>
+x  <Plug>(easymotion-iskeyword-bd-e) * <Esc>:<C-U>call EasyMotion#EK(1,2)<CR>
+x  <Plug>(easymotion-iskeyword-bd-w) * <Esc>:<C-U>call EasyMotion#WBK(1,2)<CR>
+x  <Plug>(easymotion-iskeyword-e) * <Esc>:<C-U>call EasyMotion#EK(1,0)<CR>
+x  <Plug>(easymotion-iskeyword-ge) * <Esc>:<C-U>call EasyMotion#EK(1,1)<CR>
+x  <Plug>(easymotion-iskeyword-w) * <Esc>:<C-U>call EasyMotion#WBK(1,0)<CR>
+x  <Plug>(easymotion-j) * <Esc>:<C-U>call EasyMotion#JK(1,0)<CR>
+x  <Plug>(easymotion-jumptoanywhere) * <Esc>:<C-U>call EasyMotion#JumpToAnywhere(1,2)<CR>
+x  <Plug>(easymotion-k) * <Esc>:<C-U>call EasyMotion#JK(1,1)<CR>
+x  <Plug>(easymotion-lineanywhere) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,2)<CR>
+x  <Plug>(easymotion-linebackward) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,1)<CR>
+x  <Plug>(easymotion-lineforward) * <Esc>:<C-U>call EasyMotion#LineAnywhere(1,0)<CR>
+x  <Plug>(easymotion-n) * <Esc>:<C-U>call EasyMotion#Search(1,0,0)<CR>
+x  <Plug>(easymotion-next) * :<C-U>call EasyMotion#NextPrevious(1,0)<CR>
+x  <Plug>(easymotion-prev) * :<C-U>call EasyMotion#NextPrevious(1,1)<CR>
+x  <Plug>(easymotion-repeat) * <Esc>:<C-U>call EasyMotion#Repeat(1)<CR>
+x  <Plug>(easymotion-s) * <Esc>:<C-U>call EasyMotion#S(1,1,2)<CR>
+x  <Plug>(easymotion-s2) * <Esc>:<C-U>call EasyMotion#S(2,1,2)<CR>
+x  <Plug>(easymotion-sl) * <Esc>:<C-U>call EasyMotion#SL(1,1,2)<CR>
+x  <Plug>(easymotion-sl2) * <Esc>:<C-U>call EasyMotion#SL(2,1,2)<CR>
+x  <Plug>(easymotion-sln) * <Esc>:<C-U>call EasyMotion#SL(-1,1,2)<CR>
+x  <Plug>(easymotion-sn) * <Esc>:<C-U>call EasyMotion#S(-1,1,2)<CR>
+x  <Plug>(easymotion-sol-bd-jk) * <Esc>:<C-U>call EasyMotion#Sol(1,2)<CR>
+x  <Plug>(easymotion-sol-j) * <Esc>:<C-U>call EasyMotion#Sol(1,0)<CR>
+x  <Plug>(easymotion-sol-k) * <Esc>:<C-U>call EasyMotion#Sol(1,1)<CR>
+x  <Plug>(easymotion-t) * <Esc>:<C-U>call EasyMotion#T(1,1,0)<CR>
+x  <Plug>(easymotion-t2) * <Esc>:<C-U>call EasyMotion#T(2,1,0)<CR>
+x  <Plug>(easymotion-tl) * <Esc>:<C-U>call EasyMotion#TL(1,1,0)<CR>
+x  <Plug>(easymotion-tl2) * <Esc>:<C-U>call EasyMotion#TL(2,1,0)<CR>
+x  <Plug>(easymotion-tln) * <Esc>:<C-U>call EasyMotion#TL(-1,1,0)<CR>
+x  <Plug>(easymotion-tn) * <Esc>:<C-U>call EasyMotion#T(-1,1,0)<CR>
+x  <Plug>(easymotion-vim-N) * <Esc>:<C-U>call EasyMotion#Search(1,1,1)<CR>
+x  <Plug>(easymotion-vim-n) * <Esc>:<C-U>call EasyMotion#Search(1,0,1)<CR>
+x  <Plug>(easymotion-w) * <Esc>:<C-U>call EasyMotion#WB(1,0)<CR>
+x  <Plug>(easymotion-wl) * <Esc>:<C-U>call EasyMotion#WBL(1,0)<CR>
+x  <Plug>NERDCommenterAlignBoth * :call NERDComment("x", "AlignBoth")<CR>
+x  <Plug>NERDCommenterAlignLeft * :call NERDComment("x", "AlignLeft")<CR>
+x  <Plug>NERDCommenterComment * :call NERDComment("x", "Comment")<CR>
+x  <Plug>NERDCommenterInvert * :call NERDComment("x", "Invert")<CR>
+x  <Plug>NERDCommenterMinimal * :call NERDComment("x", "Minimal")<CR>
+x  <Plug>NERDCommenterNested * :call NERDComment("x", "Nested")<CR>
+x  <Plug>NERDCommenterSexy * :call NERDComment("x", "Sexy")<CR>
+x  <Plug>NERDCommenterToggle * :call NERDComment("x", "Toggle")<CR>
+x  <Plug>NERDCommenterUncomment * :call NERDComment("x", "Uncomment")<CR>
+x  <Plug>NERDCommenterYank * :call NERDComment("x", "Yank")<CR>
+x  <Plug>unimpairedContextNext * :<C-U>exe 'normal! gv'|call <SNR>94_Context(0)<CR>
+x  <Plug>unimpairedContextPrevious * :<C-U>exe 'normal! gv'|call <SNR>94_Context(1)<CR>
+x  <Plug>unimpaired_string_decode * <SNR>94_TransformSetup("string_decode")
+x  <Plug>unimpaired_string_encode * <SNR>94_TransformSetup("string_encode")
+x  <Plug>unimpaired_url_decode * <SNR>94_TransformSetup("url_decode")
+x  <Plug>unimpaired_url_encode * <SNR>94_TransformSetup("url_encode")
+x  <Plug>unimpaired_xml_decode * <SNR>94_TransformSetup("xml_decode")
+x  <Plug>unimpaired_xml_encode * <SNR>94_TransformSetup("xml_encode")
+x  <Space>c<Space>   <Plug>NERDCommenterToggle
+x  <Space>cb     <Plug>NERDCommenterAlignBoth
+x  <Space>cc     <Plug>NERDCommenterComment
+x  <Space>ci     <Plug>NERDCommenterInvert
+x  <Space>cl     <Plug>NERDCommenterAlignLeft
+x  <Space>cm     <Plug>NERDCommenterMinimal
+x  <Space>cn     <Plug>NERDCommenterNested
+x  <Space>cs     <Plug>NERDCommenterSexy
+x  <Space>cu     <Plug>NERDCommenterUncomment
+x  <Space>cy     <Plug>NERDCommenterYank
+x  S             <Plug>VSurround
+x  [e            <Plug>unimpairedMoveSelectionUp
+x  [n            <Plug>unimpairedContextPrevious
+x  [u            <Plug>unimpaired_url_encode
+x  [x            <Plug>unimpaired_xml_encode
+x  [y            <Plug>unimpaired_string_encode
+x  \\/           <Plug>(VM-Visual-Regex)
+x  \\A           <Plug>(VM-Visual-All)
+x  \\a           <Plug>(VM-Visual-Add)
+x  \\c           <Plug>(VM-Visual-Cursors)
+x  \\f           <Plug>(VM-Visual-Find)
+x  ]e            <Plug>unimpairedMoveSelectionDown
+x  ]n            <Plug>unimpairedContextNext
+x  ]u            <Plug>unimpaired_url_decode
+x  ]x            <Plug>unimpaired_xml_decode
+x  ]y            <Plug>unimpaired_string_decode
+x  gS            <Plug>VgSurround
+x  jk          * <Esc>
