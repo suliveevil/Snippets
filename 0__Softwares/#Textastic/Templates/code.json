@@ -1,0 +1,33 @@
+{
+    "uuid": "E5AE1F52-7E49-11EA-A9DE-E7AC371A57AD",
+    "category": "Code - Programming Language",
+    "templates": [
+        {
+            "name": ".sh    - Bash File",
+            "fileExtension": "filename.sh",
+            "snippet": ""
+        },
+        {
+            "name": ".c     - C Programming Language",
+            "fileExtension": "filename.c",
+            "snippet": ""
+        },
+        {
+            "name": ".js    - JavaScript File",
+            "fileExtension": "filename.js",
+            "snippet": ""
+        },
+        {
+            "name": ".py\t\t- Python File",
+            "//":"缺少设置默认文件名功能",
+            "defaultFileName":"$CURRENTTIME",
+            "fileExtension": "filename.py",
+            "snippet": "#!/usr/bin/env python3\n# -*- coding: utf-8 -*-\n\n\"\"\"${1:Description}\n$2\n\"\"\"\n\n$0\n"
+        },
+        {
+            "name": ".vim\t\t- VimScript",
+            "fileExtension": "filename.vim",
+            "snippet": ""
+        }
+    ]
+}

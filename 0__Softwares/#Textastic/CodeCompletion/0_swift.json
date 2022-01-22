@@ -1,0 +1,217 @@
+{
+    "description": "Textastic CodeCompletion for Swift",
+    "uuid": "5925CB1A-91D2-11EA-94C1-D3D5B8634217",
+    "completionSets": [
+        {
+            "name": "swift.comment",
+            "strings": [
+                {
+                    "string": "comment","replace": "/${1:*$2*}/$0"
+                }
+            ]
+        },
+        {
+            "name": "swift.identifier",
+            "strings": [
+                {
+                    "string": "comment","replace": "/${1:*$2*}/$0"
+                }
+            ]
+        },
+        {
+            "name": "swift.keyword.declaration",
+            "strings": [
+                "associatedtype",
+                "class",
+                "deinit",
+                "enum",
+                "extension",
+                "fileprivate",
+                "func",
+                "import",
+                "init",
+                "inout",
+                "internal",
+                "let",
+                "open",
+                "operator",
+                "private",
+                "protocol",
+                "public",
+                "rethrows",
+                "static",
+                "struct",
+                "subscript",
+                "typealias",
+                "var"
+            ]
+        },
+        {
+            "name": "swift.keyword.statement",
+            "strings": [
+                "break",
+                "case",
+                "continue",
+                "default",
+                "defer",
+                "do",
+                "else",
+                "fallthrough",
+                "for",
+                "guard",
+                "if",
+                "in",
+                "repeat",
+                "return",
+                "switch",
+                "where",
+                "while"
+            ]
+        },
+        {
+            "name": "swift.keyword.pattern",
+            "strings": [
+                "_"
+            ]
+        },
+        {
+            "//":"begin with # number sign",
+            "name": "swift.keyword.numbersign",
+            "strings": [
+                "available",
+                "colorLiteral",
+                "column",
+                "else",
+                "elseif",
+                "endif",
+                "error",
+                "file",
+                "fileLiteral",
+                "function",
+                "if",
+                "imageLiteral",
+                "line",
+                "selector",
+                "sourceLocation",
+                "warning"
+            ]
+        },
+        {
+            "name": "swift.keyword.context",
+            "strings": [
+                "associativity",
+                "convenience",
+                "dynamic",
+                "didSet",
+                "final",
+                "get",
+                "infix",
+                "indirect",
+                "lazy",
+                "left",
+                "mutating",
+                "none",
+                "nonmutating",
+                "optional",
+                "override",
+                "postfix",
+                "precedence",
+                "prefix",
+                "Protocol",
+                "required",
+                "right",
+                "set",
+                "Type",
+                "unowned",
+                "weak",
+                "willSet"
+            ]
+        },
+        {
+            "name": "swift.operators",
+            "strings": [
+                "&&",
+                "||",
+                "=",
+                "==",
+                "+",
+                "-",
+                "*",
+                "/",
+                "%",
+                "..<",
+                "...",
+                "-",
+                "!",
+                "?",
+                ":",
+                "= -",
+                "= +",
+                "+=",
+                "!=",
+                ">",
+                "<",
+                ">=",
+                "<=",
+                "! :",
+                "~",
+                "&",
+                "|",
+                "^",
+                "<<",
+                ">>",
+                "&+",
+                "&-",
+                "&*",
+                "",
+                "",
+            ]
+        },
+        {
+            "name": "swift.comment",
+            "strings": [
+                {
+                    "string": "comment","replace": "/${1:*$2*}/$0"
+                }
+            ]
+        }
+    ],
+    "contexts": [
+        {
+            "description": "description",
+            "scope": "source.swift",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+            "swift.comment"
+            ]
+        },
+        {
+            "description": "description",
+            "scope": "source.swift",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+            "swift.comment"
+            ]
+        },
+        {
+            "description": "description",
+            "scope": "source.swift",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+            "swift.comment"
+            ]
+        },
+        {
+            "description": "description",
+            "scope": "source.swift",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+            "swift.comment"
+            ]
+        }
+    ]
+}

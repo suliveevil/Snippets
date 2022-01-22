@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// simulation.cellDimension 修改每个细胞的大小。为了使细胞清晰可见，你必须将这个值设为大于 4 的数字。建议不要将这个值设为大于 512。
+</string>
+			<key>ModifiedRange</key>
+			<string>{1829, 84}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(ex2k1)
+// simulation.cellDimension modifies the size of each cell. In order to see the cells, you must set this value to a number greater than 4. It is recommended that this value be no larger than 512.
+//#-end-localizable-zone
+</string>
+			<key>OriginalRange</key>
+			<string>{1829, 249}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 尝试将滑翔机更改为脉冲星。
+simulation.placePattern(Pattern.pulsar, atColumn: 3, row: 3)
+</string>
+			<key>ModifiedRange</key>
+			<string>{1944, 78}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(ex2k2)
+// Try changing glider to pulsar.
+//#-end-localizable-zone
+simulation.placePattern(Pattern.glider, atColumn: 3, row: 3)
+</string>
+			<key>OriginalRange</key>
+			<string>{2109, 148}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 尝试将速度调整为 1 到 60 之间的一个数字。
+</string>
+			<key>ModifiedRange</key>
+			<string>{2023, 28}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(ex2k3)
+// Try adjusting the speed to a number from 1 to 60.
+//#-end-localizable-zone
+</string>
+			<key>OriginalRange</key>
+			<string>{2258, 106}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 使用自己的图像、文本或表情符号个性化细胞。
+simulation.set("😊", forState: .alive)
+</string>
+			<key>ModifiedRange</key>
+			<string>{2073, 64}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(ex2k4)
+// Personalize your cells with your own images, text, or emojis.
+//#-end-localizable-zone
+simulation.set("😀", forState: .alive)
+</string>
+			<key>OriginalRange</key>
+			<string>{2386, 157}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Document1.playgroundchapter/Pages/Exercise2.playgroundpage/main.swift</string>
+</dict>
+</plist>

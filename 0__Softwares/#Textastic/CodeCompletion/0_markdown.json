@@ -1,0 +1,300 @@
+{
+    "description": "Textastic Code Completion for markdown",
+    "uuid": "89FCE51A-7171-11EA-9BFC-0BEAD3AAAEF1",
+    "completionSets": [{
+            "name": "markdown.blog.head",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "blog",
+                "replace": "---\nlayout: post\ntitle: \"${1:文章标题}\"\ndate:  20${2:年}-${3:月}-${4:日} ${5:时}:${6:分}:${7:秒} +0800\ncategories: ${8:所在目录}\ntags: ${9:标签，空格分开}\nauthor: ${10:suliveevil}\nmathjax: true\n---\n\n* content\n{:toc}\n\n${11:正文内容}"
+            }]
+        },
+        {
+            "name": "markdown.blog.category",
+            "defaultAppend": "",
+            "strings": [
+                {"string": "随笔",         "replace": "随笔"},
+                {"string": "software",    "replace": "Software"},
+                {"string": "python",      "replace": "Python"},
+                {"string": "生活",         "replace": "生活"},
+                {"string": "hardware",    "replace": "Hardware"},
+                {"string": "it",          "replace": "IT"},
+                {"string": "学习",         "replace": "学习"},
+                {"string": "文学",         "replace": "文学"},
+                {"string": "english",     "replace": "English"},
+                {"string": "linux",       "replace": "Linux"},
+                {"string": "macos",       "replace": "macOS"},
+                {"string": "unix",        "replace": "Unix"},
+                {"string": "音乐",         "replace": "音乐"},
+                {"string": "math",        "replace": "Math"},
+                {"string": "git",         "replace": "git"},
+                {"string": "github",      "replace": "GitHub"},
+                {"string": "windows",     "replace": "Windows"},
+                {"string": "健身",         "replace": "健身"},
+                {"string": "automation",  "replace": "Automation"},
+                {"string": "book",        "replace": "Book"},
+                {"string": "ipados",      "replace": "iPadOS"}
+            ]
+        },
+        {
+            "name": "markdown.blog.tag",
+            "defaultAppend": "",
+            "strings": [
+                {"string": "apfs",            "replace": "APFS"},
+                {"string": "alfred",          "replace": "Alfred"},
+                {"string": "applescript",     "replace": "AppleScript"},
+                {"string": "automator",       "replace": "Automator"},
+                {"string": "betterandbetter", "replace": "BetterAndBetter"},
+                {"string": "cs",              "replace": "CS"},
+                {"string": "ee",              "replace": "EE"},
+                {"string": "electron",        "replace": "Electron"},
+                {"string": "english",         "replace": "English"},
+                {"string": "filesystem",      "replace": "FileSystem"},
+                {"string": "finder",          "replace": "Finder"},
+                {"string": "gui",             "replace": "GUI Scripting"},
+                {"string": "git",             "replace": "Git"},
+                {"string": "github",          "replace": "GitHub"},
+                {"string": "javascript",      "replace": "JavaScript"},
+                {"string": "jekyll",          "replace": "Jekyll"},
+                {"string": "katex",           "replace": "KaTeX"},
+                {"string": "keyboardmaestro", "replace": "Keyboard Maestro"},
+                {"string": "latex",           "replace": "LaTeX"},
+                {"string": "launchbar",       "replace": "LaunchBar"},
+                {"string": "leetcode",        "replace": "LeetCode"},
+                {"string": "",                "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"},
+                {"string": "随笔",             "replace": "随笔"}
+            ]
+        },
+        {
+            "name": "markdown.url",
+            "defaultAppend": "",
+            "strings": [{
+                    "string": "imgLink",
+                    "replace": "![${2:Title}](${1:URL})\n$0"
+                },
+                {
+                    "string": "pictureLink",
+                    "replace": "![${2:Title}](${1:URL})\n$0"
+                },
+                {
+                    "string": "urlLink",
+                    "replace": "[${2:Title}](${1:URL})\n$0"
+                }
+            ]
+        },
+        {
+            "name": "markdown.block.code",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "codeblock",
+                "replace": "\n```$0\n${1:your code}\n```\n"
+            }]
+        },
+        {
+            "name": "markdown.block.code.language",
+            "strings": [
+                {"string":"actionscript3","replace":"actionscript3"},
+                {"string":"applescript","replace":"applescript"},
+                "arduino",
+                "asciidoc",
+                "autohotkey",
+                "autoit",
+                "awk",
+                "bash",
+                "brainfuck",
+                "c",
+                "c#",
+                "clojure",
+                "cmake",
+                "cobol",
+                "cpp",
+                "csharp",
+                "css",
+                "csv",
+                "dart",
+                "delphi",
+                "diff",
+                "edn",
+                "emacs",
+                "elisp",
+                "erl",
+                "fsharp",
+                "go",
+                "golang",
+                "groovy",
+                "haskell",
+                "html",
+                "ini",
+                "java",
+                {"string":"javascript","replace":"javascript"},
+                {"string":"jsc","replace":"javascript"},
+                "json",
+                "julia",
+                "less",
+                "lisp",
+                "lua",
+                "markdown",
+                "mathematica",
+                "matlab",
+                "objc",
+                "objectivec",
+                "org",
+                "osascript",
+                "pascal",
+                "perl",
+                "php",
+                "plantuml",
+                "plist",
+                "prolog",
+                "ps",
+                "pwsh",
+                "python",
+                "puml",
+                "r",
+                "regex",
+                "ruby",
+                "rss",
+                "rtf",
+                "sas",
+                "sass",
+                "scala",
+                "scheme",
+                "sed",
+                "shader",
+                "shell",
+                "snippet",
+                "sql",
+                "svg",
+                "swift",
+                "tcl",
+                "tex",
+                "text",
+                "toml",
+                "unity",
+                "vba",
+                "vim",
+                "vue",
+                "xml",
+                "yaml",
+                "zsh"
+            ]
+        },
+        {
+            "name": "markdown.block.diagram",
+            "defaultAppend": "",
+            "strings": [{
+                    "string": "dot",
+                    "replace": "```${1:dot}\n${2:graphviz code}\n```\n$0"
+                },
+                {
+                    "string": "echarts",
+                    "replace": "```${1:echarts}\n${2:Badu Echarts}\n```\n$0"
+                },
+                {
+                    "string": "flow",
+                    "replace": "```${1:flow}\n${2:flowchart}\n```\n$0"
+                },
+                {
+                    "string": "graphviz",
+                    "replace": "```${1:dot}\n${2:graphviz}\n```\n$0"
+                },
+                {
+                    "string": "mermaid",
+                    "replace": "```${1:mermaid}\n${2:mermaid}\n```\n$0"
+                },
+                {
+                    "string": "sequence",
+                    "replace": "```${1:sequence}\n${2:sequence}\n```\n$0"
+                }
+            ]
+        },
+        {
+            "name": "markdown.fold",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "fold",
+                "replace": "<details><summary>${1:description}</summary><br>\n${2:content}\n</details>\n$0"
+            }]
+        },
+        {
+            "name": "markdown.regex.box",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "box",
+                "replace": "\"「${1:/./-/g}\",\n\"|${1}|\",\n\"${1:/./-/g}」\"\n"
+            }]
+        },
+        {
+            "name": "markdown.test",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "func",
+                "replace": "${1:func}($COMPLETION):\n\t$0"
+            }]
+        }
+    ],
+    "contexts": [
+        {
+            "description": "markdown test COMPLETION",
+            "scope": "text.html.markdown",
+            "pattern": "\\b([a-zA-Z]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.test"
+            ]
+        },
+        {
+            "description": "markdown url",
+            "scope": "text.html.markdown",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.blog.head",
+                "markdown.fold",
+                "markdown.regex.box",
+                "markdown.url"
+            ]
+        },
+        {
+            "description": "markdown block diagram",
+            "scope": "text.html.markdown",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.block.diagram"
+            ]
+        },
+        {
+            "description": "",
+            "scope": "text.html.markdown",
+            "pattern": "\\b([a-zA-Z0-9]+)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "markdown.block.code"
+            ]
+        },
+        {
+            "description": "markdown diagram",
+            "scope": "text.html.markdown",
+            "pattern": "(```)([a-zA-Z]+)",
+            "completionCaptureIndex": 2,
+            "completionSetNames": [
+                "markdown.block.code.language"
+            ]
+        }
+    ]
+}

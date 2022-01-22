@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LiveViewEdgeToEdge</key>
+	<true/>
+	<key>LiveViewMode</key>
+	<string>VisibleByDefault</string>
+	<key>Name</key>
+	<string>Name</string>
+	<key>PlaygroundLoggingMode</key>
+	<string>Off</string>
+	<key>UserModuleCodeCompletionDirectives</key>
+	<array>
+		<string>everything, hide</string>
+		<string>currentmodule, show</string>
+		<string>module, show, MyFiles, Book</string>
+		<string>literal, show, array, boolean, color, integer, string</string>
+		<string>bookauxiliarymodule, show</string>
+		<string>keyword, show, if, for, while, func, var, let</string>
+		<string>identifier, hide, GameViewController, viewController, GameResult, Game, Action, canPlay, Play()</string>
+	</array>
+	<key>UserModuleSourceFilesToOpen</key>
+	<array>
+		<string>UserModules/MyFiles.playgroundmodule/Sources/SharedCode.swift</string>
+	</array>
+</dict>
+</plist>

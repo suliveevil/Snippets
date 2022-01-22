@@ -1,0 +1,1 @@
+com.kite.intellij

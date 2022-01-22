@@ -1,0 +1,1 @@
+perl -0pe 's/(.*)\n(.*)\n/$1 $2\n/g' file.txt

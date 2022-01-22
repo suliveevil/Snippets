@@ -1,0 +1,1 @@
+find ./ -type d -name "del_dir" -exec rm -r {} \;

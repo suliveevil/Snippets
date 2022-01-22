@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{4, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-localizable-zone(SharedCodeCopyright1)*/</string>
+			<key>OriginalRange</key>
+			<string>{4, 44}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{13, 0}</string>
+			<key>OriginalContent</key>
+			<string>/*#-end-localizable-zone*/</string>
+			<key>OriginalRange</key>
+			<string>{57, 26}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{25, 0}</string>
+			<key>OriginalContent</key>
+			<string> Apple Inc. /*#-localizable-zone(SharedCodeCopyright2)*/All rights</string>
+			<key>OriginalRange</key>
+			<string>{95, 66}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>App</string>
+			<key>ModifiedRange</key>
+			<string>{26, 3}</string>
+			<key>OriginalContent</key>
+			<string>reserved./*#-end-localizab</string>
+			<key>OriginalRange</key>
+			<string>{162, 26}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string> I</string>
+			<key>ModifiedRange</key>
+			<string>{31, 2}</string>
+			<key>OriginalContent</key>
+			<string>-zo</string>
+			<key>OriginalRange</key>
+			<string>{190, 3}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>c. 保留一切权利。</string>
+			<key>ModifiedRange</key>
+			<string>{34, 10}</string>
+			<key>OriginalContent</key>
+			<string>e*/</string>
+			<key>OriginalRange</key>
+			<string>{194, 3}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 共享代码
+// 此文件中编写的代码在这本 Playground 中的所有页面均可用。
+</string>
+			<key>ModifiedRange</key>
+			<string>{46, 46}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(Blink01)
+// Shared Code
+// Code written in this file is available on all pages in this Playground Book.
+//#-end-localizable-zone
+</string>
+			<key>OriginalRange</key>
+			<string>{199, 150}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 简单的配置细胞函数
+</string>
+			<key>ModifiedRange</key>
+			<string>{133, 13}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(Blink02)
+// Simple Configure Cell Function
+//#-end-localizable-zone
+</string>
+			<key>OriginalRange</key>
+			<string>{390, 89}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>    // 为细胞何时存活或死亡创建规则。
+</string>
+			<key>ModifiedRange</key>
+			<string>{250, 23}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(Blink03)
+    // Create rules for when your cells live or die.
+//#-end-localizable-zone
+</string>
+			<key>OriginalRange</key>
+			<string>{583, 108}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>        // 尝试将这个值更改为 &gt;= 3，看看会发生什么。
+</string>
+			<key>ModifiedRange</key>
+			<string>{483, 35}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(Blink04)
+        // Try changing this value to &gt;= 3 and see what happens.
+//#-end-localizable-zone
+</string>
+			<key>OriginalRange</key>
+			<string>{901, 120}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 复杂的配置细胞函数
+</string>
+			<key>ModifiedRange</key>
+			<string>{759, 13}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(Blink05)
+// Complex Configure Cell Function
+//#-end-localizable-zone
+</string>
+			<key>OriginalRange</key>
+			<string>{1262, 90}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>        // 尝试将这个值更改为 == 1，看看会发生什么。
+</string>
+			<key>ModifiedRange</key>
+			<string>{1331, 35}</string>
+			<key>OriginalContent</key>
+			<string>//#-localizable-zone(Blink06)
+        // Try changing this value to == 1 and see what happens.
+//#-end-localizable-zone
+</string>
+			<key>OriginalRange</key>
+			<string>{1911, 120}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>UserModules/MyFiles.playgroundmodule/Sources/SharedCode.swift</string>
+</dict>
+</plist>

@@ -1,0 +1,62 @@
+{
+    "description": "Snippet",
+    "uuid": "44065688-726E-11EA-A06C-1163C736638C",
+    "//":"1 Textastic Snippet File",
+    "//":"2 Global Snippet",
+    "completionSets": [
+        {
+            "name": "textastic.snippet.file",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "tsfile",
+                "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"uuid\": \"${2:uuid}\",\n\t\"completionSets\":[\n\t\t${3:tsni$0}\n\t],\n\t\"contexts\": [\n\t\t${4:tcon}\n\t]\n}"
+            }]
+        },
+        {
+            "name": "textastic.snippet.snippets",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "tsnippet",
+                "replace": "{\n\t\"name\": \"${1:enviroment}.${2:situation1}.${3:situation2}\",\n\t\"defaultAppend\":\"${4}\",\n\t\"strings\":[\n\t\t{\n\t\t\t\"string\":\"${5:string2match}\",\n\t\t\t\"${6:replace}\":\"${7:snippet}\"\n\t\t}\n\t]\n}"
+            }]
+        },
+        {
+            "name": "textastic.snippet.contexts",
+            "defaultAppend": "",
+            "strings": [{
+                "string": "tcontext",
+                "replace": "{\n\t\"description\": \"${1:description}\",\n\t\"scope\":\"${2:source}.${3:python}\",\n\t\"pattern\":\"(${4:prefix}[${5:a-zA-Z0-9}]*)\",\n\t\"completionCaptureIndex\":1,\n\t\"completionSetNames\":[\n\t\t\"${6:enviroment}.${7:situation1}.${8:situation2}\"\n\t]\n}"
+            }]
+        },
+        {
+            "name": "snippet.global",
+            "strings": [
+                {"string": "==0ipad",  "replace": "$0iPadOS 13.5 Public Beta 3 on iPad Pro 11 (2018)"},
+                {"string": "==global", "replace": "Global"},
+                {"string": "==global", "replace": ""}
+            ]
+        }
+    ],
+    "contexts": [
+        {
+            "description": "textastic snippet file",
+            "scope": "source.json",
+            "pattern": "\\b([a-zA-Z]+)\\b",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "textastic.snippet.file",
+                "textastic.snippet.snippets",
+                "textastic.snippet.contexts"
+            ]
+        },
+        {
+            "description": "Global Snippet",
+            "scope":"source.c++ | source.clojure | source.cs | source.css | source.diff | source.erlang | source.go | source.dot | source.haskell  | source.hex     | text.html.basic | source.java | source.js | source.js.jquery | source.json | text.tex.latex  | source.css.less | source.lisp    | source.lua  | text.html.markdown | source.matlab | source.objc | source.perl | source.php | text.plain | source.python | source.r | source.regexp | source.regexp.python | source.ruby | source.sass | source.scala | source.shell | source.sql | source.tcl | text.texs | text.xml | source.yaml",
+            "pattern": "(={2}[0-9a-zA-Z_+\\-*/]*)",
+            "completionCaptureIndex": 1,
+            "completionSetNames": [
+                "snippet.global"
+            ]
+        }
+    ]
+}

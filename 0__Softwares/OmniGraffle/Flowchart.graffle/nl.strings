@@ -1,0 +1,39 @@
+/*  Canvases  */
+"Flowchart" = "Stroomschema"; 
+
+/*  Layers  */
+"flowchart" = "Stroomschema"; 
+
+/*  Graphics  */
+"start" = "start"; 
+"Start" = "Begin"; 
+"decision" = "decision"; 
+"Decision" = "Beslissing"; 
+"join" = "join"; 
+"Join" = "Neem deel"; 
+"login" = "login"; 
+"Login" = "Log in"; 
+"member data" = "member data"; 
+"Member \nData Input" = "Invoer \ngegevens lid"; 
+"member database" = "member database"; 
+"Member Database" = "Leden-database"; 
+"view events" = "view events"; 
+"View Events" = "Gebeurtenissen weergeven"; 
+"event database" = "event database"; 
+"Event Database" = "Gebeurtenissen-database"; 
+"select event" = "select event"; 
+"Select Event" = "Selecteer gebeurtenis"; 
+"no" = "no"; 
+"No" = "Nee"; 
+"stop" = "stop"; 
+"Stop" = "Stop"; 
+"yes" = "yes"; 
+"Yes" = "Ja"; 
+"contact customer" = "contact customer"; 
+"Contact \nCustomer" = "Contact klant"; 
+"send agreement" = "send agreement"; 
+"Send\nAgreement" = "Verstuur overeenkomst"; 
+"record results" = "record results"; 
+"Record\nResults" = "Registreer resultaten"; 
+"stop" = "stop"; 
+"Stop" = "Stop"; 

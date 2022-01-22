@@ -1,0 +1,39 @@
+/*  Canvases  */
+"Flowchart" = "流程图"; 
+
+/*  Layers  */
+"flowchart" = "流程图"; 
+
+/*  Graphics  */
+"start" = "start"; 
+"Start" = "开始"; 
+"decision" = "decision"; 
+"Decision" = "决定"; 
+"join" = "join"; 
+"Join" = "加入"; 
+"login" = "login"; 
+"Login" = "登录"; 
+"member data" = "member data"; 
+"Member \nData Input" = "会员数据录入"; 
+"member database" = "member database"; 
+"Member Database" = "会员数据库"; 
+"view events" = "view events"; 
+"View Events" = "查看事件"; 
+"event database" = "event database"; 
+"Event Database" = "事件数据库"; 
+"select event" = "select event"; 
+"Select Event" = "选择事件"; 
+"no" = "no"; 
+"No" = "否"; 
+"stop" = "stop"; 
+"Stop" = "停止"; 
+"yes" = "yes"; 
+"Yes" = "是"; 
+"contact customer" = "contact customer"; 
+"Contact \nCustomer" = "联系客户"; 
+"send agreement" = "send agreement"; 
+"Send\nAgreement" = "发送协议"; 
+"record results" = "record results"; 
+"Record\nResults" = "记录结果"; 
+"stop" = "stop"; 
+"Stop" = "停止"; 
